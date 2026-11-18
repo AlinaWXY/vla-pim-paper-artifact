@@ -1,0 +1,490 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nets
+        -max_paths 10
+        -transition_time
+        -capacitance
+Design : actpim_output_128b
+Version: W-2024.09-SP5
+Date   : Sun Nov 15 04:46:10 2026
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: PVT_0P7V_25C   Library: asap7sc7p5t_OA_RVT_TT_nldm_211120
+Wire Load Model Mode: top
+
+  Startpoint: ra0[1] (input port clocked by core_clk)
+  Endpoint: rf/rd0_reg[202]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                  0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  input external delay                                                       93.80      93.80 r
+  ra0[1] (in)                                                      25.00      0.00      93.80 r
+  ra0[1] (net)                                  3         2.46                0.00      93.80 r
+  rf/ra0[1] (actpim_output_rf_DEPTH4)                                         0.00      93.80 r
+  rf/N21 (net)                                            2.46                0.00      93.80 r
+  rf/U957/Y (INVx3_ASAP7_75t_R)                                     7.57      7.50     101.30 f
+  rf/n2090 (net)                                2         0.68                0.00     101.30 f
+  rf/U1901/Y (NOR2xp33_ASAP7_75t_R)                               309.81    148.13     249.43 r
+  rf/n2083 (net)                               29        12.18                0.00     249.43 r
+  rf/U1819/Y (HB1xp67_ASAP7_75t_R)                                301.14    186.03     435.47 r
+  rf/n2091 (net)                               54        22.78                0.00     435.47 r
+  rf/U1751/Y (HB1xp67_ASAP7_75t_R)                                303.78    186.64     622.11 r
+  rf/n2092 (net)                               55        22.99                0.00     622.11 r
+  rf/U1637/Y (HB1xp67_ASAP7_75t_R)                                231.34    153.61     775.72 r
+  rf/n2094 (net)                               41        17.38                0.00     775.72 r
+  rf/U2510/Y (AOI22xp33_ASAP7_75t_R)                               46.96     31.92     807.63 f
+  rf/n1978 (net)                                1         0.33                0.00     807.63 f
+  rf/U2512/Y (NAND2xp33_ASAP7_75t_R)                               28.83     26.78     834.42 r
+  rf/N137 (net)                                 1         0.50                0.00     834.42 r
+  rf/U461/Y (OAI22xp5_ASAP7_75t_R)                                 30.93     15.47     849.89 f
+  rf/n531 (net)                                 1         0.56                0.00     849.89 f
+  rf/rd0_reg[202]/D (DFFHQNx1_ASAP7_75t_R)                         30.93      0.00     849.89 f
+  data arrival time                                                                    849.89
+
+  clock core_clk (rise edge)                                                938.00     938.00
+  clock network delay (ideal)                                                 0.00     938.00
+  clock uncertainty                                                         -46.90     891.10
+  rf/rd0_reg[202]/CLK (DFFHQNx1_ASAP7_75t_R)                                  0.00     891.10 r
+  library setup time                                                         -2.04     889.06
+  data required time                                                                   889.06
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                   889.06
+  data arrival time                                                                   -849.89
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                           39.17
+
+
+  Startpoint: ra0[1] (input port clocked by core_clk)
+  Endpoint: rf/rd0_reg[200]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                  0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  input external delay                                                       93.80      93.80 r
+  ra0[1] (in)                                                      25.00      0.00      93.80 r
+  ra0[1] (net)                                  3         2.46                0.00      93.80 r
+  rf/ra0[1] (actpim_output_rf_DEPTH4)                                         0.00      93.80 r
+  rf/N21 (net)                                            2.46                0.00      93.80 r
+  rf/U957/Y (INVx3_ASAP7_75t_R)                                     7.57      7.50     101.30 f
+  rf/n2090 (net)                                2         0.68                0.00     101.30 f
+  rf/U1901/Y (NOR2xp33_ASAP7_75t_R)                               309.81    148.13     249.43 r
+  rf/n2083 (net)                               29        12.18                0.00     249.43 r
+  rf/U1819/Y (HB1xp67_ASAP7_75t_R)                                301.14    186.03     435.47 r
+  rf/n2091 (net)                               54        22.78                0.00     435.47 r
+  rf/U1751/Y (HB1xp67_ASAP7_75t_R)                                303.78    186.64     622.11 r
+  rf/n2092 (net)                               55        22.99                0.00     622.11 r
+  rf/U1637/Y (HB1xp67_ASAP7_75t_R)                                231.34    153.61     775.72 r
+  rf/n2094 (net)                               41        17.38                0.00     775.72 r
+  rf/U2504/Y (AOI22xp33_ASAP7_75t_R)                               46.96     31.92     807.63 f
+  rf/n1974 (net)                                1         0.33                0.00     807.63 f
+  rf/U2506/Y (NAND2xp33_ASAP7_75t_R)                               28.83     26.78     834.42 r
+  rf/N139 (net)                                 1         0.50                0.00     834.42 r
+  rf/U459/Y (OAI22xp5_ASAP7_75t_R)                                 30.93     15.47     849.89 f
+  rf/n529 (net)                                 1         0.56                0.00     849.89 f
+  rf/rd0_reg[200]/D (DFFHQNx1_ASAP7_75t_R)                         30.93      0.00     849.89 f
+  data arrival time                                                                    849.89
+
+  clock core_clk (rise edge)                                                938.00     938.00
+  clock network delay (ideal)                                                 0.00     938.00
+  clock uncertainty                                                         -46.90     891.10
+  rf/rd0_reg[200]/CLK (DFFHQNx1_ASAP7_75t_R)                                  0.00     891.10 r
+  library setup time                                                         -2.04     889.06
+  data required time                                                                   889.06
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                   889.06
+  data arrival time                                                                   -849.89
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                           39.17
+
+
+  Startpoint: ra0[1] (input port clocked by core_clk)
+  Endpoint: rf/rd0_reg[199]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                  0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  input external delay                                                       93.80      93.80 r
+  ra0[1] (in)                                                      25.00      0.00      93.80 r
+  ra0[1] (net)                                  3         2.46                0.00      93.80 r
+  rf/ra0[1] (actpim_output_rf_DEPTH4)                                         0.00      93.80 r
+  rf/N21 (net)                                            2.46                0.00      93.80 r
+  rf/U957/Y (INVx3_ASAP7_75t_R)                                     7.57      7.50     101.30 f
+  rf/n2090 (net)                                2         0.68                0.00     101.30 f
+  rf/U1901/Y (NOR2xp33_ASAP7_75t_R)                               309.81    148.13     249.43 r
+  rf/n2083 (net)                               29        12.18                0.00     249.43 r
+  rf/U1819/Y (HB1xp67_ASAP7_75t_R)                                301.14    186.03     435.47 r
+  rf/n2091 (net)                               54        22.78                0.00     435.47 r
+  rf/U1751/Y (HB1xp67_ASAP7_75t_R)                                303.78    186.64     622.11 r
+  rf/n2092 (net)                               55        22.99                0.00     622.11 r
+  rf/U1636/Y (HB1xp67_ASAP7_75t_R)                                231.34    153.61     775.72 r
+  rf/n2095 (net)                               41        17.38                0.00     775.72 r
+  rf/U2501/Y (AOI22xp33_ASAP7_75t_R)                               46.96     31.92     807.63 f
+  rf/n1972 (net)                                1         0.33                0.00     807.63 f
+  rf/U2503/Y (NAND2xp33_ASAP7_75t_R)                               28.83     26.78     834.42 r
+  rf/N140 (net)                                 1         0.50                0.00     834.42 r
+  rf/U458/Y (OAI22xp5_ASAP7_75t_R)                                 30.93     15.47     849.89 f
+  rf/n528 (net)                                 1         0.56                0.00     849.89 f
+  rf/rd0_reg[199]/D (DFFHQNx1_ASAP7_75t_R)                         30.93      0.00     849.89 f
+  data arrival time                                                                    849.89
+
+  clock core_clk (rise edge)                                                938.00     938.00
+  clock network delay (ideal)                                                 0.00     938.00
+  clock uncertainty                                                         -46.90     891.10
+  rf/rd0_reg[199]/CLK (DFFHQNx1_ASAP7_75t_R)                                  0.00     891.10 r
+  library setup time                                                         -2.04     889.06
+  data required time                                                                   889.06
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                   889.06
+  data arrival time                                                                   -849.89
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                           39.17
+
+
+  Startpoint: ra0[1] (input port clocked by core_clk)
+  Endpoint: rf/rd0_reg[196]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                  0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  input external delay                                                       93.80      93.80 r
+  ra0[1] (in)                                                      25.00      0.00      93.80 r
+  ra0[1] (net)                                  3         2.46                0.00      93.80 r
+  rf/ra0[1] (actpim_output_rf_DEPTH4)                                         0.00      93.80 r
+  rf/N21 (net)                                            2.46                0.00      93.80 r
+  rf/U957/Y (INVx3_ASAP7_75t_R)                                     7.57      7.50     101.30 f
+  rf/n2090 (net)                                2         0.68                0.00     101.30 f
+  rf/U1901/Y (NOR2xp33_ASAP7_75t_R)                               309.81    148.13     249.43 r
+  rf/n2083 (net)                               29        12.18                0.00     249.43 r
+  rf/U1819/Y (HB1xp67_ASAP7_75t_R)                                301.14    186.03     435.47 r
+  rf/n2091 (net)                               54        22.78                0.00     435.47 r
+  rf/U1751/Y (HB1xp67_ASAP7_75t_R)                                303.78    186.64     622.11 r
+  rf/n2092 (net)                               55        22.99                0.00     622.11 r
+  rf/U1639/Y (HB1xp67_ASAP7_75t_R)                                231.34    153.61     775.72 r
+  rf/n2093 (net)                               41        17.38                0.00     775.72 r
+  rf/U2492/Y (AOI22xp33_ASAP7_75t_R)                               46.96     31.92     807.63 f
+  rf/n1966 (net)                                1         0.33                0.00     807.63 f
+  rf/U2494/Y (NAND2xp33_ASAP7_75t_R)                               28.83     26.78     834.42 r
+  rf/N143 (net)                                 1         0.50                0.00     834.42 r
+  rf/U455/Y (OAI22xp5_ASAP7_75t_R)                                 30.93     15.47     849.89 f
+  rf/n525 (net)                                 1         0.56                0.00     849.89 f
+  rf/rd0_reg[196]/D (DFFHQNx1_ASAP7_75t_R)                         30.93      0.00     849.89 f
+  data arrival time                                                                    849.89
+
+  clock core_clk (rise edge)                                                938.00     938.00
+  clock network delay (ideal)                                                 0.00     938.00
+  clock uncertainty                                                         -46.90     891.10
+  rf/rd0_reg[196]/CLK (DFFHQNx1_ASAP7_75t_R)                                  0.00     891.10 r
+  library setup time                                                         -2.04     889.06
+  data required time                                                                   889.06
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                   889.06
+  data arrival time                                                                   -849.89
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                           39.17
+
+
+  Startpoint: ra0[1] (input port clocked by core_clk)
+  Endpoint: rf/rd0_reg[194]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                  0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  input external delay                                                       93.80      93.80 r
+  ra0[1] (in)                                                      25.00      0.00      93.80 r
+  ra0[1] (net)                                  3         2.46                0.00      93.80 r
+  rf/ra0[1] (actpim_output_rf_DEPTH4)                                         0.00      93.80 r
+  rf/N21 (net)                                            2.46                0.00      93.80 r
+  rf/U957/Y (INVx3_ASAP7_75t_R)                                     7.57      7.50     101.30 f
+  rf/n2090 (net)                                2         0.68                0.00     101.30 f
+  rf/U1901/Y (NOR2xp33_ASAP7_75t_R)                               309.81    148.13     249.43 r
+  rf/n2083 (net)                               29        12.18                0.00     249.43 r
+  rf/U1819/Y (HB1xp67_ASAP7_75t_R)                                301.14    186.03     435.47 r
+  rf/n2091 (net)                               54        22.78                0.00     435.47 r
+  rf/U1751/Y (HB1xp67_ASAP7_75t_R)                                303.78    186.64     622.11 r
+  rf/n2092 (net)                               55        22.99                0.00     622.11 r
+  rf/U1637/Y (HB1xp67_ASAP7_75t_R)                                231.34    153.61     775.72 r
+  rf/n2094 (net)                               41        17.38                0.00     775.72 r
+  rf/U2486/Y (AOI22xp33_ASAP7_75t_R)                               46.96     31.92     807.63 f
+  rf/n1962 (net)                                1         0.33                0.00     807.63 f
+  rf/U2488/Y (NAND2xp33_ASAP7_75t_R)                               28.83     26.78     834.42 r
+  rf/N145 (net)                                 1         0.50                0.00     834.42 r
+  rf/U453/Y (OAI22xp5_ASAP7_75t_R)                                 30.93     15.47     849.89 f
+  rf/n523 (net)                                 1         0.56                0.00     849.89 f
+  rf/rd0_reg[194]/D (DFFHQNx1_ASAP7_75t_R)                         30.93      0.00     849.89 f
+  data arrival time                                                                    849.89
+
+  clock core_clk (rise edge)                                                938.00     938.00
+  clock network delay (ideal)                                                 0.00     938.00
+  clock uncertainty                                                         -46.90     891.10
+  rf/rd0_reg[194]/CLK (DFFHQNx1_ASAP7_75t_R)                                  0.00     891.10 r
+  library setup time                                                         -2.04     889.06
+  data required time                                                                   889.06
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                   889.06
+  data arrival time                                                                   -849.89
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                           39.17
+
+
+  Startpoint: ra0[1] (input port clocked by core_clk)
+  Endpoint: rf/rd0_reg[193]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                  0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  input external delay                                                       93.80      93.80 r
+  ra0[1] (in)                                                      25.00      0.00      93.80 r
+  ra0[1] (net)                                  3         2.46                0.00      93.80 r
+  rf/ra0[1] (actpim_output_rf_DEPTH4)                                         0.00      93.80 r
+  rf/N21 (net)                                            2.46                0.00      93.80 r
+  rf/U957/Y (INVx3_ASAP7_75t_R)                                     7.57      7.50     101.30 f
+  rf/n2090 (net)                                2         0.68                0.00     101.30 f
+  rf/U1901/Y (NOR2xp33_ASAP7_75t_R)                               309.81    148.13     249.43 r
+  rf/n2083 (net)                               29        12.18                0.00     249.43 r
+  rf/U1819/Y (HB1xp67_ASAP7_75t_R)                                301.14    186.03     435.47 r
+  rf/n2091 (net)                               54        22.78                0.00     435.47 r
+  rf/U1751/Y (HB1xp67_ASAP7_75t_R)                                303.78    186.64     622.11 r
+  rf/n2092 (net)                               55        22.99                0.00     622.11 r
+  rf/U1636/Y (HB1xp67_ASAP7_75t_R)                                231.34    153.61     775.72 r
+  rf/n2095 (net)                               41        17.38                0.00     775.72 r
+  rf/U2483/Y (AOI22xp33_ASAP7_75t_R)                               46.96     31.92     807.63 f
+  rf/n1960 (net)                                1         0.33                0.00     807.63 f
+  rf/U2485/Y (NAND2xp33_ASAP7_75t_R)                               28.83     26.78     834.42 r
+  rf/N146 (net)                                 1         0.50                0.00     834.42 r
+  rf/U452/Y (OAI22xp5_ASAP7_75t_R)                                 30.93     15.47     849.89 f
+  rf/n522 (net)                                 1         0.56                0.00     849.89 f
+  rf/rd0_reg[193]/D (DFFHQNx1_ASAP7_75t_R)                         30.93      0.00     849.89 f
+  data arrival time                                                                    849.89
+
+  clock core_clk (rise edge)                                                938.00     938.00
+  clock network delay (ideal)                                                 0.00     938.00
+  clock uncertainty                                                         -46.90     891.10
+  rf/rd0_reg[193]/CLK (DFFHQNx1_ASAP7_75t_R)                                  0.00     891.10 r
+  library setup time                                                         -2.04     889.06
+  data required time                                                                   889.06
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                   889.06
+  data arrival time                                                                   -849.89
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                           39.17
+
+
+  Startpoint: ra0[1] (input port clocked by core_clk)
+  Endpoint: rf/rd0_reg[188]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                  0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  input external delay                                                       93.80      93.80 r
+  ra0[1] (in)                                                      25.00      0.00      93.80 r
+  ra0[1] (net)                                  3         2.46                0.00      93.80 r
+  rf/ra0[1] (actpim_output_rf_DEPTH4)                                         0.00      93.80 r
+  rf/N21 (net)                                            2.46                0.00      93.80 r
+  rf/U957/Y (INVx3_ASAP7_75t_R)                                     7.57      7.50     101.30 f
+  rf/n2090 (net)                                2         0.68                0.00     101.30 f
+  rf/U1901/Y (NOR2xp33_ASAP7_75t_R)                               309.81    148.13     249.43 r
+  rf/n2083 (net)                               29        12.18                0.00     249.43 r
+  rf/U1819/Y (HB1xp67_ASAP7_75t_R)                                301.14    186.03     435.47 r
+  rf/n2091 (net)                               54        22.78                0.00     435.47 r
+  rf/U1751/Y (HB1xp67_ASAP7_75t_R)                                303.78    186.64     622.11 r
+  rf/n2092 (net)                               55        22.99                0.00     622.11 r
+  rf/U1636/Y (HB1xp67_ASAP7_75t_R)                                231.34    153.61     775.72 r
+  rf/n2095 (net)                               41        17.38                0.00     775.72 r
+  rf/U2468/Y (AOI22xp33_ASAP7_75t_R)                               46.96     31.92     807.63 f
+  rf/n1950 (net)                                1         0.33                0.00     807.63 f
+  rf/U2470/Y (NAND2xp33_ASAP7_75t_R)                               28.83     26.78     834.42 r
+  rf/N151 (net)                                 1         0.50                0.00     834.42 r
+  rf/U447/Y (OAI22xp5_ASAP7_75t_R)                                 30.93     15.47     849.89 f
+  rf/n517 (net)                                 1         0.56                0.00     849.89 f
+  rf/rd0_reg[188]/D (DFFHQNx1_ASAP7_75t_R)                         30.93      0.00     849.89 f
+  data arrival time                                                                    849.89
+
+  clock core_clk (rise edge)                                                938.00     938.00
+  clock network delay (ideal)                                                 0.00     938.00
+  clock uncertainty                                                         -46.90     891.10
+  rf/rd0_reg[188]/CLK (DFFHQNx1_ASAP7_75t_R)                                  0.00     891.10 r
+  library setup time                                                         -2.04     889.06
+  data required time                                                                   889.06
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                   889.06
+  data arrival time                                                                   -849.89
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                           39.17
+
+
+  Startpoint: ra0[1] (input port clocked by core_clk)
+  Endpoint: rf/rd0_reg[187]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                  0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  input external delay                                                       93.80      93.80 r
+  ra0[1] (in)                                                      25.00      0.00      93.80 r
+  ra0[1] (net)                                  3         2.46                0.00      93.80 r
+  rf/ra0[1] (actpim_output_rf_DEPTH4)                                         0.00      93.80 r
+  rf/N21 (net)                                            2.46                0.00      93.80 r
+  rf/U957/Y (INVx3_ASAP7_75t_R)                                     7.57      7.50     101.30 f
+  rf/n2090 (net)                                2         0.68                0.00     101.30 f
+  rf/U1901/Y (NOR2xp33_ASAP7_75t_R)                               309.81    148.13     249.43 r
+  rf/n2083 (net)                               29        12.18                0.00     249.43 r
+  rf/U1819/Y (HB1xp67_ASAP7_75t_R)                                301.14    186.03     435.47 r
+  rf/n2091 (net)                               54        22.78                0.00     435.47 r
+  rf/U1751/Y (HB1xp67_ASAP7_75t_R)                                303.78    186.64     622.11 r
+  rf/n2092 (net)                               55        22.99                0.00     622.11 r
+  rf/U1639/Y (HB1xp67_ASAP7_75t_R)                                231.34    153.61     775.72 r
+  rf/n2093 (net)                               41        17.38                0.00     775.72 r
+  rf/U2465/Y (AOI22xp33_ASAP7_75t_R)                               46.96     31.92     807.63 f
+  rf/n1948 (net)                                1         0.33                0.00     807.63 f
+  rf/U2467/Y (NAND2xp33_ASAP7_75t_R)                               28.83     26.78     834.42 r
+  rf/N152 (net)                                 1         0.50                0.00     834.42 r
+  rf/U446/Y (OAI22xp5_ASAP7_75t_R)                                 30.93     15.47     849.89 f
+  rf/n516 (net)                                 1         0.56                0.00     849.89 f
+  rf/rd0_reg[187]/D (DFFHQNx1_ASAP7_75t_R)                         30.93      0.00     849.89 f
+  data arrival time                                                                    849.89
+
+  clock core_clk (rise edge)                                                938.00     938.00
+  clock network delay (ideal)                                                 0.00     938.00
+  clock uncertainty                                                         -46.90     891.10
+  rf/rd0_reg[187]/CLK (DFFHQNx1_ASAP7_75t_R)                                  0.00     891.10 r
+  library setup time                                                         -2.04     889.06
+  data required time                                                                   889.06
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                   889.06
+  data arrival time                                                                   -849.89
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                           39.17
+
+
+  Startpoint: ra1[1] (input port clocked by core_clk)
+  Endpoint: rf/rd1_reg[188]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                  0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  input external delay                                                       93.80      93.80 r
+  ra1[1] (in)                                                      25.00      0.00      93.80 r
+  ra1[1] (net)                                  3         2.46                0.00      93.80 r
+  rf/ra1[1] (actpim_output_rf_DEPTH4)                                         0.00      93.80 r
+  rf/N23 (net)                                            2.46                0.00      93.80 r
+  rf/U925/Y (INVx3_ASAP7_75t_R)                                     7.57      7.50     101.30 f
+  rf/n2696 (net)                                2         0.68                0.00     101.30 f
+  rf/U2673/Y (NOR2xp33_ASAP7_75t_R)                               309.81    148.13     249.43 r
+  rf/n2689 (net)                               29        12.18                0.00     249.43 r
+  rf/U1818/Y (HB1xp67_ASAP7_75t_R)                                301.14    186.03     435.47 r
+  rf/n2697 (net)                               54        22.78                0.00     435.47 r
+  rf/U1750/Y (HB1xp67_ASAP7_75t_R)                                303.78    186.64     622.11 r
+  rf/n2698 (net)                               55        22.99                0.00     622.11 r
+  rf/U1634/Y (HB1xp67_ASAP7_75t_R)                                231.34    153.61     775.72 r
+  rf/n2701 (net)                               41        17.38                0.00     775.72 r
+  rf/U3240/Y (AOI22xp33_ASAP7_75t_R)                               46.96     31.92     807.63 f
+  rf/n2556 (net)                                1         0.33                0.00     807.63 f
+  rf/U3242/Y (NAND2xp33_ASAP7_75t_R)                               28.83     26.78     834.42 r
+  rf/N407 (net)                                 1         0.50                0.00     834.42 r
+  rf/U190/Y (OAI22xp5_ASAP7_75t_R)                                 30.93     15.47     849.89 f
+  rf/n261 (net)                                 1         0.56                0.00     849.89 f
+  rf/rd1_reg[188]/D (DFFHQNx1_ASAP7_75t_R)                         30.93      0.00     849.89 f
+  data arrival time                                                                    849.89
+
+  clock core_clk (rise edge)                                                938.00     938.00
+  clock network delay (ideal)                                                 0.00     938.00
+  clock uncertainty                                                         -46.90     891.10
+  rf/rd1_reg[188]/CLK (DFFHQNx1_ASAP7_75t_R)                                  0.00     891.10 r
+  library setup time                                                         -2.04     889.06
+  data required time                                                                   889.06
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                   889.06
+  data arrival time                                                                   -849.89
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                           39.17
+
+
+  Startpoint: ra1[1] (input port clocked by core_clk)
+  Endpoint: rf/rd1_reg[187]
+            (rising edge-triggered flip-flop clocked by core_clk)
+  Path Group: core_clk
+  Path Type: max
+
+  Point                                       Fanout       Cap     Trans      Incr       Path
+  ----------------------------------------------------------------------------------------------
+  clock core_clk (rise edge)                                                  0.00       0.00
+  clock network delay (ideal)                                                 0.00       0.00
+  input external delay                                                       93.80      93.80 r
+  ra1[1] (in)                                                      25.00      0.00      93.80 r
+  ra1[1] (net)                                  3         2.46                0.00      93.80 r
+  rf/ra1[1] (actpim_output_rf_DEPTH4)                                         0.00      93.80 r
+  rf/N23 (net)                                            2.46                0.00      93.80 r
+  rf/U925/Y (INVx3_ASAP7_75t_R)                                     7.57      7.50     101.30 f
+  rf/n2696 (net)                                2         0.68                0.00     101.30 f
+  rf/U2673/Y (NOR2xp33_ASAP7_75t_R)                               309.81    148.13     249.43 r
+  rf/n2689 (net)                               29        12.18                0.00     249.43 r
+  rf/U1818/Y (HB1xp67_ASAP7_75t_R)                                301.14    186.03     435.47 r
+  rf/n2697 (net)                               54        22.78                0.00     435.47 r
+  rf/U1750/Y (HB1xp67_ASAP7_75t_R)                                303.78    186.64     622.11 r
+  rf/n2698 (net)                               55        22.99                0.00     622.11 r
+  rf/U1638/Y (HB1xp67_ASAP7_75t_R)                                231.34    153.61     775.72 r
+  rf/n2699 (net)                               41        17.38                0.00     775.72 r
+  rf/U3237/Y (AOI22xp33_ASAP7_75t_R)                               46.96     31.92     807.63 f
+  rf/n2554 (net)                                1         0.33                0.00     807.63 f
+  rf/U3239/Y (NAND2xp33_ASAP7_75t_R)                               28.83     26.78     834.42 r
+  rf/N408 (net)                                 1         0.50                0.00     834.42 r
+  rf/U189/Y (OAI22xp5_ASAP7_75t_R)                                 30.93     15.47     849.89 f
+  rf/n260 (net)                                 1         0.56                0.00     849.89 f
+  rf/rd1_reg[187]/D (DFFHQNx1_ASAP7_75t_R)                         30.93      0.00     849.89 f
+  data arrival time                                                                    849.89
+
+  clock core_clk (rise edge)                                                938.00     938.00
+  clock network delay (ideal)                                                 0.00     938.00
+  clock uncertainty                                                         -46.90     891.10
+  rf/rd1_reg[187]/CLK (DFFHQNx1_ASAP7_75t_R)                                  0.00     891.10 r
+  library setup time                                                         -2.04     889.06
+  data required time                                                                   889.06
+  ----------------------------------------------------------------------------------------------
+  data required time                                                                   889.06
+  data arrival time                                                                   -849.89
+  ----------------------------------------------------------------------------------------------
+  slack (MET)                                                                           39.17
+
+
+1

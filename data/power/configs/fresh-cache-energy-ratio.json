@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-17T21:38:20.326311+08:00",
+  "baseline": "single GPU, AE waits for latest VLM cache (fresh_cache)",
+  "selected_measurement_mode": "fresh_cache",
+  "selected_rounds": [
+    1,
+    2,
+    3
+  ],
+  "baseline_power_rail": "VIN",
+  "GPU_proxy_power_rail": "VDD_GPU",
+  "formula": "ratio = (P_board_baseline * T_baseline) / ((P_GPU_baseline + P_DRAM_g) * T_g)",
+  "baseline_time_definition": "sum(measurement seconds) / sum(completed AE chunks): steady completion period, not input-to-action latency",
+  "g_time_definition": "native total_us / 1e6: one combined pair completion time, not a multi-frame steady-state measurement",
+  "GPU_proxy_application": "fresh_cache measured GPU average reused as a constant throughout the full g interval",
+  "measurement_source": "Important data/thor-pi05-measurements-2026-11-17/thor-pi05-mha8-power-1117/measurements.json",
+  "DRAM_source": "data/power/results/power-report.json"
+}

@@ -1,0 +1,10 @@
+{
+  "case": "b",
+  "slurm_job": "2074284_0",
+  "rank_switches": 0,
+  "ae_solo_ms": 56.94669288,
+  "vlm_solo_ms": 65.936397646,
+  "e2e_ms": 122.883090526,
+  "same_sha256_as_always_on": true,
+  "raw_sha256": "55ece92bcb7e7728103618751ec087c776f804863819ba92137fe263a7dfb969"
+}

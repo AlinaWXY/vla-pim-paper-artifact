@@ -1,0 +1,35 @@
+{
+  "cases": [
+    {
+      "actual": "55ece92bcb7e7728103618751ec087c776f804863819ba92137fe263a7dfb969",
+      "case": "b",
+      "expected": "55ece92bcb7e7728103618751ec087c776f804863819ba92137fe263a7dfb969"
+    },
+    {
+      "actual": "89095d62efde1e068072e84ef319dfd2e75e48ab4846bf03a36facb8b54d15db",
+      "case": "c",
+      "expected": "89095d62efde1e068072e84ef319dfd2e75e48ab4846bf03a36facb8b54d15db"
+    },
+    {
+      "actual": "516e94c8c631bca9252c36d7d5069bad7302ef23752347b0ab4c32c42bbda716",
+      "case": "d",
+      "expected": "516e94c8c631bca9252c36d7d5069bad7302ef23752347b0ab4c32c42bbda716"
+    },
+    {
+      "actual": "4a9306a3b76f3910a1d88682f8b58cad4b193d85c41fd4c53ca1548a20d6c168",
+      "case": "e",
+      "expected": "4a9306a3b76f3910a1d88682f8b58cad4b193d85c41fd4c53ca1548a20d6c168"
+    },
+    {
+      "actual": "1567d68c93dc46f640ab6c703c6e3aec4bba3d6a76d0089e10c764a8e07cd360",
+      "case": "f",
+      "expected": "1567d68c93dc46f640ab6c703c6e3aec4bba3d6a76d0089e10c764a8e07cd360"
+    },
+    {
+      "actual": "6d1bd4c5d8139497473db4237735dbbe1d591736831074c68695d0ce70f5eb0e",
+      "case": "g",
+      "expected": "6d1bd4c5d8139497473db4237735dbbe1d591736831074c68695d0ce70f5eb0e"
+    }
+  ],
+  "passed": true
+}

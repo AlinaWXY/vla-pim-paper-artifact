@@ -1,0 +1,903 @@
+{
+  "schema_version": 1,
+  "units": [
+    {
+      "ordinal": 0,
+      "name": "void cudnn::cnn::kern_precompute_indices<false>(int*, int, int, int, int, int)",
+      "kind": "kernel",
+      "read_sectors": 179,
+      "write_sectors": 377,
+      "write_is_proxy": true,
+      "us": 1.312,
+      "base_sector": 0
+    },
+    {
+      "ordinal": 1,
+      "name": "void precomputed_convolve_sgemm<float, 1024, 5, 5, 4, 3, 3, 1, false>(int, int, int, float const*, int, float*, float const*, kernel_conv_params, unsigned long long, int, float, float, int, bool, bool, float const*, float const*, int*)",
+      "kind": "kernel",
+      "read_sectors": 106356,
+      "write_sectors": 149149,
+      "write_is_proxy": true,
+      "us": 144.928,
+      "base_sector": 1024
+    },
+    {
+      "ordinal": 2,
+      "name": "triton_red_fused__to_copy_add_convolution_embedding_native_layer_norm_transpose_view_0",
+      "kind": "kernel",
+      "read_sectors": 74743,
+      "write_sectors": 905,
+      "write_is_proxy": true,
+      "us": 16.192,
+      "base_sector": 257024
+    },
+    {
+      "ordinal": 3,
+      "name": "triton_per_fused__to_copy_add_convolution_embedding_native_layer_norm_transpose_view_1",
+      "kind": "kernel",
+      "read_sectors": 1262,
+      "write_sectors": 109,
+      "write_is_proxy": true,
+      "us": 1.632,
+      "base_sector": 332800
+    },
+    {
+      "ordinal": 4,
+      "name": "triton_poi_fused__to_copy_add_convolution_embedding_native_layer_norm_transpose_view_2",
+      "kind": "kernel",
+      "read_sectors": 74672,
+      "write_sectors": 18460,
+      "write_is_proxy": true,
+      "us": 4.928,
+      "base_sector": 334848
+    },
+    {
+      "ordinal": 5,
+      "name": "nvjet_sm110_tst_128x128_64x6_1x2_h_bz_bias_TNT",
+      "kind": "kernel",
+      "read_sectors": 102325,
+      "write_sectors": 18521,
+      "write_is_proxy": true,
+      "us": 15.872,
+      "base_sector": 428032
+    },
+    {
+      "ordinal": 6,
+      "name": "nvjet_sm110_tst_128x128_64x6_1x2_h_bz_bias_TNT",
+      "kind": "kernel",
+      "read_sectors": 102350,
+      "write_sectors": 18469,
+      "write_is_proxy": true,
+      "us": 12.864,
+      "base_sector": 549888
+    },
+    {
+      "ordinal": 7,
+      "name": "nvjet_sm110_tst_128x128_64x6_1x2_h_bz_bias_TNT",
+      "kind": "kernel",
+      "read_sectors": 102370,
+      "write_sectors": 18465,
+      "write_is_proxy": true,
+      "us": 15.488,
+      "base_sector": 670720
+    },
+    {
+      "ordinal": 8,
+      "name": "triton_poi_fused__scaled_dot_product_flash_attention_clone_transpose_view_3",
+      "kind": "kernel",
+      "read_sectors": 18648,
+      "write_sectors": 18458,
+      "write_is_proxy": true,
+      "us": 2.656,
+      "base_sector": 792576
+    },
+    {
+      "ordinal": 9,
+      "name": "triton_poi_fused__scaled_dot_product_flash_attention_clone_transpose_view_3",
+      "kind": "kernel",
+      "read_sectors": 18584,
+      "write_sectors": 18463,
+      "write_is_proxy": true,
+      "us": 2.08,
+      "base_sector": 830464
+    },
+    {
+      "ordinal": 10,
+      "name": "triton_poi_fused__scaled_dot_product_flash_attention_clone_transpose_view_3",
+      "kind": "kernel",
+      "read_sectors": 18653,
+      "write_sectors": 18492,
+      "write_is_proxy": true,
+      "us": 2.176,
+      "base_sector": 868352
+    },
+    {
+      "ordinal": 11,
+      "name": "void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<96, 128, 64, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<96, 128, 64, 4, cutlass::bfloat16_t> >, false, false, false, false, false, false, false, false>(pytorch_flash::Flash_fwd_params)",
+      "kind": "kernel",
+      "read_sectors": 57273,
+      "write_sectors": 23625,
+      "write_is_proxy": true,
+      "us": 17.856,
+      "base_sector": 906240
+    },
+    {
+      "ordinal": 12,
+      "name": "triton_poi_fused_clone_transpose_4",
+      "kind": "kernel",
+      "read_sectors": 18695,
+      "write_sectors": 18490,
+      "write_is_proxy": true,
+      "us": 3.584,
+      "base_sector": 988160
+    },
+    {
+      "ordinal": 13,
+      "name": "nvjet_sm110_tst_128x128_64x6_1x2_h_bz_bias_TNT",
+      "kind": "kernel",
+      "read_sectors": 102336,
+      "write_sectors": 18493,
+      "write_is_proxy": true,
+      "us": 12.992,
+      "base_sector": 1026048
+    },
+    {
+      "ordinal": 14,
+      "name": "triton_red_fused__to_copy_add_convolution_embedding_native_layer_norm_transpose_view_5",
+      "kind": "kernel",
+      "read_sectors": 93154,
+      "write_sectors": 36898,
+      "write_is_proxy": true,
+      "us": 12.544,
+      "base_sector": 1146880
+    },
+    {
+      "ordinal": 15,
+      "name": "nvjet_sm110_tst_224x128_64x7_1x2_2cta_h_bz_bias_TNN",
+      "kind": "kernel",
+      "read_sectors": 329807,
+      "write_sectors": 69119,
+      "write_is_proxy": true,
+      "us": 49.825,
+      "base_sector": 1277952
+    },
+    {
+      "ordinal": 16,
+      "name": "triton_poi_fused_gelu_view_6",
+      "kind": "kernel",
+      "read_sectors": 69288,
+      "write_sectors": 68958,
+      "write_is_proxy": true,
+      "us": 12.48,
+      "base_sector": 1677312
+    },
+    {
+      "ordinal": 17,
+      "name": "nvjet_sm110_tst_144x128_64x6_4x1_v_bz_bias_TNN",
+      "kind": "kernel",
+      "read_sectors": 380434,
+      "write_sectors": 18774,
+      "write_is_proxy": true,
+      "us": 49.568,
+      "base_sector": 1816576
+    },
+    {
+      "ordinal": 18,
+      "name": "triton_red_fused_add_native_layer_norm_view_7",
+      "kind": "kernel",
+      "read_sectors": 38558,
+      "write_sectors": 18532,
+      "write_is_proxy": true,
+      "us": 9.472,
+      "base_sector": 2215936
+    },
+    {
+      "ordinal": 19,
+      "name": "nvjet_sm110_tst_128x128_64x6_1x2_h_bz_bias_TNT",
+      "kind": "kernel",
+      "read_sectors": 102325,
+      "write_sectors": 18668,
+      "write_is_proxy": true,
+      "us": 14.048,
+      "base_sector": 2273280
+    },
+    {
+      "ordinal": 20,
+      "name": "nvjet_sm110_tst_128x128_64x6_1x2_h_bz_bias_TNT",
+      "kind": "kernel",
+      "read_sectors": 102313,
+      "write_sectors": 18465,
+      "write_is_proxy": true,
+      "us": 13.12,
+      "base_sector": 2395136
+    },
+    {
+      "ordinal": 21,
+      "name": "nvjet_sm110_tst_128x128_64x6_1x2_h_bz_bias_TNT",
+      "kind": "kernel",
+      "read_sectors": 102322,
+      "write_sectors": 18469,
+      "write_is_proxy": true,
+      "us": 13.088,
+      "base_sector": 2515968
+    },
+    {
+      "ordinal": 22,
+      "name": "triton_poi_fused__scaled_dot_product_flash_attention_clone_transpose_view_3",
+      "kind": "kernel",
+      "read_sectors": 18643,
+      "write_sectors": 18458,
+      "write_is_proxy": true,
+      "us": 2.24,
+      "base_sector": 2636800
+    },
+    {
+      "ordinal": 23,
+      "name": "triton_poi_fused__scaled_dot_product_flash_attention_clone_transpose_view_3",
+      "kind": "kernel",
+      "read_sectors": 18667,
+      "write_sectors": 18459,
+      "write_is_proxy": true,
+      "us": 2.08,
+      "base_sector": 2674688
+    },
+    {
+      "ordinal": 24,
+      "name": "triton_poi_fused__scaled_dot_product_flash_attention_clone_transpose_view_3",
+      "kind": "kernel",
+      "read_sectors": 18612,
+      "write_sectors": 18474,
+      "write_is_proxy": true,
+      "us": 2.08,
+      "base_sector": 2712576
+    },
+    {
+      "ordinal": 25,
+      "name": "void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<96, 128, 64, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<96, 128, 64, 4, cutlass::bfloat16_t> >, false, false, false, false, false, false, false, false>(pytorch_flash::Flash_fwd_params)",
+      "kind": "kernel",
+      "read_sectors": 57322,
+      "write_sectors": 23548,
+      "write_is_proxy": true,
+      "us": 17.728,
+      "base_sector": 2750464
+    },
+    {
+      "ordinal": 26,
+      "name": "triton_poi_fused_clone_transpose_4",
+      "kind": "kernel",
+      "read_sectors": 18667,
+      "write_sectors": 18634,
+      "write_is_proxy": true,
+      "us": 3.552,
+      "base_sector": 2831360
+    },
+    {
+      "ordinal": 27,
+      "name": "nvjet_sm110_tst_128x128_64x6_1x2_h_bz_bias_TNT",
+      "kind": "kernel",
+      "read_sectors": 102354,
+      "write_sectors": 18759,
+      "write_is_proxy": true,
+      "us": 13.056,
+      "base_sector": 2869248
+    },
+    {
+      "ordinal": 28,
+      "name": "triton_red_fused_add_native_layer_norm_view_8",
+      "kind": "kernel",
+      "read_sectors": 56465,
+      "write_sectors": 18479,
+      "write_is_proxy": true,
+      "us": 16.641,
+      "base_sector": 2991104
+    },
+    {
+      "ordinal": 29,
+      "name": "nvjet_sm110_tst_224x128_64x7_1x2_2cta_h_bz_bias_TNN",
+      "kind": "kernel",
+      "read_sectors": 329818,
+      "write_sectors": 69238,
+      "write_is_proxy": true,
+      "us": 42.656,
+      "base_sector": 3066880
+    },
+    {
+      "ordinal": 30,
+      "name": "triton_poi_fused_gelu_view_6",
+      "kind": "kernel",
+      "read_sectors": 69259,
+      "write_sectors": 69317,
+      "write_is_proxy": true,
+      "us": 12.544,
+      "base_sector": 3466240
+    },
+    {
+      "ordinal": 31,
+      "name": "nvjet_sm110_tst_144x128_64x6_4x1_v_bz_bias_TNN",
+      "kind": "kernel",
+      "read_sectors": 380441,
+      "write_sectors": 18950,
+      "write_is_proxy": true,
+      "us": 46.912,
+      "base_sector": 3605504
+    }
+  ],
+  "target_us": 66802.54669189453,
+  "phase": "ViT + language prefix / KV cache",
+  "kernel_count": 32,
+  "memory_units": 0,
+  "measured_duration_sum_us": 62794.754,
+  "read_bytes": 12630469632,
+  "write_proxy_bytes": 3965057568,
+  "alternate_launch_counter_proxies": [
+    {
+      "ordinal": 14,
+      "name": "triton_red_fused__to_copy_add_convolution_embedding_native_layer_norm_transpose_view_5",
+      "direction": "write",
+      "sectors": 36898,
+      "counter_grid": [
+        128,
+        1,
+        1
+      ],
+      "counter_block": [
+        512,
+        1,
+        1
+      ],
+      "timing_grid": [
+        32,
+        1,
+        1
+      ],
+      "timing_block": [
+        512,
+        1,
+        1
+      ]
+    },
+    {
+      "ordinal": 397,
+      "name": "triton_red_fused__to_copy_add_convolution_embedding_native_layer_norm_transpose_view_5",
+      "direction": "write",
+      "sectors": 36898,
+      "counter_grid": [
+        128,
+        1,
+        1
+      ],
+      "counter_block": [
+        512,
+        1,
+        1
+      ],
+      "timing_grid": [
+        32,
+        1,
+        1
+      ],
+      "timing_block": [
+        512,
+        1,
+        1
+      ]
+    },
+    {
+      "ordinal": 780,
+      "name": "triton_red_fused__to_copy_add_convolution_embedding_native_layer_norm_transpose_view_5",
+      "direction": "write",
+      "sectors": 36898,
+      "counter_grid": [
+        128,
+        1,
+        1
+      ],
+      "counter_block": [
+        512,
+        1,
+        1
+      ],
+      "timing_grid": [
+        32,
+        1,
+        1
+      ],
+      "timing_block": [
+        512,
+        1,
+        1
+      ]
+    },
+    {
+      "ordinal": 1167,
+      "name": "triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_20",
+      "direction": "read",
+      "sectors": 248468,
+      "counter_grid": [
+        484,
+        1,
+        1
+      ],
+      "counter_block": [
+        512,
+        1,
+        1
+      ],
+      "timing_grid": [
+        121,
+        1,
+        1
+      ],
+      "timing_block": [
+        128,
+        1,
+        1
+      ]
+    },
+    {
+      "ordinal": 1167,
+      "name": "triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_20",
+      "direction": "write",
+      "sectors": 124242,
+      "counter_grid": [
+        484,
+        1,
+        1
+      ],
+      "counter_block": [
+        512,
+        1,
+        1
+      ],
+      "timing_grid": [
+        121,
+        1,
+        1
+      ],
+      "timing_block": [
+        128,
+        1,
+        1
+      ]
+    },
+    {
+      "ordinal": 1197,
+      "name": "triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_20",
+      "direction": "read",
+      "sectors": 248459,
+      "counter_grid": [
+        484,
+        1,
+        1
+      ],
+      "counter_block": [
+        512,
+        1,
+        1
+      ],
+      "timing_grid": [
+        121,
+        1,
+        1
+      ],
+      "timing_block": [
+        128,
+        1,
+        1
+      ]
+    },
+    {
+      "ordinal": 1197,
+      "name": "triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_20",
+      "direction": "write",
+      "sectors": 124363,
+      "counter_grid": [
+        484,
+        1,
+        1
+      ],
+      "counter_block": [
+        512,
+        1,
+        1
+      ],
+      "timing_grid": [
+        121,
+        1,
+        1
+      ],
+      "timing_block": [
+        128,
+        1,
+        1
+      ]
+    },
+    {
+      "ordinal": 1227,
+      "name": "triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_20",
+      "direction": "read",
+      "sectors": 248485,
+      "counter_grid": [
+        484,
+        1,
+        1
+      ],
+      "counter_block": [
+        512,
+        1,
+        1
+      ],
+      "timing_grid": [
+        121,
+        1,
+        1
+      ],
+      "timing_block": [
+        128,
+        1,
+        1
+      ]
+    },
+    {
+      "ordinal": 1227,
+      "name": "triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_20",
+      "direction": "write",
+      "sectors": 123931,
+      "counter_grid": [
+        484,
+        1,
+        1
+      ],
+      "counter_block": [
+        512,
+        1,
+        1
+      ],
+      "timing_grid": [
+        121,
+        1,
+        1
+      ],
+      "timing_block": [
+        128,
+        1,
+        1
+      ]
+    },
+    {
+      "ordinal": 1257,
+      "name": "triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_20",
+      "direction": "read",
+      "sectors": 248483,
+      "counter_grid": [
+        484,
+        1,
+        1
+      ],
+      "counter_block": [
+        512,
+        1,
+        1
+      ],
+      "timing_grid": [
+        121,
+        1,
+        1
+      ],
+      "timing_block": [
+        128,
+        1,
+        1
+      ]
+    },
+    {
+      "ordinal": 1257,
+      "name": "triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_20",
+      "direction": "write",
+      "sectors": 123957,
+      "counter_grid": [
+        484,
+        1,
+        1
+      ],
+      "counter_block": [
+        512,
+        1,
+        1
+      ],
+      "timing_grid": [
+        121,
+        1,
+        1
+      ],
+      "timing_block": [
+        128,
+        1,
+        1
+      ]
+    },
+    {
+      "ordinal": 1287,
+      "name": "triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_20",
+      "direction": "read",
+      "sectors": 248499,
+      "counter_grid": [
+        484,
+        1,
+        1
+      ],
+      "counter_block": [
+        512,
+        1,
+        1
+      ],
+      "timing_grid": [
+        121,
+        1,
+        1
+      ],
+      "timing_block": [
+        128,
+        1,
+        1
+      ]
+    },
+    {
+      "ordinal": 1287,
+      "name": "triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_20",
+      "direction": "write",
+      "sectors": 124460,
+      "counter_grid": [
+        484,
+        1,
+        1
+      ],
+      "counter_block": [
+        512,
+        1,
+        1
+      ],
+      "timing_grid": [
+        121,
+        1,
+        1
+      ],
+      "timing_block": [
+        128,
+        1,
+        1
+      ]
+    },
+    {
+      "ordinal": 1317,
+      "name": "triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_20",
+      "direction": "read",
+      "sectors": 248486,
+      "counter_grid": [
+        484,
+        1,
+        1
+      ],
+      "counter_block": [
+        512,
+        1,
+        1
+      ],
+      "timing_grid": [
+        121,
+        1,
+        1
+      ],
+      "timing_block": [
+        128,
+        1,
+        1
+      ]
+    },
+    {
+      "ordinal": 1317,
+      "name": "triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_20",
+      "direction": "write",
+      "sectors": 124416,
+      "counter_grid": [
+        484,
+        1,
+        1
+      ],
+      "counter_block": [
+        512,
+        1,
+        1
+      ],
+      "timing_grid": [
+        121,
+        1,
+        1
+      ],
+      "timing_block": [
+        128,
+        1,
+        1
+      ]
+    },
+    {
+      "ordinal": 1347,
+      "name": "triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_20",
+      "direction": "read",
+      "sectors": 248467,
+      "counter_grid": [
+        484,
+        1,
+        1
+      ],
+      "counter_block": [
+        512,
+        1,
+        1
+      ],
+      "timing_grid": [
+        121,
+        1,
+        1
+      ],
+      "timing_block": [
+        128,
+        1,
+        1
+      ]
+    },
+    {
+      "ordinal": 1347,
+      "name": "triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_20",
+      "direction": "write",
+      "sectors": 124469,
+      "counter_grid": [
+        484,
+        1,
+        1
+      ],
+      "counter_block": [
+        512,
+        1,
+        1
+      ],
+      "timing_grid": [
+        121,
+        1,
+        1
+      ],
+      "timing_block": [
+        128,
+        1,
+        1
+      ]
+    },
+    {
+      "ordinal": 1377,
+      "name": "triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_20",
+      "direction": "read",
+      "sectors": 248461,
+      "counter_grid": [
+        484,
+        1,
+        1
+      ],
+      "counter_block": [
+        512,
+        1,
+        1
+      ],
+      "timing_grid": [
+        121,
+        1,
+        1
+      ],
+      "timing_block": [
+        128,
+        1,
+        1
+      ]
+    },
+    {
+      "ordinal": 1377,
+      "name": "triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_20",
+      "direction": "write",
+      "sectors": 124237,
+      "counter_grid": [
+        484,
+        1,
+        1
+      ],
+      "counter_block": [
+        512,
+        1,
+        1
+      ],
+      "timing_grid": [
+        121,
+        1,
+        1
+      ],
+      "timing_block": [
+        128,
+        1,
+        1
+      ]
+    },
+    {
+      "ordinal": 1407,
+      "name": "triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_20",
+      "direction": "read",
+      "sectors": 248493,
+      "counter_grid": [
+        484,
+        1,
+        1
+      ],
+      "counter_block": [
+        512,
+        1,
+        1
+      ],
+      "timing_grid": [
+        121,
+        1,
+        1
+      ],
+      "timing_block": [
+        128,
+        1,
+        1
+      ]
+    },
+    {
+      "ordinal": 1407,
+      "name": "triton_red_fused__to_copy__unsafe_view_add_mean_mul_pow_rsqrt_20",
+      "direction": "write",
+      "sectors": 123945,
+      "counter_grid": [
+        484,
+        1,
+        1
+      ],
+      "counter_block": [
+        512,
+        1,
+        1
+      ],
+      "timing_grid": [
+        121,
+        1,
+        1
+      ],
+      "timing_block": [
+        128,
+        1,
+        1
+      ]
+    }
+  ],
+  "timeline_spans_us": [
+    74540.05078125,
+    74295.2919921875,
+    74406.98681640625,
+    81882.748046875,
+    73961.53369140625
+  ],
+  "source_sha256": {
+    "compiled-prefix-0.json": "29dff95796419052b2ef0a038dcc54edc671cb2d1ffefc6fc6d78b8bf5c9fb6c",
+    "compiled-prefix-1.json": "cd6d0449bae45c6f2968ba862e0bba432a78109672c6a447c690fe988201d734",
+    "compiled-prefix-2.json": "e2c000c7aae39f82a82c09bfd555a0d452eaa663814381e8aa900f4b97650ce2",
+    "compiled-prefix-3.json": "a358d053910fa7b6295750105e2217b53f8b8fe5bfebbfe51b300b6f58816e46",
+    "compiled-prefix-4.json": "a033291ea0b8c470f854dad87faa847ee15b6b4907372e7211f119f7802b3445",
+    "reads.csv": "0e2caeedd34b2abac56d74c7acbc98516d51585e44adb9b94eff595b2267dda9",
+    "writes.csv": "cbc925111240cd90d165ddfc0637d1b084ad499701ec25a3b5e8daf46baa906d",
+    "capture-summary.json": "ccbae3d1b06b974feeaa0a53db7f052a41a5a48bc1d4d6812d272f2f7582ef09"
+  },
+  "assumptions": {
+    "addresses": "Sequential synthetic sectors with the same channel striping as the old model",
+    "arrivals": "Uniform releases over the measured kernel interval",
+    "timings": "Median duration of five ordinal-aligned CUPTI captures in microseconds",
+    "writeback": "Fit the fraction of measured L2 write sectors that reach DRAM"
+  }
+}

@@ -1,0 +1,321 @@
+{
+  "alternate_launch_proxies": [
+    {
+      "counter_block": [
+        256,
+        1,
+        1
+      ],
+      "counter_grid": [
+        648,
+        1,
+        1
+      ],
+      "direction": "read",
+      "name": "triton_red_fused_add_native_layer_norm_view_8",
+      "ordinal": 89,
+      "sectors": 467697,
+      "timing_block": [
+        256,
+        1,
+        1
+      ],
+      "timing_grid": [
+        1296,
+        1,
+        1
+      ]
+    },
+    {
+      "counter_block": [
+        256,
+        1,
+        1
+      ],
+      "counter_grid": [
+        648,
+        1,
+        1
+      ],
+      "direction": "read",
+      "name": "triton_red_fused_add_native_layer_norm_view_8",
+      "ordinal": 125,
+      "sectors": 467704,
+      "timing_block": [
+        256,
+        1,
+        1
+      ],
+      "timing_grid": [
+        1296,
+        1,
+        1
+      ]
+    },
+    {
+      "counter_block": [
+        256,
+        1,
+        1
+      ],
+      "counter_grid": [
+        648,
+        1,
+        1
+      ],
+      "direction": "read",
+      "name": "triton_red_fused_add_native_layer_norm_view_8",
+      "ordinal": 161,
+      "sectors": 467661,
+      "timing_block": [
+        256,
+        1,
+        1
+      ],
+      "timing_grid": [
+        1296,
+        1,
+        1
+      ]
+    },
+    {
+      "counter_block": [
+        256,
+        1,
+        1
+      ],
+      "counter_grid": [
+        648,
+        1,
+        1
+      ],
+      "direction": "read",
+      "name": "triton_red_fused_add_native_layer_norm_view_8",
+      "ordinal": 197,
+      "sectors": 467685,
+      "timing_block": [
+        256,
+        1,
+        1
+      ],
+      "timing_grid": [
+        1296,
+        1,
+        1
+      ]
+    },
+    {
+      "counter_block": [
+        256,
+        1,
+        1
+      ],
+      "counter_grid": [
+        648,
+        1,
+        1
+      ],
+      "direction": "read",
+      "name": "triton_red_fused_add_native_layer_norm_view_8",
+      "ordinal": 233,
+      "sectors": 467702,
+      "timing_block": [
+        256,
+        1,
+        1
+      ],
+      "timing_grid": [
+        1296,
+        1,
+        1
+      ]
+    },
+    {
+      "counter_block": [
+        256,
+        1,
+        1
+      ],
+      "counter_grid": [
+        648,
+        1,
+        1
+      ],
+      "direction": "read",
+      "name": "triton_red_fused_add_native_layer_norm_view_8",
+      "ordinal": 269,
+      "sectors": 467739,
+      "timing_block": [
+        256,
+        1,
+        1
+      ],
+      "timing_grid": [
+        1296,
+        1,
+        1
+      ]
+    },
+    {
+      "counter_block": [
+        256,
+        1,
+        1
+      ],
+      "counter_grid": [
+        648,
+        1,
+        1
+      ],
+      "direction": "read",
+      "name": "triton_red_fused_add_native_layer_norm_view_8",
+      "ordinal": 305,
+      "sectors": 467722,
+      "timing_block": [
+        256,
+        1,
+        1
+      ],
+      "timing_grid": [
+        1296,
+        1,
+        1
+      ]
+    },
+    {
+      "counter_block": [
+        256,
+        1,
+        1
+      ],
+      "counter_grid": [
+        648,
+        1,
+        1
+      ],
+      "direction": "read",
+      "name": "triton_red_fused_add_native_layer_norm_view_8",
+      "ordinal": 341,
+      "sectors": 467688,
+      "timing_block": [
+        256,
+        1,
+        1
+      ],
+      "timing_grid": [
+        1296,
+        1,
+        1
+      ]
+    },
+    {
+      "counter_block": [
+        256,
+        1,
+        1
+      ],
+      "counter_grid": [
+        648,
+        1,
+        1
+      ],
+      "direction": "read",
+      "name": "triton_red_fused_add_native_layer_norm_view_8",
+      "ordinal": 377,
+      "sectors": 467719,
+      "timing_block": [
+        256,
+        1,
+        1
+      ],
+      "timing_grid": [
+        1296,
+        1,
+        1
+      ]
+    },
+    {
+      "counter_block": [
+        256,
+        1,
+        1
+      ],
+      "counter_grid": [
+        648,
+        1,
+        1
+      ],
+      "direction": "read",
+      "name": "triton_red_fused_add_native_layer_norm_view_8",
+      "ordinal": 413,
+      "sectors": 467720,
+      "timing_block": [
+        256,
+        1,
+        1
+      ],
+      "timing_grid": [
+        1296,
+        1,
+        1
+      ]
+    },
+    {
+      "counter_block": [
+        256,
+        1,
+        1
+      ],
+      "counter_grid": [
+        648,
+        1,
+        1
+      ],
+      "direction": "read",
+      "name": "triton_red_fused_add_native_layer_norm_view_8",
+      "ordinal": 449,
+      "sectors": 467728,
+      "timing_block": [
+        256,
+        1,
+        1
+      ],
+      "timing_grid": [
+        1296,
+        1,
+        1
+      ]
+    },
+    {
+      "counter_block": [
+        256,
+        1,
+        1
+      ],
+      "counter_grid": [
+        648,
+        1,
+        1
+      ],
+      "direction": "read",
+      "name": "triton_red_fused_add_native_layer_norm_view_8",
+      "ordinal": 485,
+      "sectors": 467736,
+      "timing_block": [
+        256,
+        1,
+        1
+      ],
+      "timing_grid": [
+        1296,
+        1,
+        1
+      ]
+    }
+  ],
+  "kernel_count": 757,
+  "memory_units": 1,
+  "pi05_default_still_rejects_unlisted_launch_variant": true,
+  "read_bytes": 5378971392,
+  "write_proxy_bytes": 2243056704
+}

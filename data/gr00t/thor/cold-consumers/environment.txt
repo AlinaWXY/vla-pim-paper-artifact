@@ -1,0 +1,10 @@
+2026-11-17T23:13:39+08:00
+GPU 0: NVIDIA Thor (UUID: GPU-a7c66ad2-6dbb-0ab8-c1a2-37ba6dba3600)
+NV Power Mode: MAXN
+0
+Pi0.5 cold source /var/tmp/anonymous-ae-nonlinear-thor.sNidva/precision/results.json, eviction MiB 192
+f841d7ae0c37e11d9fbe802a63e7de2080ad8b75924cec4f0632c4fe48a91198  /var/tmp/anonymous-gr00t-n16-cold.DAXkQZ/tools/capture_gr00t_ae.py
+53d9261c0d4ba6deb1e9934d904f7f0b9841334e588eb58b2a7af63881ba96c1  /var/tmp/anonymous-gr00t-n16-cold.DAXkQZ/tools/capture_gr00t_cold_consumers.py
+f58ba1ef07211843952e517d0c7267a507281f4792aaae22d803aaf0c365ca89  /var/tmp/anonymous-gr00t-n16-cold.DAXkQZ/reference/2026-11-15/benchmarks/bench.py
+059ab02d227f8b896c336970114c0515e77cb011c844721b03f0428963a93881  /var/tmp/anonymous-gr00t-n16-cold.DAXkQZ/fixture.json
+f398aa7546be07d8a84105bd2f952aae6860a98e2a90d61c12fd90abbe36b93b  /var/tmp/anonymous-ae-nonlinear-thor.sNidva/precision/results.json

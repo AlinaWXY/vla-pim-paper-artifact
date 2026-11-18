@@ -1,0 +1,38 @@
+{
+  "mode": "Case b AE solo, charge GPU-bound DRAM reads in existing cold-cache GPU kernel timings",
+  "slurm_job": "2043562_10",
+  "steps": 10,
+  "layers_per_step": 18,
+  "native_raw_sha256": "55ece92bcb7e7728103618751ec087c776f804863819ba92137fe263a7dfb969",
+  "separate_dram_to_gpu_read_bytes": 0,
+  "excluded_duplicate_read_bytes": 418775040,
+  "gpu_to_pim_write_bytes": 704839680,
+  "ae_ms": "56.94669288",
+  "pim_ms": "46.011895034",
+  "gpu_ms": "10.934797846",
+  "gpu_action_projections_ms": "0.126551208",
+  "pim_stage_ms": {
+    "qkv": "11.343874654",
+    "rope_export": "0",
+    "rope_import": "0.216226822",
+    "q_exchange_export": "0.107880318",
+    "q_exchange_import": "0",
+    "qkt": "8.097994128",
+    "pv": "3.183580442",
+    "o": "3.834289802",
+    "gate_up": "12.781394360",
+    "down": "6.446654508"
+  },
+  "ae_step_ms": {
+    "1": "5.694517332",
+    "2": "5.700458624",
+    "3": "5.694299716",
+    "4": "5.692327102",
+    "5": "5.695484410",
+    "6": "5.690763456",
+    "7": "5.694855012",
+    "8": "5.694372880",
+    "9": "5.694789352",
+    "10": "5.694824996"
+  }
+}

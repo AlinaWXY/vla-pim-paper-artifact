@@ -1,0 +1,2 @@
+# Preserve release bytes for reproducible checksums.
+* -text

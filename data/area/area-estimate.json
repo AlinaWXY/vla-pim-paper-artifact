@@ -1,0 +1,18 @@
+{
+  "cell_area_um2": {
+    "mac": 2999.864141,
+    "rope": 785.045515,
+    "input_1k": 3859.661247,
+    "input_512b": 1927.782136,
+    "output_2k": 9023.795069,
+    "output_128b": 726.404746
+  },
+  "banks_per_reference_die": 16,
+  "logic_to_dram_scale": 45.94202898550725,
+  "reference_die_mm2": 60.92,
+  "target_area_mm2": 12.252456842026668,
+  "base_area_mm2": 4.156137215747247,
+  "target_overhead_percent": 20.112371703917706,
+  "increment_area_mm2": 8.09631962627942,
+  "note": "Reference-normalized estimate from cell-area reports; excludes rank control, cross-bank interconnect, PHY, clock tree and routing."
+}

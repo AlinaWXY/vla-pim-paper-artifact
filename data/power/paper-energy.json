@@ -1,0 +1,13 @@
+{
+  "baseline_board_W": 98.85179792586243,
+  "baseline_coupled_cycle_ms": 137.07,
+  "baseline_energy_J": 13.549615941697963,
+  "gpu_proxy_W": 50.35811665878143,
+  "dram_model_W": 12.67746,
+  "pim_logic_reference_W": 5.40928,
+  "heterogeneous_cycle_ms": 77.677674,
+  "heterogeneous_energy_J": 5.316637262517553,
+  "energy_reduction_percent": 60.76171246923696,
+  "source": "data/power/results/fresh-cache-energy-ratio-with-pim-logic.json",
+  "note": "Paper comparison uses the coupled 137.07 ms baseline; the archived fresh-cache ratio separately uses a steady-state completion period. GPU proxy and PIM logic are estimates."
+}

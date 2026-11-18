@@ -1,0 +1,16 @@
+************************************
+Report : units
+Design : actpim_output_2k
+Version: W-2024.09-SP5
+Date   : Sun Nov 15 04:46:16 2026
+
+************************************
+Units
+------------------------------------
+Time_unit            : 1.0e-12 Second(ps)
+Capacitive_load_unit : 1.0e-15 Farad(fF)
+Resistance_unit      : 1000 Ohm(kOhm)
+Voltage_unit         : 1 Volt
+Power_unit           : N/A
+Current_unit         : 1.0e-03 Amp(mA)
+1

@@ -1,0 +1,63 @@
+{
+  "baseline_snapshot": "2026-11-17-g-power-rerun/source",
+  "generated_variants": 5,
+  "model": "pi05",
+  "programs_and_ae_schedules_sha256_match": true,
+  "raw_replay": [
+    {
+      "ae_elapsed_us": 56946.69288,
+      "bytes_identical": true,
+      "case": "b",
+      "raw_sha256": "55ece92bcb7e7728103618751ec087c776f804863819ba92137fe263a7dfb969",
+      "reference": "GR00T N1.6/results/pi05-regression/archived/case-b-single-read.bauEXp/10/raw.json",
+      "run_kind": "ae_solo",
+      "total_us": 56946.69288
+    },
+    {
+      "ae_elapsed_us": 60327.083544,
+      "bytes_identical": true,
+      "case": "c",
+      "raw_sha256": "89095d62efde1e068072e84ef319dfd2e75e48ab4846bf03a36facb8b54d15db",
+      "reference": "data/pi05/evidence/compiled-single-read-matrix.683RuH/compiled/c/raw.json",
+      "run_kind": "combined",
+      "total_us": 86766.105902
+    },
+    {
+      "ae_elapsed_us": 57898.038744,
+      "bytes_identical": true,
+      "case": "d",
+      "raw_sha256": "516e94c8c631bca9252c36d7d5069bad7302ef23752347b0ab4c32c42bbda716",
+      "reference": "data/pi05/evidence/compiled-single-read-matrix.683RuH/compiled/d/raw.json",
+      "run_kind": "combined",
+      "total_us": 84036.430226
+    },
+    {
+      "ae_elapsed_us": 56828.808792,
+      "bytes_identical": true,
+      "case": "e",
+      "raw_sha256": "4a9306a3b76f3910a1d88682f8b58cad4b193d85c41fd4c53ca1548a20d6c168",
+      "reference": "data/pi05/evidence/compiled-single-read-matrix.683RuH/compiled/e/raw.json",
+      "run_kind": "combined",
+      "total_us": 83570.593162
+    },
+    {
+      "ae_elapsed_us": 69271.388172,
+      "bytes_identical": true,
+      "case": "f",
+      "raw_sha256": "1567d68c93dc46f640ab6c703c6e3aec4bba3d6a76d0089e10c764a8e07cd360",
+      "reference": "data/pi05/evidence/compiled-single-read-matrix.683RuH/compiled/f/raw.json",
+      "run_kind": "combined",
+      "total_us": 78165.433822
+    },
+    {
+      "ae_elapsed_us": 68644.552788,
+      "bytes_identical": true,
+      "case": "g",
+      "raw_sha256": "6d1bd4c5d8139497473db4237735dbbe1d591736831074c68695d0ce70f5eb0e",
+      "reference": "data/pi05/evidence/compiled-single-read-matrix.683RuH/compiled/g/raw.json",
+      "run_kind": "combined",
+      "total_us": 77677.673822
+    }
+  ],
+  "source_sha256_excluded_only_for_programs": true
+}

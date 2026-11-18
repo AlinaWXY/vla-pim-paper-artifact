@@ -1,0 +1,949 @@
+{
+  "accounting": [
+    {
+      "case": "n16-b",
+      "cross_kv_write_bytes": 50331648,
+      "preserved_pim_write_bytes": 748683264,
+      "removed_pim_read_bytes": 390070272
+    },
+    {
+      "case": "n16-c",
+      "cross_kv_write_bytes": 50331648,
+      "preserved_pim_write_bytes": 748683264,
+      "removed_pim_read_bytes": 390070272
+    },
+    {
+      "case": "n16-d",
+      "cross_kv_write_bytes": 37748736,
+      "preserved_pim_write_bytes": 699400192,
+      "removed_pim_read_bytes": 335544320
+    },
+    {
+      "case": "n16-f",
+      "cross_kv_write_bytes": 37748736,
+      "preserved_pim_write_bytes": 680525824,
+      "removed_pim_read_bytes": 329252864
+    }
+  ],
+  "calibration": {
+    "kernel_count": 757,
+    "kernel_relative_error_median": 0.03800735294117631,
+    "kernel_relative_error_p90": 0.43391085325976997,
+    "passed": true,
+    "relative_error": 0.0013968198431806474,
+    "target_us": 58547.80139923096,
+    "total_us": 58629.58213,
+    "work_units": 758
+  },
+  "capture_sources": {
+    "ae-latency.json": "ef2bb62ba9af1b6254daf52573cd2a5be4ae66ec2e5ddf2df5025790a5deb02b",
+    "capture-notes.json": "1e8a492fd22f6d897f02f3d050971ff7b2b984f9397c4d2eccffd8e05c9a8c49",
+    "capture-summary.json": "b4da37b8be55e32f40cc7b6fe76c921ac3f5f7e8d2f0b5130b71f94824796b07",
+    "cold-consumers.json": "69c089e1f885dd3f697e443ac0e2538fd0c92ca783d3b184b4140845e53848ab",
+    "compiled-prefix-0.json": "53971eb7ad49cf1a5e03f2bddeb93fc59d0c3b20950d38addf4bafe53fc54087",
+    "compiled-prefix-1.json": "cfe6c7c40f5b15b054378fc43e969f52e0df1b1f9ce2df6ad2d3e414d89b31fe",
+    "compiled-prefix-2.json": "2fd2fb0961b1a703bd6b5af06d376b0d7dbb2fd7ed91501821338634deccf275",
+    "compiled-prefix-3.json": "0f02296e66f9a4a5de008af687afec0de3c013c5af2613dc1eeb4316dde657e0",
+    "compiled-prefix-4.json": "02858f58e85853efc70da6232e3638b56c7b2df03dfbcf7752c17b468adf3140",
+    "fixture.json": "d24c2c6a61d46ca39675c4a71ce1c367f0b1d33c5321df8f8cf1cec0357430b8",
+    "launch-variant-evidence.json": "de75cc61ba2014403674c7103fac60085cd31c144690a7ef29cf64529c8837ce"
+  },
+  "cold_profile_sha256": "69c089e1f885dd3f697e443ac0e2538fd0c92ca783d3b184b4140845e53848ab",
+  "compiled_ae": {
+    "mean": 45.578651428222656,
+    "p50": 44.0524959564209,
+    "samples": [
+      55.84419250488281,
+      55.73904037475586,
+      51.2815055847168,
+      44.068607330322266,
+      44.10224151611328,
+      43.98476791381836,
+      44.11337661743164,
+      43.96268844604492,
+      44.26911926269531,
+      44.33612823486328,
+      44.199745178222656,
+      44.00422286987305,
+      44.10483169555664,
+      43.855777740478516,
+      44.02153778076172,
+      43.98553466796875,
+      43.9628791809082,
+      43.87580871582031,
+      44.03638458251953,
+      43.82463836669922
+    ]
+  },
+  "fixture": {
+    "attention": "packed SDPA",
+    "cameras": 3,
+    "checkpoint_revision": "d0814e7ecb19202e7c8468b46098b0b7ef3a6d61",
+    "compile_options": {
+      "emulate_precision_casts": true,
+      "max_autotune": true,
+      "triton.cudagraphs": false,
+      "triton.unique_kernel_names": true
+    },
+    "gpu": "NVIDIA Thor",
+    "horizon": 15,
+    "image_size": [
+      480,
+      640
+    ],
+    "image_size_order": "height,width",
+    "image_tokens": 324,
+    "model": "gr00t_n16",
+    "preprocessing": {
+      "crop_fraction": 0.95,
+      "kind": "Checkpoint evaluation image transform followed by Eagle alignment",
+      "output_sizes_wh": [
+        [
+          340,
+          256
+        ],
+        [
+          340,
+          256
+        ],
+        [
+          340,
+          256
+        ]
+      ],
+      "shortest_image_edge": 256,
+      "stages": [
+        {
+          "name": "SmallestMaxSize",
+          "size_wh": [
+            341,
+            256
+          ]
+        },
+        {
+          "name": "FractionalCenterCrop",
+          "size_wh": [
+            323,
+            243
+          ]
+        },
+        {
+          "name": "SmallestMaxSize",
+          "size_wh": [
+            340,
+            256
+          ]
+        }
+      ]
+    },
+    "processed_image_sizes": [
+      [
+        252,
+        336
+      ],
+      [
+        252,
+        336
+      ],
+      [
+        252,
+        336
+      ]
+    ],
+    "prompt": "Pick up the object and place it on the table.",
+    "queries": 16,
+    "seed": 17,
+    "source_revision": "9b37aa1ce69c73c6d165233fa88128283bba4508",
+    "text_tokens": 47,
+    "torch": "2.11.0+cu130",
+    "vit_input_shapes": [
+      [
+        1,
+        3,
+        252,
+        336
+      ],
+      [
+        1,
+        3,
+        252,
+        336
+      ],
+      [
+        1,
+        3,
+        252,
+        336
+      ]
+    ],
+    "vl_tokens": 371
+  },
+  "original_thor_profile": {
+    "action_output_shape": [
+      1,
+      15,
+      128
+    ],
+    "ae_cross_kv": "Official get_action path, K/V projected during each denoising step",
+    "ae_scope": "Full checkpoint action head including state/VL normalization, encoders, 32-layer DiT and decoder, four denoising steps",
+    "attention": "packed SDPA",
+    "cameras": 3,
+    "checkpoint_revision": "d0814e7ecb19202e7c8468b46098b0b7ef3a6d61",
+    "compile_options": {
+      "emulate_precision_casts": true,
+      "max_autotune": true,
+      "triton.cudagraphs": false,
+      "triton.unique_kernel_names": true
+    },
+    "completed_at_utc": "2026-11-17T18:51:26.892224+00:00",
+    "dit_query_shapes": [
+      [
+        1,
+        16,
+        1536
+      ],
+      [
+        1,
+        16,
+        1536
+      ],
+      [
+        1,
+        16,
+        1536
+      ],
+      [
+        1,
+        16,
+        1536
+      ]
+    ],
+    "eager_compile_embedding_comparison": {
+      "max_abs": 225.75,
+      "per_token_relative_error_p95": 0.11219505965709686,
+      "reference_max_abs": 292.0,
+      "relative_rms": 0.11181952804327011
+    },
+    "gpu": "NVIDIA Thor",
+    "horizon": 15,
+    "host": "fact-thor",
+    "image_size": [
+      480,
+      640
+    ],
+    "image_size_order": "height,width",
+    "image_tokens": 324,
+    "input_kind": "Seeded random uint8 images, zero state, fixed English instruction",
+    "model": "gr00t_n16",
+    "nonlinear_norms": {
+      "adaln": {
+        "bias": false,
+        "eps": 1e-05,
+        "shape": [
+          1536
+        ],
+        "weight": false
+      },
+      "output": {
+        "bias": false,
+        "eps": 1e-06,
+        "shape": [
+          1536
+        ],
+        "weight": false
+      },
+      "post_attention": {
+        "bias": false,
+        "eps": 1e-05,
+        "shape": [
+          1536
+        ],
+        "weight": false
+      },
+      "vl": {
+        "bias": true,
+        "eps": 1e-05,
+        "shape": [
+          2048
+        ],
+        "weight": true
+      }
+    },
+    "phases": {
+      "ae": {
+        "compile": {
+          "cuda_ms": {
+            "mean": 44.07905445098877,
+            "p50": 44.007904052734375,
+            "p90": 44.344439315795896,
+            "samples": [
+              44.05062484741211,
+              43.946815490722656,
+              43.99590301513672,
+              43.86636734008789,
+              43.792640686035156,
+              44.104095458984375,
+              44.01990509033203,
+              43.821983337402344,
+              44.0382080078125,
+              44.2716178894043,
+              44.13468933105469,
+              44.18288040161133,
+              43.83631896972656,
+              43.73379135131836,
+              43.94998550415039,
+              43.965694427490234,
+              43.92588806152344,
+              44.78700637817383,
+              44.86140823364258,
+              44.295265197753906
+            ]
+          },
+          "wall_ms": {
+            "mean": 44.09969124935742,
+            "p50": 44.02639899853966,
+            "p90": 44.363790100760525,
+            "samples": [
+              44.09635799675016,
+              43.966496999928495,
+              44.01403500014567,
+              43.885727998713264,
+              43.81053399993107,
+              44.12331899948185,
+              44.038762996933656,
+              43.84217999904649,
+              44.05711599974893,
+              44.28941099831718,
+              44.15512400009902,
+              44.204698999237735,
+              43.8549669997883,
+              43.751635999797145,
+              43.96912499942118,
+              43.98379100166494,
+              43.944051998551004,
+              44.81002000102308,
+              44.882260997837875,
+              44.31420900073135
+            ]
+          }
+        },
+        "eager": {
+          "cuda_ms": {
+            "mean": 67.28665733337402,
+            "p50": 66.9605598449707,
+            "p90": 68.43064422607422,
+            "samples": [
+              67.73900604248047,
+              66.80944061279297,
+              66.83280181884766,
+              66.89266967773438,
+              67.15837097167969,
+              66.92726135253906,
+              66.94841766357422,
+              67.08672332763672,
+              67.20674896240234,
+              66.80691528320312,
+              66.97270202636719,
+              66.74642944335938,
+              67.04422760009766,
+              67.33135986328125,
+              66.82527923583984,
+              66.69977569580078,
+              66.8512954711914,
+              68.40863800048828,
+              69.8163833618164,
+              68.62870025634766
+            ]
+          },
+          "wall_ms": {
+            "mean": 67.31202100054361,
+            "p50": 66.98273450092529,
+            "p90": 68.45674050200614,
+            "samples": [
+              67.79206600185717,
+              66.83451700155274,
+              66.85938800001168,
+              66.91244000103325,
+              67.18337600250379,
+              66.95444099750603,
+              66.96833100068034,
+              67.10983199809561,
+              67.2282930026995,
+              66.8261770006211,
+              66.99713800117024,
+              66.76914100171416,
+              67.06847800160176,
+              67.35779999871738,
+              66.85001699952409,
+              66.71907199779525,
+              66.87591700028861,
+              68.43468300212407,
+              69.84405500043067,
+              68.65525800094474
+            ]
+          }
+        }
+      },
+      "vlm": {
+        "compile": {
+          "cuda_ms": {
+            "mean": 58.67400951385498,
+            "p50": 58.679391860961914,
+            "p90": 58.92425727844238,
+            "samples": [
+              58.919681549072266,
+              58.81721496582031,
+              58.80486297607422,
+              58.1693115234375,
+              58.64873504638672,
+              58.96543884277344,
+              58.84479904174805,
+              58.772254943847656,
+              59.07097625732422,
+              58.80403137207031,
+              58.639774322509766,
+              58.70070266723633,
+              58.61747360229492,
+              58.593345642089844,
+              58.638240814208984,
+              58.6247673034668,
+              57.870849609375,
+              58.4389762878418,
+              58.6580810546875,
+              58.880672454833984
+            ]
+          },
+          "wall_ms": {
+            "mean": 58.71139909995691,
+            "p50": 58.71553400174889,
+            "p90": 58.98582479967445,
+            "samples": [
+              58.98389399953885,
+              58.8544339989312,
+              58.84333300127764,
+              58.20491199847311,
+              58.68357500003185,
+              59.00320200089482,
+              58.882638997602044,
+              58.80926000099862,
+              59.10728399976506,
+              58.842722999543184,
+              58.67494300036924,
+              58.73527800213196,
+              58.652807001635665,
+              58.627203998184996,
+              58.67207600022084,
+              58.659382000769256,
+              57.906943999114446,
+              58.47321799956262,
+              58.69579000136582,
+              58.915083998726914
+            ]
+          }
+        },
+        "eager": {
+          "cuda_ms": {
+            "mean": 75.64204750061035,
+            "p50": 75.15150451660156,
+            "p90": 77.37618942260742,
+            "samples": [
+              75.76211547851562,
+              75.11373138427734,
+              75.08182525634766,
+              75.21052551269531,
+              75.07718658447266,
+              74.90128326416016,
+              74.7705307006836,
+              74.75782775878906,
+              74.93251037597656,
+              75.06339263916016,
+              74.80841827392578,
+              75.82633972167969,
+              78.40096282958984,
+              76.35164642333984,
+              78.1860122680664,
+              75.85820770263672,
+              77.28620910644531,
+              74.75692749023438,
+              75.18927764892578,
+              75.50601959228516
+            ]
+          },
+          "wall_ms": {
+            "mean": 75.67140294977435,
+            "p50": 75.18515149968152,
+            "p90": 77.40235519813723,
+            "samples": [
+              75.82474699665909,
+              75.14828000057605,
+              75.11066100050812,
+              75.23553600185551,
+              75.10397200167063,
+              74.92744599949219,
+              74.79836600032286,
+              74.78350800010958,
+              74.95986800131504,
+              75.09277300050599,
+              74.83674800096196,
+              75.85232099881978,
+              78.42678700035322,
+              76.38063000194961,
+              78.21376999709173,
+              75.88331399892922,
+              77.3121979982534,
+              74.78498999989824,
+              75.222022998787,
+              75.53012099742773
+            ]
+          }
+        }
+      }
+    },
+    "preprocessing": {
+      "crop_fraction": 0.95,
+      "kind": "Checkpoint evaluation image transform followed by Eagle alignment",
+      "output_sizes_wh": [
+        [
+          340,
+          256
+        ],
+        [
+          340,
+          256
+        ],
+        [
+          340,
+          256
+        ]
+      ],
+      "shortest_image_edge": 256,
+      "stages": [
+        {
+          "name": "SmallestMaxSize",
+          "size_wh": [
+            341,
+            256
+          ]
+        },
+        {
+          "name": "FractionalCenterCrop",
+          "size_wh": [
+            323,
+            243
+          ]
+        },
+        {
+          "name": "SmallestMaxSize",
+          "size_wh": [
+            340,
+            256
+          ]
+        }
+      ]
+    },
+    "processed_image_sizes": [
+      [
+        252,
+        336
+      ],
+      [
+        252,
+        336
+      ],
+      [
+        252,
+        336
+      ]
+    ],
+    "profile_repeats": 5,
+    "prompt": "Pick up the object and place it on the table.",
+    "queries": 16,
+    "samples": 20,
+    "seed": 17,
+    "source_revision": "9b37aa1ce69c73c6d165233fa88128283bba4508",
+    "source_sha256": {
+      "capture_gr00t_thor.py": "c3d3005b759159eb3a7420a13d0db38dfb36f3ac9f27cf0daf6603aae80147fc",
+      "profile_gr00t_resolution.py": "22b0d38ce982c240b9c2b9e7163dea97859025c73ca7a56713c62ea900c619a9"
+    },
+    "started_at_utc": "2026-11-17T18:46:53.194076+00:00",
+    "text_tokens": 47,
+    "timestep_embedding_width": 1536,
+    "timing_scope": "Separate GPU solo phases, inputs already on device, compilation and warmup excluded",
+    "torch": "2.11.0+cu130",
+    "vit_input_shapes": [
+      [
+        1,
+        3,
+        252,
+        336
+      ],
+      [
+        1,
+        3,
+        252,
+        336
+      ],
+      [
+        1,
+        3,
+        252,
+        336
+      ]
+    ],
+    "vl_tokens": 371,
+    "vlm_scope": "Eagle vision encoder, projection, and 16 Qwen3 layers",
+    "warmup": 10
+  },
+  "repeat_checks": [
+    {
+      "byte_identical": true,
+      "case": "n16-b",
+      "raw_sha256": [
+        "25ffef1058e4734238b49ac331f337ad3e6b229edbf687f819911dc9b8129e5d",
+        "25ffef1058e4734238b49ac331f337ad3e6b229edbf687f819911dc9b8129e5d"
+      ]
+    },
+    {
+      "byte_identical": true,
+      "case": "n16-c",
+      "raw_sha256": [
+        "7a16feb01fce8c58525c826f92514d6ae7b45a62036980cf9a6aa7c640aa5e62",
+        "7a16feb01fce8c58525c826f92514d6ae7b45a62036980cf9a6aa7c640aa5e62"
+      ]
+    },
+    {
+      "byte_identical": true,
+      "case": "n16-d",
+      "raw_sha256": [
+        "0f0eefa2cee41f8a27a21d29df93cd5ec929e61826d0d13b95b581dcef93cb66",
+        "0f0eefa2cee41f8a27a21d29df93cd5ec929e61826d0d13b95b581dcef93cb66"
+      ]
+    },
+    {
+      "byte_identical": true,
+      "case": "n16-f",
+      "raw_sha256": [
+        "7d82e65517bca28b699fe0d47a360c28e4567c66a228a467ca529113e581551e",
+        "7d82e65517bca28b699fe0d47a360c28e4567c66a228a467ca529113e581551e"
+      ]
+    }
+  ],
+  "vlm_trace": {
+    "alternate_launch_counter_proxies": [
+      {
+        "counter_block": [
+          256,
+          1,
+          1
+        ],
+        "counter_grid": [
+          648,
+          1,
+          1
+        ],
+        "direction": "read",
+        "name": "triton_red_fused_add_native_layer_norm_view_8",
+        "ordinal": 89,
+        "sectors": 467697,
+        "timing_block": [
+          256,
+          1,
+          1
+        ],
+        "timing_grid": [
+          1296,
+          1,
+          1
+        ]
+      },
+      {
+        "counter_block": [
+          256,
+          1,
+          1
+        ],
+        "counter_grid": [
+          648,
+          1,
+          1
+        ],
+        "direction": "read",
+        "name": "triton_red_fused_add_native_layer_norm_view_8",
+        "ordinal": 125,
+        "sectors": 467704,
+        "timing_block": [
+          256,
+          1,
+          1
+        ],
+        "timing_grid": [
+          1296,
+          1,
+          1
+        ]
+      },
+      {
+        "counter_block": [
+          256,
+          1,
+          1
+        ],
+        "counter_grid": [
+          648,
+          1,
+          1
+        ],
+        "direction": "read",
+        "name": "triton_red_fused_add_native_layer_norm_view_8",
+        "ordinal": 161,
+        "sectors": 467661,
+        "timing_block": [
+          256,
+          1,
+          1
+        ],
+        "timing_grid": [
+          1296,
+          1,
+          1
+        ]
+      },
+      {
+        "counter_block": [
+          256,
+          1,
+          1
+        ],
+        "counter_grid": [
+          648,
+          1,
+          1
+        ],
+        "direction": "read",
+        "name": "triton_red_fused_add_native_layer_norm_view_8",
+        "ordinal": 197,
+        "sectors": 467685,
+        "timing_block": [
+          256,
+          1,
+          1
+        ],
+        "timing_grid": [
+          1296,
+          1,
+          1
+        ]
+      },
+      {
+        "counter_block": [
+          256,
+          1,
+          1
+        ],
+        "counter_grid": [
+          648,
+          1,
+          1
+        ],
+        "direction": "read",
+        "name": "triton_red_fused_add_native_layer_norm_view_8",
+        "ordinal": 233,
+        "sectors": 467702,
+        "timing_block": [
+          256,
+          1,
+          1
+        ],
+        "timing_grid": [
+          1296,
+          1,
+          1
+        ]
+      },
+      {
+        "counter_block": [
+          256,
+          1,
+          1
+        ],
+        "counter_grid": [
+          648,
+          1,
+          1
+        ],
+        "direction": "read",
+        "name": "triton_red_fused_add_native_layer_norm_view_8",
+        "ordinal": 269,
+        "sectors": 467739,
+        "timing_block": [
+          256,
+          1,
+          1
+        ],
+        "timing_grid": [
+          1296,
+          1,
+          1
+        ]
+      },
+      {
+        "counter_block": [
+          256,
+          1,
+          1
+        ],
+        "counter_grid": [
+          648,
+          1,
+          1
+        ],
+        "direction": "read",
+        "name": "triton_red_fused_add_native_layer_norm_view_8",
+        "ordinal": 305,
+        "sectors": 467722,
+        "timing_block": [
+          256,
+          1,
+          1
+        ],
+        "timing_grid": [
+          1296,
+          1,
+          1
+        ]
+      },
+      {
+        "counter_block": [
+          256,
+          1,
+          1
+        ],
+        "counter_grid": [
+          648,
+          1,
+          1
+        ],
+        "direction": "read",
+        "name": "triton_red_fused_add_native_layer_norm_view_8",
+        "ordinal": 341,
+        "sectors": 467688,
+        "timing_block": [
+          256,
+          1,
+          1
+        ],
+        "timing_grid": [
+          1296,
+          1,
+          1
+        ]
+      },
+      {
+        "counter_block": [
+          256,
+          1,
+          1
+        ],
+        "counter_grid": [
+          648,
+          1,
+          1
+        ],
+        "direction": "read",
+        "name": "triton_red_fused_add_native_layer_norm_view_8",
+        "ordinal": 377,
+        "sectors": 467719,
+        "timing_block": [
+          256,
+          1,
+          1
+        ],
+        "timing_grid": [
+          1296,
+          1,
+          1
+        ]
+      },
+      {
+        "counter_block": [
+          256,
+          1,
+          1
+        ],
+        "counter_grid": [
+          648,
+          1,
+          1
+        ],
+        "direction": "read",
+        "name": "triton_red_fused_add_native_layer_norm_view_8",
+        "ordinal": 413,
+        "sectors": 467720,
+        "timing_block": [
+          256,
+          1,
+          1
+        ],
+        "timing_grid": [
+          1296,
+          1,
+          1
+        ]
+      },
+      {
+        "counter_block": [
+          256,
+          1,
+          1
+        ],
+        "counter_grid": [
+          648,
+          1,
+          1
+        ],
+        "direction": "read",
+        "name": "triton_red_fused_add_native_layer_norm_view_8",
+        "ordinal": 449,
+        "sectors": 467728,
+        "timing_block": [
+          256,
+          1,
+          1
+        ],
+        "timing_grid": [
+          1296,
+          1,
+          1
+        ]
+      },
+      {
+        "counter_block": [
+          256,
+          1,
+          1
+        ],
+        "counter_grid": [
+          648,
+          1,
+          1
+        ],
+        "direction": "read",
+        "name": "triton_red_fused_add_native_layer_norm_view_8",
+        "ordinal": 485,
+        "sectors": 467736,
+        "timing_block": [
+          256,
+          1,
+          1
+        ],
+        "timing_grid": [
+          1296,
+          1,
+          1
+        ]
+      }
+    ],
+    "kernel_count": 757,
+    "memory_units": 1
+  }
+}

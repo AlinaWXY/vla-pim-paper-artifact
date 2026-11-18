@@ -1,0 +1,33 @@
+{
+  "array": "2074523",
+  "source_commit": "2240d5e74de3bae124292cf7873283d4d5295f74",
+  "binary_sha256": "0e8be90ee963638e19b39151d233768ec5a940c6f8f9d42be54f147a21bc8c4a",
+  "configs": {
+    "f": {
+      "config_sha256": "99039fcaf1de5a1f23aead5a43e056be1816743f42a6001d5814793042bcc515",
+      "input_paths": {
+        "spec_path": "data/pi05/configs/spec-k2.json",
+        "program_path": "data/pi05/evidence/compiled-single-read-matrix.683RuH/f/pim-program.json",
+        "ae_schedule_path": "data/pi05/evidence/compiled-single-read-matrix.683RuH/f/ae.json",
+        "vlm_path": "data/pi05/evidence/compiled-single-read-matrix.683RuH/compiled/vlm.json"
+      }
+    },
+    "g": {
+      "config_sha256": "c7c869c10970ff22e5d7b87bc3f4625afc3d61e8ba44582638fd506df0fb227b",
+      "input_paths": {
+        "spec_path": "data/pi05/configs/spec-k2.json",
+        "program_path": "data/pi05/evidence/compiled-single-read-matrix.683RuH/g/pim-program.json",
+        "ae_schedule_path": "data/pi05/evidence/compiled-single-read-matrix.683RuH/g/ae.json",
+        "vlm_path": "data/pi05/evidence/compiled-single-read-matrix.683RuH/compiled/vlm.json"
+      }
+    }
+  },
+  "input_sha256": {
+    "data/pi05/configs/spec-k2.json": "541dde44b28c466fe3847840a871e065f8c8cdfd5902ebb60a46ee74996c5900",
+    "data/pi05/evidence/compiled-single-read-matrix.683RuH/compiled/vlm.json": "877cbba5461ced6d2c3aa0714d1f6bf86bf4da21e664cb5383b731ccd5196a3b",
+    "data/pi05/evidence/compiled-single-read-matrix.683RuH/f/ae.json": "17ad5b8511f1e9f6becac18ce0da400765ab523709b6648f2f39f6b9b070b910",
+    "data/pi05/evidence/compiled-single-read-matrix.683RuH/f/pim-program.json": "ad01129ecbb62beb7146f2775421f0a7a7c471225fc1be0f51ccdd0b286951bf",
+    "data/pi05/evidence/compiled-single-read-matrix.683RuH/g/ae.json": "457c6b01788ca861174adb6d03a2d4c7a8612608dfd186d5f2aff8a1dbe301d8",
+    "data/pi05/evidence/compiled-single-read-matrix.683RuH/g/pim-program.json": "edb55da5254ed01ccc74a1001f85ac15332a343afaefe84c595b7b554aef2368"
+  }
+}

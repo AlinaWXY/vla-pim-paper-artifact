@@ -1,0 +1,38 @@
+{
+  "arithmetic_helpers_included": true,
+  "excluded": "Old PIM traces, external arbitration, DQ postprocessing and all latency offsets",
+  "generated": {
+    "ae-feature_gpu_before.json": "a5ed98fe49d9d9f248402f0cfcbd2826b2796e7981c9a2841c4eba8401799606",
+    "ae-token_gpu_after.json": "3ffd64f1d8cc4d048cb763c2a4923e5a8763c5653f30cf165b781b9577aa4e0a",
+    "ae-token_gpu_before.json": "dc23dfc9d2db168a77fdfacedd5f6cf8f99b81760eff7cdefe97789c3b78e7f2",
+    "ae-token_local_after.json": "0ecf6eba432b61d70b7d30ab0fa1ecbecbdda8e9b8fc1969840b653a70fb8042",
+    "ae-token_local_before.json": "9716dcb4e6b9b7ae86a303660d51857ca3500b717a0471ef245b3b78311d1114",
+    "vlm.json": "4024e7a68526f8c953598aa7fa52b6790ed8cd3d5b3008ad649868752e1157d0"
+  },
+  "included": "Thor measured durations and traffic counts only",
+  "schema_version": 1,
+  "sources": {
+    "arithmetic-helper-measurements.json": {
+      "sha256": "5b39c27eb0a4d016712aa6af43f1597227e7e118e7e426f1ea686f5cfc8bc3ec",
+      "source_relative_path": "gpu/handoff-measurements.json"
+    },
+    "direct-pv-handoff.json": {
+      "sha256": "3cd09be1200ffd957bd10dabd6227353a65ea2c1575d82535405cb5ee1cc4c0c",
+      "source_relative_path": "gpu/direct-pv-handoff.json"
+    },
+    "natural-ae-kernel-ledger.json": {
+      "sha256": "c28205aad5df067aafcf02592c27fff6b9b58e33a280537fde5bf4de718cc03e",
+      "source_relative_path": "online-arbitration-preparation/natural-ae-kernel-ledger.json"
+    },
+    "vlm-memory-demand.json": {
+      "byte_conversion": "CRLF to LF only",
+      "captured_sha256": "24d03d012c746fce3a1d3f0b78322b2c320583f24e1ce0f6580e5b8520add406",
+      "sha256": "079628f69ac48817d0bef5c7aada3e7e333bfafc0966882a7dd9f58322c092ac",
+      "source_relative_path": "gpu/uniform-memory-demand.json"
+    },
+    "warm-summary.json": {
+      "sha256": "f84781d6afb79da1fffbf5abfb4c36426c656468f7d115bf459935afa6e4a2db",
+      "source_relative_path": "gpu/warm-summary.json"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "ae_schedule_path": "data/timeline/ae-e-layer0.json",
+  "arbitration": "pim_head",
+  "calibration": {
+    "alpha": 0.5,
+    "window": 1024,
+    "write_high": 768,
+    "write_low": 256
+  },
+  "case": "e",
+  "dataflow": "streaming",
+  "layout": "token",
+  "mac_freq_mult": 2,
+  "mode": "concurrent",
+  "program_path": "data/pi05/evidence/compiled-single-read-matrix.683RuH/e/pim-program.json",
+  "rope": "local",
+  "run_kind": "combined",
+  "spec_path": "data/pi05/configs/spec-k2.json",
+  "vlm_path": "data/timeline/vlm-first32.json",
+  "vlm_release": "uniform",
+  "trace_ae_dq": true,
+  "trace_channel": 0,
+  "trace_ca_commands": false
+}

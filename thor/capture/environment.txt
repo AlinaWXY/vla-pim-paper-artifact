@@ -1,0 +1,8 @@
+2026-11-17T22:17:00+08:00
+GPU 0: NVIDIA Thor (UUID: GPU-a7c66ad2-6dbb-0ab8-c1a2-37ba6dba3600)
+NV Power Mode: MAXN
+0
+Python 3.12.3
+421a99a9286275ee6281f10fe6c802951b508ca71c4ce47983572e2c3f8df8be  /var/tmp/anonymous-gr00t16/tools/capture_gr00t_ae.py
+a7c5678f4cffadb38fd8ddb3e3805b86136b97a013646dba710b37b379919439  /var/tmp/anonymous-gr00t16/tools/capture_gr00t_thor.py
+b8beb34b07490fce630c8e1d116abfe116e72aa6e8e6c2a0aea9fb2449f65948  /var/tmp/anonymous-gr00t16/tools/preflight.py

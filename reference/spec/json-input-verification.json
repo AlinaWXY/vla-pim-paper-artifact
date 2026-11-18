@@ -1,0 +1,50 @@
+{
+  "programs": [
+    {
+      "program": "feature_gpu_before.json",
+      "fields_match": true,
+      "stages": 10,
+      "operations": 404832,
+      "semantic_digest64": "a39e4b2885f85cd8",
+      "parse_ms": 984.45,
+      "peak_rss_KiB": 153244
+    },
+    {
+      "program": "token_gpu_before.json",
+      "fields_match": true,
+      "stages": 10,
+      "operations": 402016,
+      "semantic_digest64": "ab6ded4c16ed2558",
+      "parse_ms": 1040.64,
+      "peak_rss_KiB": 144556
+    },
+    {
+      "program": "token_local_before.json",
+      "fields_match": true,
+      "stages": 9,
+      "operations": 410224,
+      "semantic_digest64": "a8e9ac39c18792f6",
+      "parse_ms": 1005.44,
+      "peak_rss_KiB": 156516
+    },
+    {
+      "program": "token_gpu_after.json",
+      "fields_match": true,
+      "stages": 10,
+      "operations": 622336,
+      "semantic_digest64": "83934773efd227a8",
+      "parse_ms": 1400.27,
+      "peak_rss_KiB": 239736
+    },
+    {
+      "program": "token_local_after.json",
+      "fields_match": true,
+      "stages": 9,
+      "operations": 630560,
+      "semantic_digest64": "965f7d253c67390a",
+      "parse_ms": 1405.74,
+      "peak_rss_KiB": 245088
+    }
+  ],
+  "malformed_inputs_rejected": 5
+}

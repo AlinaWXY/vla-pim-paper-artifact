@@ -1,0 +1,29 @@
+{
+  "kernel": "triton_red_fused_add_native_layer_norm_view_8",
+  "shape": [
+    1296,
+    1152
+  ],
+  "counter_grid": [
+    648,
+    1,
+    1
+  ],
+  "timing_grid": [
+    1296,
+    1,
+    1
+  ],
+  "block": [
+    256,
+    1,
+    1
+  ],
+  "xblock": [
+    1,
+    2
+  ],
+  "source_path": "/var/tmp/anonymous-gr00t16-inductor/ij/cijusulhtto5kidupqnitnro5io7or6y3dtwphhva5vcts2pk42l.py",
+  "source_sha256": "57110f2eadf3d06dd3b2c915e54cdfa2f6c1d225a99d3d6e0d7b8b3920f4e558",
+  "policy": "Counter demand is a recorded alternate launch proxy; CUPTI time and kernel ordinal are retained"
+}

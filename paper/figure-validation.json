@@ -1,0 +1,95 @@
+{
+  "panels": 2,
+  "completed_vlm_kernels": [
+    15,
+    19
+  ],
+  "scope": "Same layer-0 workload; independently normalized AE spans",
+  "horizontal_axes": false,
+  "insets": false,
+  "all_numeric_labels_inside_kernel_blocks": true,
+  "all_numeric_labels_white": true,
+  "kernel_fill": "#12734f",
+  "kernel_border": "#c6e6d5",
+  "compressed_kernel_width_ratios": [
+    {
+      "case": "combined-e-vlm-priority",
+      "kernel": 2,
+      "width_ratio": 0.42250000000000004
+    },
+    {
+      "case": "combined-g-vlm-priority",
+      "kernel": 2,
+      "width_ratio": 0.42250000000000004
+    },
+    {
+      "case": "combined-g-vlm-priority",
+      "kernel": 16,
+      "width_ratio": 0.650000000000001
+    }
+  ],
+  "ae_gpu_vlm_overlap_ck": 0,
+  "vlm_kernel_pauses": 0,
+  "native_timestamps_unchanged": true,
+  "font": "Arial",
+  "pixels": [
+    4023,
+    1772
+  ],
+  "dpi": [
+    599.9988,
+    599.9988
+  ],
+  "validation": "Native replay assertions, display geometry and color checks; standalone and manuscript visual inspection",
+  "compile_exit_codes": [
+    0,
+    0
+  ],
+  "compile_checks": {
+    "Overfull": 0,
+    "Missing character": 0,
+    "undefined": 0,
+    "multiply defined": 0,
+    "LaTeX Warning": 0
+  },
+  "manuscript_pages": 8,
+  "figure_page": 7,
+  "gray_io_epoch_bands": false,
+  "legend": false,
+  "stage_labels": [
+    "QKV Projection",
+    "QK^T",
+    "PV",
+    "O Projection",
+    "FFN Gate/Up",
+    "FFN Down"
+  ],
+  "all_stage_labels_inside_blue_blocks": true,
+  "qkt_width_multipliers": [
+    1.5000000000000004,
+    1.5000000000000004
+  ],
+  "qkt_fontsize": 8,
+  "vlm_widths_preserved_during_qkt_widening": true,
+  "gpu_lane_title": "GPU Kernels",
+  "ae_gpu_fill": "#eb6834",
+  "ae_gpu_blocks_per_panel": [
+    6,
+    5
+  ],
+  "ae_gpu_label": "AE Non-Linear",
+  "ae_gpu_label_location": "Directly below the first orange AE block after kernel 2 in each panel",
+  "kernel2_further_width_ratios": [
+    0.65,
+    0.65
+  ],
+  "kernel2_width_transferred_to_following_ae_interval": true,
+  "qkt_widths_preserved_during_kernel2_shortening": true,
+  "other_vlm_widths_preserved": false,
+  "first_ae_width_ratios": [
+    0.20000000000000012,
+    0.20000000000000007
+  ],
+  "ae_gpu_label_color": "#eb6834",
+  "noncompressed_vlm_blocks_receive_width_from_ae": true
+}

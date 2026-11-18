@@ -1,0 +1,37 @@
+{
+  "snapshot_date": "2026-11-18",
+  "compiler": "GCC 14",
+  "test_python": "3.11",
+  "source_builds": [
+    "latest root",
+    "frozen pi05",
+    "frozen GR00T"
+  ],
+  "python_tests": {
+    "passed": 113
+  },
+  "native_checks": {
+    "spec_checks": 224,
+    "microbench": "passed",
+    "lookahead": "passed",
+    "sequencer": "passed",
+    "refresh": "passed",
+    "resource_lifecycle": "passed",
+    "fault_injection": "passed",
+    "frontend_smoke": "passed",
+    "power_stats": "passed"
+  },
+  "paper_data_checks": "pi05 and GR00T plotted values agree with native archived outputs; GR00T repeats match; timeline 15/19 kernels do not overlap AE GPU work",
+  "native_replays": {
+    "timeline_e": "raw.json exactly matches archive",
+    "timeline_g": "raw.json exactly matches archive"
+  },
+  "plotting": "all four paper plotting scripts ran successfully with Arial",
+  "full_inference_runs": "archived; not rerun during publication preparation",
+  "anonymity": {
+    "author_identifier_matches": 0,
+    "credential_pattern_matches": 0,
+    "reviewed_upstream_home_paths": 7,
+    "git_history": "independent anonymous snapshot"
+  }
+}

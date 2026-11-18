@@ -1,0 +1,515 @@
+{
+  "assumptions": {
+    "GPU_execution": "Nonpreemptive measured kernels, no AE/VLM overlap on GPU",
+    "arithmetic_helpers": [
+      "feature_score_rank_sum",
+      "common_O_rank_sum_cast",
+      "common_GateUp_fp32_to_bf16",
+      "common_Down_fp32_to_bf16"
+    ],
+    "handoff_control_us": 0,
+    "ledger": "Natural-cache profiled per-kernel durations; launch gaps excluded",
+    "local_rope_coefficients": "offline; GPU coefficient-generation kernels omitted in local mode",
+    "streaming_pv_to_o": "Measured direct packing kernel between PV export and O input; no added control delay"
+  },
+  "denoising_steps": 10,
+  "events": [
+    {
+      "kind": "gpu",
+      "layer": -1,
+      "name": "action_in_proj",
+      "source": "natural-cache Thor kernel",
+      "source_ordinal": 0,
+      "step": 0,
+      "us": 6.7328
+    },
+    {
+      "kind": "gpu",
+      "layer": -1,
+      "name": "setup_ones",
+      "source": "natural-cache Thor kernel",
+      "source_ordinal": 1,
+      "step": 0,
+      "us": 1.9008
+    },
+    {
+      "kind": "gpu",
+      "layer": -1,
+      "name": "setup_cumsum",
+      "source": "natural-cache Thor kernel",
+      "source_ordinal": 2,
+      "step": 0,
+      "us": 1.152
+    },
+    {
+      "kind": "gpu",
+      "layer": -1,
+      "name": "setup_cumsum",
+      "source": "natural-cache Thor kernel",
+      "source_ordinal": 3,
+      "step": 0,
+      "us": 1.9264
+    },
+    {
+      "kind": "gpu",
+      "layer": -1,
+      "name": "setup_le",
+      "source": "natural-cache Thor kernel",
+      "source_ordinal": 4,
+      "step": 0,
+      "us": 3.3535999999999997
+    },
+    {
+      "kind": "gpu",
+      "layer": -1,
+      "name": "setup_mul",
+      "source": "natural-cache Thor kernel",
+      "source_ordinal": 5,
+      "step": 0,
+      "us": 1.8048
+    },
+    {
+      "kind": "gpu",
+      "layer": -1,
+      "name": "setup___and__",
+      "source": "natural-cache Thor kernel",
+      "source_ordinal": 6,
+      "step": 0,
+      "us": 1.8175999999999999
+    },
+    {
+      "kind": "gpu",
+      "layer": -1,
+      "name": "setup_cat",
+      "source": "natural-cache Thor kernel",
+      "source_ordinal": 7,
+      "step": 0,
+      "us": 2.5664
+    },
+    {
+      "kind": "gpu",
+      "layer": -1,
+      "name": "setup_sum",
+      "source": "natural-cache Thor kernel",
+      "source_ordinal": 8,
+      "step": 0,
+      "us": 2.9375999999999998
+    },
+    {
+      "kind": "gpu",
+      "layer": -1,
+      "name": "setup_sum",
+      "source": "natural-cache Thor kernel",
+      "source_ordinal": 9,
+      "step": 0,
+      "us": 2.7392
+    },
+    {
+      "kind": "gpu",
+      "layer": -1,
+      "name": "setup_cumsum",
+      "source": "natural-cache Thor kernel",
+      "source_ordinal": 10,
+      "step": 0,
+      "us": 1.4464
+    },
+    {
+      "kind": "gpu",
+      "layer": -1,
+      "name": "setup_cumsum",
+      "source": "natural-cache Thor kernel",
+      "source_ordinal": 11,
+      "step": 0,
+      "us": 1.0048
+    },
+    {
+      "kind": "gpu",
+      "layer": -1,
+      "name": "setup_cumsum",
+      "source": "natural-cache Thor kernel",
+      "source_ordinal": 12,
+      "step": 0,
+      "us": 1.92
+    },
+    {
+      "kind": "gpu",
+      "layer": -1,
+      "name": "setup_add",
+      "source": "natural-cache Thor kernel",
+      "source_ordinal": 13,
+      "step": 0,
+      "us": 1.4016
+    },
+    {
+      "kind": "gpu",
+      "layer": -1,
+      "name": "setup_sub",
+      "source": "natural-cache Thor kernel",
+      "source_ordinal": 14,
+      "step": 0,
+      "us": 1.3504
+    },
+    {
+      "kind": "gpu",
+      "layer": -1,
+      "name": "setup_where",
+      "source": "natural-cache Thor kernel",
+      "source_ordinal": 15,
+      "step": 0,
+      "us": 1.0048
+    },
+    {
+      "kind": "gpu",
+      "layer": -1,
+      "name": "setup_where",
+      "source": "natural-cache Thor kernel",
+      "source_ordinal": 16,
+      "step": 0,
+      "us": 0.9984
+    },
+    {
+      "kind": "gpu",
+      "layer": -1,
+      "name": "setup_where",
+      "source": "natural-cache Thor kernel",
+      "source_ordinal": 17,
+      "step": 0,
+      "us": 1.8304
+    },
+    {
+      "kind": "gpu",
+      "layer": -1,
+      "name": "setup_arange",
+      "source": "natural-cache Thor kernel",
+      "source_ordinal": 18,
+      "step": 0,
+      "us": 0.9472
+    },
+    {
+      "kind": "gpu",
+      "layer": -1,
+      "name": "copies_casts",
+      "source": "natural-cache Thor kernel",
+      "source_ordinal": 19,
+      "step": 0,
+      "us": 1.1072000000000002
+    },
+    {
+      "kind": "gpu",
+      "layer": -1,
+      "name": "copies_casts",
+      "source": "natural-cache Thor kernel",
+      "source_ordinal": 20,
+      "step": 0,
+      "us": 1.9968
+    },
+    {
+      "kind": "gpu",
+      "layer": -1,
+      "name": "copies_casts",
+      "source": "natural-cache Thor kernel",
+      "source_ordinal": 21,
+      "step": 0,
+      "us": 1.4143999999999999
+    },
+    {
+      "kind": "gpu",
+      "layer": -1,
+      "name": "copies_casts",
+      "source": "natural-cache Thor kernel",
+      "source_ordinal": 28,
+      "step": 0,
+      "us": 1.1136
+    },
+    {
+      "kind": "gpu",
+      "layer": -1,
+      "name": "copies_casts",
+      "source": "natural-cache Thor kernel",
+      "source_ordinal": 29,
+      "step": 0,
+      "us": 1.1136000000000001
+    },
+    {
+      "kind": "gpu",
+      "layer": 0,
+      "name": "adarmsnorm",
+      "source": "natural-cache Thor kernel",
+      "source_ordinal": 30,
+      "step": 0,
+      "us": 3.360000000007858
+    },
+    {
+      "kind": "pim",
+      "layer": 0,
+      "source_ordinal": 41,
+      "stage": "qkv",
+      "step": 0
+    },
+    {
+      "kind": "pim",
+      "layer": 0,
+      "source_ordinal": 41,
+      "stage": "rope",
+      "step": 0
+    },
+    {
+      "kind": "pim",
+      "layer": 0,
+      "source_ordinal": 41,
+      "stage": "q_exchange_export",
+      "step": 0
+    },
+    {
+      "kind": "pim",
+      "layer": 0,
+      "source_ordinal": 41,
+      "stage": "q_exchange_import",
+      "step": 0
+    },
+    {
+      "kind": "pim",
+      "layer": 0,
+      "source_ordinal": 56,
+      "stage": "qkt",
+      "step": 0
+    },
+    {
+      "kind": "gpu",
+      "layer": 0,
+      "name": "scale_mask_softmax_cast",
+      "source": "natural-cache Thor kernel",
+      "source_ordinal": 57,
+      "step": 0,
+      "us": 5.183999999979278
+    },
+    {
+      "kind": "pim",
+      "layer": 0,
+      "source_ordinal": 61,
+      "stage": "pv",
+      "step": 0
+    },
+    {
+      "anchor_source_ordinal": 61,
+      "kind": "gpu",
+      "layer": 0,
+      "measurement_operator": "token_direct_PV_to_O_pack",
+      "name": "pv_to_o_transpose",
+      "source": "Thor direct-pv-handoff.json cold32MiB device kernel median",
+      "source_ordinal": -1,
+      "step": 0,
+      "us": 4.992000000000189
+    },
+    {
+      "kind": "pim",
+      "layer": 0,
+      "source_ordinal": 61,
+      "stage": "o",
+      "step": 0
+    },
+    {
+      "kind": "gpu",
+      "layer": 0,
+      "name": "common_O_rank_sum_cast",
+      "source": "measured arithmetic helper",
+      "source_ordinal": -1,
+      "step": 0,
+      "us": 9.82400000000007
+    },
+    {
+      "kind": "gpu",
+      "layer": 0,
+      "name": "residual_adarmsnorm",
+      "source": "natural-cache Thor kernel",
+      "source_ordinal": 64,
+      "step": 0,
+      "us": 3.7439999999992324
+    },
+    {
+      "kind": "pim",
+      "layer": 0,
+      "source_ordinal": 77,
+      "stage": "gate_up",
+      "step": 0
+    },
+    {
+      "kind": "gpu",
+      "layer": 0,
+      "name": "common_GateUp_fp32_to_bf16",
+      "source": "measured arithmetic helper",
+      "source_ordinal": -1,
+      "step": 0,
+      "us": 7.631999999999948
+    },
+    {
+      "kind": "gpu",
+      "layer": 0,
+      "name": "gelu_gate",
+      "source": "natural-cache Thor kernel",
+      "source_ordinal": 78,
+      "step": 0,
+      "us": 4.1600000000034925
+    },
+    {
+      "kind": "pim",
+      "layer": 0,
+      "source_ordinal": 81,
+      "stage": "down",
+      "step": 0
+    },
+    {
+      "kind": "gpu",
+      "layer": 0,
+      "name": "common_Down_fp32_to_bf16",
+      "source": "measured arithmetic helper",
+      "source_ordinal": -1,
+      "step": 0,
+      "us": 2.5920000000000982
+    },
+    {
+      "kind": "gpu",
+      "layer": 0,
+      "name": "residual_adarmsnorm",
+      "source": "natural-cache Thor kernel",
+      "source_ordinal": 83,
+      "step": 0,
+      "us": 3.7439999999992324
+    }
+  ],
+  "gpu_us": 8108.396799996755,
+  "layers": 18,
+  "ledger_layer_boundaries": [
+    {
+      "layer": 0,
+      "source_end_exclusive": 85,
+      "source_start": 30
+    },
+    {
+      "layer": 1,
+      "source_end_exclusive": 140,
+      "source_start": 85
+    },
+    {
+      "layer": 2,
+      "source_end_exclusive": 195,
+      "source_start": 140
+    },
+    {
+      "layer": 3,
+      "source_end_exclusive": 250,
+      "source_start": 195
+    },
+    {
+      "layer": 4,
+      "source_end_exclusive": 305,
+      "source_start": 250
+    },
+    {
+      "layer": 5,
+      "source_end_exclusive": 360,
+      "source_start": 305
+    },
+    {
+      "layer": 6,
+      "source_end_exclusive": 415,
+      "source_start": 360
+    },
+    {
+      "layer": 7,
+      "source_end_exclusive": 470,
+      "source_start": 415
+    },
+    {
+      "layer": 8,
+      "source_end_exclusive": 525,
+      "source_start": 470
+    },
+    {
+      "layer": 9,
+      "source_end_exclusive": 580,
+      "source_start": 525
+    },
+    {
+      "layer": 10,
+      "source_end_exclusive": 635,
+      "source_start": 580
+    },
+    {
+      "layer": 11,
+      "source_end_exclusive": 690,
+      "source_start": 635
+    },
+    {
+      "layer": 12,
+      "source_end_exclusive": 745,
+      "source_start": 690
+    },
+    {
+      "layer": 13,
+      "source_end_exclusive": 800,
+      "source_start": 745
+    },
+    {
+      "layer": 14,
+      "source_end_exclusive": 855,
+      "source_start": 800
+    },
+    {
+      "layer": 15,
+      "source_end_exclusive": 910,
+      "source_start": 855
+    },
+    {
+      "layer": 16,
+      "source_end_exclusive": 965,
+      "source_start": 910
+    },
+    {
+      "layer": 17,
+      "source_end_exclusive": 1020,
+      "source_start": 965
+    }
+  ],
+  "retained_gpu_categories": {
+    "action_in_proj": 10,
+    "action_out_proj": 10,
+    "attention_add": 180,
+    "attention_mul": 180,
+    "copies_casts": 1350,
+    "ffn_gate_multiply": 180,
+    "gelu": 180,
+    "norm_add": 1110,
+    "norm_mul": 740,
+    "residual_gate_add": 360,
+    "residual_gate_mul": 360,
+    "rms_mean": 370,
+    "rms_pow": 370,
+    "rms_rsqrt": 370,
+    "setup___and__": 10,
+    "setup_add": 10,
+    "setup_arange": 10,
+    "setup_cat": 10,
+    "setup_cumsum": 50,
+    "setup_le": 10,
+    "setup_mul": 10,
+    "setup_ones": 10,
+    "setup_sub": 10,
+    "setup_sum": 20,
+    "setup_where": 30,
+    "softmax": 180
+  },
+  "schema_version": 1,
+  "stage_occurrences": {
+    "down": 180,
+    "gate_up": 180,
+    "o": 180,
+    "pv": 180,
+    "q_exchange_export": 180,
+    "q_exchange_import": 180,
+    "qkt": 180,
+    "qkv": 180,
+    "rope": 180
+  },
+  "variant": "token_local_before"
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-11-17T21:24:36.097328+08:00",
+  "method": "constant GPU average power across the entire simulated combined-g interval",
+  "gpu_average_power_W": 49.858614912477,
+  "measurement_source": "Important data/thor-pi05-measurements-2026-11-17/thor-pi05-mha8-power-1117/measurements.json",
+  "measurement_sha256": "5c3168238b1fe4e2aedf9f73738387d177ba33d07f1e1b242abd576384824857",
+  "measurement_gpu": "NVIDIA Thor",
+  "measurement_rail": "VDD_GPU",
+  "selected_mode": "serial",
+  "selected_rounds": [
+    1,
+    2,
+    3
+  ],
+  "measurement_total_duration_s": 90.0,
+  "aggregation": "sum(VDD_GPU.energy_j) / sum(block.seconds)",
+  "measurement_workload": "compiled pi0.5 synthetic physical MHA8, VLM and AE on GPU in serial",
+  "use_as": "proxy for GPU average power in method g; this is not a VLM-only power measurement",
+  "application_interval": "full combined-g epoch; no additional duty factor or GPU idle term",
+  "user_preference": "GPU average power is sufficient for this estimate",
+  "rail_definition_source": "https://docs.nvidia.com/jetson/archives/r38.4/DeveloperGuide/SD/PlatformPowerAndPerformance/JetsonThor.html#system-power-measurement"
+}

@@ -1,0 +1,125 @@
+{
+  "eager": {
+    "timing_ms": {
+      "serial": {
+        "vlm_ms": {
+          "p50": 96.7514877319336,
+          "p95": 101.65162887573243
+        },
+        "ae_ms": {
+          "p50": 153.7559051513672,
+          "p95": 172.6580032348633
+        },
+        "pair_gpu_ms": {
+          "p50": 250.6144256591797,
+          "p95": 273.2821960449219
+        },
+        "pair_wall_ms": {
+          "p50": 250.65839649999998,
+          "p95": 273.34375524999996
+        }
+      },
+      "parallel": {
+        "vlm_ms": {
+          "p50": 118.55238342285156,
+          "p95": 123.75123405456543
+        },
+        "ae_ms": {
+          "p50": 228.80303955078125,
+          "p95": 247.37051544189453
+        },
+        "pair_gpu_ms": {
+          "p50": 228.80303955078125,
+          "p95": 247.37051544189453
+        },
+        "pair_wall_ms": {
+          "p50": 228.919623,
+          "p95": 247.519626
+        }
+      }
+    },
+    "speedup_serial_to_parallel": 1.0949624729200256,
+    "native_action_max_abs_diff": 0.0,
+    "native_action_relative_rms": 0.0,
+    "parallel_vs_serial_action_max_abs_diff": 0.0,
+    "compiled_graphs": 0,
+    "trace": {
+      "phases": {
+        "AE": {
+          "stream_id": 33,
+          "kernel_count": 10890,
+          "kernel_active_ms": 79.424539
+        },
+        "VLM": {
+          "stream_id": 29,
+          "kernel_count": 2350,
+          "kernel_active_ms": 102.769055
+        }
+      },
+      "simultaneous_kernel_ms": 16.188639,
+      "first_to_last_kernel_ms": 277.979872
+    }
+  },
+  "compile": {
+    "timing_ms": {
+      "serial": {
+        "vlm_ms": {
+          "p50": 64.41342544555664,
+          "p95": 66.67248153686523
+        },
+        "ae_ms": {
+          "p50": 56.333566665649414,
+          "p95": 57.55093231201172
+        },
+        "pair_gpu_ms": {
+          "p50": 120.67038345336914,
+          "p95": 124.33241424560546
+        },
+        "pair_wall_ms": {
+          "p50": 120.69666050000001,
+          "p95": 124.3650071
+        }
+      },
+      "parallel": {
+        "vlm_ms": {
+          "p50": 86.13636779785156,
+          "p95": 88.04564361572265
+        },
+        "ae_ms": {
+          "p50": 117.44819259643555,
+          "p95": 122.92914505004883
+        },
+        "pair_gpu_ms": {
+          "p50": 117.44819259643555,
+          "p95": 122.92914505004883
+        },
+        "pair_wall_ms": {
+          "p50": 117.496658,
+          "p95": 122.9912903
+        }
+      }
+    },
+    "speedup_serial_to_parallel": 1.027234838458129,
+    "native_action_max_abs_diff": 0.004826098680496216,
+    "native_action_relative_rms": 0.011107579804956913,
+    "parallel_vs_serial_action_max_abs_diff": 0.0,
+    "compiled_graphs": 4,
+    "trace": {
+      "phases": {
+        "AE": {
+          "stream_id": 33,
+          "kernel_count": 3930,
+          "kernel_active_ms": 64.063857
+        },
+        "VLM": {
+          "stream_id": 29,
+          "kernel_count": 1513,
+          "kernel_active_ms": 72.674877
+        }
+      },
+      "simultaneous_kernel_ms": 17.591262,
+      "first_to_last_kernel_ms": 130.13824
+    }
+  },
+  "speedup_eager_to_compile_parallel": 1.9483075254787248
+}

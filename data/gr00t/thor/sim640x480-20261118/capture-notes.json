@@ -1,0 +1,8 @@
+{
+  "initial_read_kernel_count": 757,
+  "initial_read_replay_passes": [
+    1.0
+  ],
+  "correction": "The trailing occupancy field was initially misread as replay count; the named replay-count column is 1.",
+  "final_capture": "Counters were resampled with --config-file off and explicit demangled names; final reads.csv/writes.csv are each checked for one replay per launch."
+}

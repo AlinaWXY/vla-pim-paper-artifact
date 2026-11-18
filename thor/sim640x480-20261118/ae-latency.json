@@ -1,0 +1,212 @@
+{
+  "model": "gr00t_n16",
+  "horizon": 15,
+  "queries": 16,
+  "cameras": 3,
+  "image_size": [
+    480,
+    640
+  ],
+  "image_size_order": "height,width",
+  "preprocessing": {
+    "kind": "Checkpoint evaluation image transform followed by Eagle alignment",
+    "shortest_image_edge": 256,
+    "crop_fraction": 0.95,
+    "stages": [
+      {
+        "name": "SmallestMaxSize",
+        "size_wh": [
+          341,
+          256
+        ]
+      },
+      {
+        "name": "FractionalCenterCrop",
+        "size_wh": [
+          323,
+          243
+        ]
+      },
+      {
+        "name": "SmallestMaxSize",
+        "size_wh": [
+          340,
+          256
+        ]
+      }
+    ],
+    "output_sizes_wh": [
+      [
+        340,
+        256
+      ],
+      [
+        340,
+        256
+      ],
+      [
+        340,
+        256
+      ]
+    ]
+  },
+  "processed_image_sizes": [
+    [
+      252,
+      336
+    ],
+    [
+      252,
+      336
+    ],
+    [
+      252,
+      336
+    ]
+  ],
+  "vit_input_shapes": [
+    [
+      1,
+      3,
+      252,
+      336
+    ],
+    [
+      1,
+      3,
+      252,
+      336
+    ],
+    [
+      1,
+      3,
+      252,
+      336
+    ]
+  ],
+  "seed": 17,
+  "prompt": "Pick up the object and place it on the table.",
+  "torch": "2.11.0+cu130",
+  "gpu": "NVIDIA Thor",
+  "compile_options": {
+    "max_autotune": true,
+    "triton.cudagraphs": false,
+    "triton.unique_kernel_names": true,
+    "emulate_precision_casts": true
+  },
+  "attention": "packed SDPA",
+  "checkpoint_revision": "d0814e7ecb19202e7c8468b46098b0b7ef3a6d61",
+  "source_revision": "9b37aa1ce69c73c6d165233fa88128283bba4508",
+  "vl_tokens": 371,
+  "image_tokens": 324,
+  "text_tokens": 47,
+  "cuda_ms": {
+    "mean": 45.578651428222656,
+    "p50": 44.0524959564209,
+    "samples": [
+      55.84419250488281,
+      55.73904037475586,
+      51.2815055847168,
+      44.068607330322266,
+      44.10224151611328,
+      43.98476791381836,
+      44.11337661743164,
+      43.96268844604492,
+      44.26911926269531,
+      44.33612823486328,
+      44.199745178222656,
+      44.00422286987305,
+      44.10483169555664,
+      43.855777740478516,
+      44.02153778076172,
+      43.98553466796875,
+      43.9628791809082,
+      43.87580871582031,
+      44.03638458251953,
+      43.82463836669922
+    ]
+  },
+  "wall_ms": {
+    "mean": 45.60164414997416,
+    "p50": 44.07210550016316,
+    "samples": [
+      55.95922999782488,
+      55.75874100031797,
+      51.29974699957529,
+      44.08876800152939,
+      44.11939700003131,
+      44.00470300242887,
+      44.13161000047694,
+      43.98185199897853,
+      44.286063999606995,
+      44.35441500027082,
+      44.217110000317916,
+      44.02246300014667,
+      44.12152700024308,
+      43.872359001397854,
+      44.03941399868927,
+      44.00342399821966,
+      43.98060899984557,
+      43.891692999750376,
+      44.055442998796934,
+      43.844314001034945
+    ]
+  },
+  "layer_kinds": [
+    "cross",
+    "self",
+    "cross",
+    "self",
+    "cross",
+    "self",
+    "cross",
+    "self",
+    "cross",
+    "self",
+    "cross",
+    "self",
+    "cross",
+    "self",
+    "cross",
+    "self",
+    "cross",
+    "self",
+    "cross",
+    "self",
+    "cross",
+    "self",
+    "cross",
+    "self",
+    "cross",
+    "self",
+    "cross",
+    "self",
+    "cross",
+    "self",
+    "cross",
+    "self"
+  ],
+  "dit_query_shapes": [
+    [
+      1,
+      16,
+      1536
+    ],
+    [
+      1,
+      16,
+      1536
+    ],
+    [
+      1,
+      16,
+      1536
+    ],
+    [
+      1,
+      16,
+      1536
+    ]
+  ],
+  "embodiment_id": 2
+}

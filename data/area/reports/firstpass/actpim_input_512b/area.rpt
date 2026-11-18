@@ -1,0 +1,50 @@
+ 
+****************************************
+Report : area
+Design : actpim_input_512b
+Version: W-2024.09-SP5
+Date   : Sun Nov 15 04:45:45 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Warning: Design 'actpim_input_512b' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+Library(s) Used:
+
+    asap7sc7p5t_INVBUF_RVT_TT_nldm_211120 (File: /artifact-source/projects/actpim-hw-overhead/lib/asap7sc7p5t_INVBUF_RVT_TT_nldm_211120.db)
+    asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120 (File: /artifact-source/projects/actpim-hw-overhead/lib/asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.db)
+    asap7sc7p5t_AO_RVT_TT_nldm_211120 (File: /artifact-source/projects/actpim-hw-overhead/lib/asap7sc7p5t_AO_RVT_TT_nldm_211120.db)
+    asap7sc7p5t_OA_RVT_TT_nldm_211120 (File: /artifact-source/projects/actpim-hw-overhead/lib/asap7sc7p5t_OA_RVT_TT_nldm_211120.db)
+    asap7sc7p5t_SEQ_RVT_TT_nldm_220123 (File: /artifact-source/projects/actpim-hw-overhead/lib/asap7sc7p5t_SEQ_RVT_TT_nldm_220123.db)
+
+Number of ports:                         1046
+Number of nets:                         12448
+Number of cells:                        11659
+Number of combinational cells:           7306
+Number of sequential cells:              4352
+Number of macros/black boxes:               0
+Number of buf/inv:                        344
+Number of references:                       1
+
+Combinational area:                658.738984
+Buf/Inv area:                       20.047500
+Noncombinational area:            1269.043152
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                  1927.782136
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  --------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-    Noncombi-  Black-
+                                  Total      Total    national  national   boxes   Design
+--------------------------------  ---------  -------  --------  ---------  ------  -----------------------
+actpim_input_512b                 1927.7821    100.0    0.0000     0.0000  0.0000  actpim_input_512b
+rf                                1927.7821    100.0  658.7390  1269.0432  0.0000  actpim_input_rf_DEPTH16
+--------------------------------  ---------  -------  --------  ---------  ------  -----------------------
+Total                                                 658.7390  1269.0432  0.0000
+
+1

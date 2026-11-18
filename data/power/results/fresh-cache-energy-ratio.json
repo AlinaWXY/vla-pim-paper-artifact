@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "metric": "simplified baseline-board-energy / method-g-GPU-plus-DRAM-energy ratio",
+  "formula": "ratio = (P_board_baseline * T_baseline) / ((P_GPU_baseline + P_DRAM_g) * T_g)",
+  "baseline": {
+    "mode": "fresh_cache",
+    "power_rail": "VIN",
+    "board_average_power_W": 98.85179792586243,
+    "GPU_average_power_W": 50.35811665878143,
+    "measurement_seconds": 90.0,
+    "completed_AE_chunks": 663,
+    "completed_VLM_calls": 666,
+    "average_AE_completion_period_ms": 135.74660633484163,
+    "board_energy_J_per_completed_AE_chunk": 13.418796098533361,
+    "rounds": [
+      {
+        "round": 1,
+        "seconds": 30.0,
+        "AE_count": 221,
+        "VIN_energy_J": 2905.4768331274763,
+        "GPU_energy_J": 1485.8740159960144
+      },
+      {
+        "round": 2,
+        "seconds": 30.0,
+        "AE_count": 221,
+        "VIN_energy_J": 2966.25907430811,
+        "GPU_energy_J": 1506.9577158260622
+      },
+      {
+        "round": 3,
+        "seconds": 30.0,
+        "AE_count": 221,
+        "VIN_energy_J": 3024.925905892033,
+        "GPU_energy_J": 1539.3987674682517
+      }
+    ]
+  },
+  "method_g": {
+    "duration_ms": 77.67767382200002,
+    "GPU_average_power_proxy_W": 50.35811665878143,
+    "DRAM_reference_average_power_W": 12.677460209587863,
+    "GPU_plus_DRAM_reference_average_power_W": 63.03557686836929,
+    "GPU_reference_energy_J": 3.911701360111049,
+    "DRAM_reference_energy_J": 0.98475561905175,
+    "GPU_plus_DRAM_reference_energy_J": 4.8964569791627985
+  },
+  "ratio": 2.7405113851991243,
+  "estimated_energy_reduction_percent": 63.510459930917584,
+  "power_ratio_component": 1.5681905812059826,
+  "time_ratio_component": 1.7475627121109183,
+  "valid_as_matched_full_board_energy_efficiency": false,
+  "physical_power_calibrated": false,
+  "scope_and_timing_limits": [
+    "Numerator uses whole-board VIN; denominator uses GPU rail plus modeled DRAM. CPU/other SoC engines, carrier-board/peripheral power and other missing components in g are not added.",
+    "GPU power is a proxy from VLM+AE fresh_cache execution on GPU, not a measured GPU power during PIM offload.",
+    "Baseline time is a measured steady AE completion period; g time is a single combined pair completion time. Multi-frame steady-state simulation has not been run.",
+    "DRAM retains the uncalibrated PIM-column energy proxy, the 16-Gbit IDD versus 8-Gbit organization mismatch, and exclusions for PIM compute/register energy.",
+    "The result follows the requested simplified formula and must not be reported as a validated matched-scope full-board energy-efficiency improvement."
+  ],
+  "validation": {
+    "source_checksum_matches_archive": true,
+    "three_rounds_complete": true,
+    "measured_power_energy_consistent": true,
+    "baseline_energy_matches_VIN_energy_per_completed_AE_chunk": true,
+    "denominator_power_energy_consistent": true,
+    "ratio_matches_power_ratio_times_time_ratio": true,
+    "native_raw_byte_identical_to_baseline": true
+  },
+  "inputs_sha256": {
+    "Important data/thor-pi05-measurements-2026-11-17/thor-pi05-mha8-power-1117/measurements.json": "5c3168238b1fe4e2aedf9f73738387d177ba33d07f1e1b242abd576384824857",
+    "data/power/results/power-report.json": "300020789d7e691c0fa4cf1e481252bfb4566bec97bf462df122685a5c664072",
+    "data/power/configs/fresh-cache-energy-ratio.json": "ade6e19cbc812a194633415223673b993a70df6d97a0d3b26ebe6d7d3b094a31"
+  }
+}

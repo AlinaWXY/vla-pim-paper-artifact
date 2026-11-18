@@ -1,0 +1,500 @@
+PIM-VLA 仿真器重写方案（Ramulator2）
+Nov 9, 2026 · @Alina
+1. 目标与范围
+新仿真器在一个 Ramulator2 实例内同时模拟 VLM 访存与 PIM，重新得到 1108 的 b–g 消融结果。外部重放仲裁器、trace 后处理提取 DQ 延迟、91.5 ms 常数偏差抵消全部取消。
+功能
+内容
+时序
+LPDDR5X-8533 全部 JEDEC 约束；WRGB 为写类、RDRES 为读类，从 RD/WR 自动派生
+PIM 算子
+QKV（融合）、RoPE、QKᵀ（流式：归约后直接导出；融合：落盘后集中导出）、PV（token 分片）、O projection（PIM）、Gate/Up、Down
+布局
+feature / token
+RoPE 位置
+GPU / rank 内本地
+数据流
+流式（融合前）/ 融合（融合后），定义见第 5 节
+并发方式
+串行 / 并发（异步 VLA：下一帧 VLM ‖ 当前帧 AE）
+仲裁
+仅流式数据流下的调度策略，见第 6 节
+VLM 访存
+按 kernel 闭环注入，单独运行校准到实测 104.95 ms
+记账
+AE 单独/并发、PIM 干扰、AE GPU 等待、VLM stall、端到端总延迟
+验证
+spec 单元测试、DQ/CA 检查插件、微基准、回归
+明确不实现（固定为 1108 语义，不设旋钮）：
+搬运 WRGB 占用的 SM：不建模，GPU 侧不计 SM 代价。
+GPU↔PIM 交接延迟：除内存时序外为 0。
+kernel 启动策略：VLM kernel 按依赖顺序启动，不做窗口适配。
+AE 非线性算子与 VLM 并发：不并发，AE GPU 块与 VLM kernel 在 GPU 上按 kernel 粒度分时。
+case a（纯 GPU）沿用实测，不仿真。上述四项不建模是结果的已知局限，论文需注明。
+2. 设计原则
+旧版的问题来自两份时序规则：Ramulator 一份，外部仲裁器 sequential_timing.h 又一份。新版每条规则只存在一个地方。
+时序只在 DRAM spec 里定义一次。 控制器只调用 check_timing，前端和分析脚本不重新实现任何时序。
+GPU 和 PIM 的请求在同一个控制器里竞争。 仲裁就是控制器的调度策略，不存在"先单独跑 PIM、再重放"。
+PIM 程序是高层请求流。 控制器把请求展开成命令并跟踪依赖；不从 trace 反推 DQ 延迟。
+GPU 访存闭环注入。 内存跟不上时 kernel 自然变慢；单独运行校准是验收标准，之后不做任何常数修正。
+验证与决策分离。 DQ/CA 检查插件只断言、不参与调度；spec 写错会在检查插件里立即报错。
+开关正交且受校验。 非法组合直接报错；不保留历史兼容开关（旧版 config.py 中 20 多个 pim_* 开关收敛为第 9 节的 5 个）。
+3. 系统组织与固定假设
+
+新仿真器结构 · 两个请求来源、一个控制器、一份时序
+两个请求来源只产生请求；控制器用同一份 spec 过滤候选命令，再由调度策略选择；检查插件旁路观察总线。
+项目
+固定取值
+主机
+Thor GPU（不建模算力，只取实测 kernel 与 AE GPU 块时长）
+内存
+LPDDR5X-8533，16 通道 × x16，每通道 2 个 rank
+时钟
+WCK:CK = 4:1，CK ≈ 1.067 GHz（0.938 ns），WCK always-on
+组织
+BG 模式，4 BG × 4 bank；BL16 = 32 B = 2 CK
+主要时序
+CL = 23 CK，CWL = 12 CK，其余全部取自 JEDEC 8533 速档
+rank 分工
+只有两种 rank：DRAM rank（rank0）存 VLM 数据；PIM rank（rank1）存权重、KV、暂存与 SRF
+地址映射
+GPU：32 B 扇区按通道交织，行 2 KiB；PIM：由程序给出物理地址
+刷新
+按 spec，REFpb/REFab 均建模
+4. DRAM spec：命令与时序约束
+WRGB 和写 bank 的 WR 在 DQ 接口上完全相同，只在"数据进到哪里"上不同；因此接口约束全部继承，阵列约束全部免除。RDRES 与 RD 同理。
+4.1 命令分类
+类别
+命令
+外部 CA
+外部 DQ
+阵列访问
+行命令
+ACT1、ACT2、PREpb、PREab、REFpb、REFab
+是
+否
+是
+阵列读写
+RD、WR（含 RDA/WRA）
+是
+是，延迟 CL / CWL
+是
+缓冲写
+WRGB：同一 32 B 广播写入 16 个 bank 的 SRF
+是
+是，延迟 CWL
+否
+缓冲读
+RDRES：读输出累加池中的结果
+是
+是，延迟 CL
+否
+计算（细）
+MAC（MACAB/MACQK 两种时序类）
+流式：是；融合：rank 私有 CA
+否
+是（读权重行）
+计算（粗）
+MAC_RUN、ROPE_RUN 描述符
+是，21 CA CK/条
+否
+由 rank controller 展开
+本地
+LOCALRD、LOCALWR、SRF 广播、gather、cast、reduce、RoPE 执行
+否
+否
+LOCALRD/WR 是
+4.2 WRGB 与写入 bank 的区别
+方面
+WR（写 bank 阵列）
+WRGB（广播写 16 个 bank 的 SRF）
+CA
+1 条列命令
+相同
+写数据上 DQ
+发出后 CWL
+相同
+DQ 占用
+BL16 = 32 B = 2 CK
+相同
+读写转向、跨 rank 切换
+受约束
+相同，自动派生
+tCCD
+BG 内 tCCD_L、BG 间 tCCD_S
+广播覆盖全部 4 个 BG，按同 BG 处理，连续 WRGB ≥ tCCD_L（4 CK）
+行必须打开（ACT、tRCD）
+需要
+不需要
+写恢复 tWR（PRE 之前）
+需要
+不需要
+同 rank 写后读 tWTR
+需要
+保留 Rank 级 tWTR_S（共享 rank 内数据通路，保守）
+占用 bank
+占用该 bank 列通路
+不占用，其余 bank 可同时 MAC
+数据可用
+写入阵列后
+SRF 就绪 = 发出 + CWL + BL，MAC 以此为依赖
+RDRES 对 RD 的关系相同：数据在发出后 CL 上 DQ，继承全部接口约束；不需要 ACT、tRCD、tRTP；必须等对应 MAC 完成才能发出。
+核心一点：DQ 引脚上的协议与目的地无关。 写数据永远在 CWL 后出现，读数据永远在 CL 后出现。旧模型把 WRGB/RDRES 延迟设成 0，导致"RD 之后 2 CK 发 WRGB"被判合法，而真实协议要求 15 CK。
+4.3 约束派生规则
+在 spec 构造时执行一次，不手写任何 WRGB/RDRES 约束：
+ALIAS = {"RD": "RDRES", "RDA": "RDRES", "WR": "WRGB", "WRA": "WRGB"}for tc in LPDDR5X.timing_constraints:    if tc.level not in ("Channel", "Rank", "BankGroup"):   # Bank 级不派生；广播命令视为命中每个 BG        continue    if not set(ALIAS) & set(tc.preceding + tc.following):        continue    pre = tc.preceding + [ALIAS[c] for c in tc.preceding if c in ALIAS]    fol = tc.following + [ALIAS[c] for c in tc.following if c in ALIAS]    spec.add(level=tc.level, preceding=dedup(pre), following=dedup(fol),             latency=tc.latency, sibling=tc.sibling, window=tc.window)
+派生覆盖所有组合：RD→WRGB、WRGB→RD、RDRES→WR、WR→RDRES、RDRES→WRGB 等，同 rank 与跨 rank（sibling）都有。
+Bank 级阵列约束（tRCD、tRTP、tWR、tRAS）只作用于 RD/WR，不派生。WRGB/RDRES 覆盖全部 bank，BankGroup 级约束按"与每个 BG 都是同 BG"处理。
+WRGB/RDRES 的 DQ 延迟在 spec 中声明为 nCWL / nCL，控制器和检查插件读同一个值。
+4.4 内部命令约束
+MAC：Bank 级，ACT2→MAC ≥ tRCD，一列权重与 M 行输入的计算时长 = M × 4/k CK（k = mac_freq_mult）；同一 bank 下一次列读取间隔 = max(tCCD_L, M × 4/k)，MAC→PRE ≥ tRTP；WR→MAC ≥ CWL+BL+tWTR_L。取数与计算流水重叠：计算当前列时可以读下一列，所以只要 M × 4/k ≥ tCCD_L，倍频就直接缩短 MAC 时间。
+LOCALRD/LOCALWR：沿用旧版 lpddr5pim.py 第 89–110 行的 Bank 级规则，不占外部 CA、DQ。
+MAC_RUN/ROPE_RUN：外部 CA 占用 21 CK，解码 1 CK 不占 CA；展开后的内部命令走 rank 私有 CA。
+刷新：REFpb/REFab 按 spec，阻塞对应 bank/rank 的全部命令（含 MAC）。
+4.5 命令对矩阵（单元测试的标准答案）
+对 {RD, WR, WRGB, RDRES} 两两组合 × {同 BG, 不同 BG, 不同 rank}，由 spec 计算最小发射间隔和对应 DQ 空隙：
+DQ\ gap = issue\ gap + latency_{2} - latency_{1} - BL
+要求：每一项 DQ 空隙 ≥ 该方向所需的转向间隔，且不出现负值（后发先至）。关键几项的期望值：跨 rank RD→WRGB = 15 CK；跨 rank WRGB→RD = 2 CK（DQ 空隙 11 CK）；同通道 RDRES→WRGB = 15 CK。矩阵以 JSON 存档，作为回归基准。
+5. PIM 微架构与数据流
+PIM 设计只有两个结构性开关（布局、RoPE 位置）和一个数据流开关（流式 / 融合）；其余设计选择全部固定，不再做成开关。
+5.1 固定的硬件资源（每个 PIM rank）
+资源
+规格
+bank
+16 个，BG 模式 4 BG × 4 bank；只有全 bank MAC，没有半 bank（MACHB）
+SRF（输入缓冲）
+每 bank 1 KiB，WRGB 的目的地
+输出累加池
+每 bank 2 KiB，FP32
+跨 bank 归约
+BG 级、rank 级两级累加；归约结果不在 rank 内缓存：流式时直接经 RDRES 送出，融合时直接 LOCALWR 写入 score DRAM
+WRGB 广播
+一条 WRGB 的 32 B 同时写入 16 个 SRF 的同一槽位；没有单独的 rank 级输入缓冲
+RDRES 来源
+输出累加池或归约输出，经 rank 内汇集后上 DQ
+本地 RoPE 单元
+每 rank 一个（RoPE=本地时使用）
+rank controller
+仅融合数据流存在；描述符队列深度 1，内部 FIFO 32 项
+MAC 速率
+倍频参数 mac_freq_mult = k（1/2/4，默认 4）：基准 1× 为每 4 CK 完成一列 × 一行（16 次 BF16 MAC），k 倍频缩短为 4/k CK
+数值格式固定：权重与输入 BF16，累加 FP32，QKᵀ score FP32。工作负载固定：π0.5 AE，18 层 × 10 去噪步，horizon 16，16 通道 × 2 rank。
+5.2 固定的数据流选择
+QKV 融合；PV 按 token 分片；QKᵀ 的 score 不在 rank 内缓存——流式时归约结果直接经 RDRES 送到 GPU，融合时直接写入 DRAM、QKᵀ 全部完成后一次性读出送 GPU；O projection 在 PIM 上执行（每 rank 常驻完整 W_O，跨 head 求和在 GPU）。这些在 1107/1108 已确定，新版不再提供关闭它们的开关。
+5.3 两个结构开关
+开关
+取值
+影响
+layout
+feature / token
+权重与 KV 在 bank 间的切分方式，决定 DQ 总量
+rope
+gpu / local
+QK 的 RoPE 在 GPU 执行（多一次 Q/K 往返）或在 rank 内执行
+5.4 数据流开关：流式 vs 融合
+方面
+streaming（融合前，对应 c/d/e）
+fused（融合后，对应 f/g）
+rank controller
+无
+有
+计算命令
+细 MAC，走共享外部 CA
+MAC_RUN/ROPE_RUN 描述符（21 CA CK），内部展开走私有 CA
+输入来源
+GPU 逐 fragment 经 WRGB 广播，算子执行期间持续补给
+输入先一次性写入两个暂存 bank，再本地读取
+PV→O
+PV 结果导出 GPU，O 的两次输入扫描重新 WRGB
+PV 结果本地写入 DRAM 再读取
+外部 DQ 时机
+与 MAC 交织，细粒度
+集中在少数 I/O epoch
+与 GPU 访存的关系
+需要仲裁（第 6 节）
+按 epoch 独占，无需仲裁
+合法组合只有 1108 的 5 种：feature+gpu+streaming（c）、token+gpu+streaming（d）、token+local+streaming（e）、token+gpu+fused（f）、token+local+fused（g）。feature 布局只与 streaming 组合，配置校验拒绝其他组合。
+6. 控制器与仲裁
+仲裁是旋钮，但只在 concurrent + streaming 下存在；串行时没有竞争，融合时 DQ 按 epoch 独占、内部命令走私有 CA，调度规则唯一确定，因此不暴露仲裁旋钮。
+6.1 每通道控制器结构
+两个请求队列：GPU 队列（只访问 rank0）、PIM 队列（只访问 rank1，由 PIM sequencer 填充）。
+每个周期：两队列中所有就绪请求的下一条命令，凡能通过 check_timing 的都成为候选；调度策略从候选中选一条发出。
+DQ 冲突与转向已经编码在 spec 里，控制器不做单独的 DQ 检查。
+行策略：GPU 开页；PIM 由程序显式发出 ACT/PRE。
+刷新：按 spec 周期发出，期间两队列都不能向被刷新的 bank/rank 发命令。
+GPU 写批处理：写请求进写队列，达到高水位开始排空、降到低水位停止。两个水位是 VLM 校准参数（第 7 节），所有 case 共用。
+6.2 仲裁旋钮 arbitration（仅 concurrent + streaming）
+取值
+规则
+用途
+frfcfs
+不分来源，行命中优先，再按到达顺序
+无优先级基线
+pim_head
+只要 PIM 队首命令已就绪，GPU 候选不得推迟它的发射与 DQ 时隙；其余按 FR-FCFS
+对应 1108 的策略
+pim_lookahead
+PIM 程序静态已知：为未来 CL+BL+保护间隔窗口内将要发出的 PIM 命令预留 DQ 时隙，GPU 候选不得占用
+静态调度的硬件落点
+gap_batch
+只在 PIM 程序中长度 ≥ 阈值的 DQ 空档内放行 GPU，且同一空档内先读后写成批发出；WRGB/RDRES 连续段视为独占
+第 2 节审计结论
+gap_batch 的阈值不是自由参数：由 spec 计算"插入一个 GPU burst 不推迟 PIM"所需的最小空档（读、写分开计算），直接写死。
+6.3 融合数据流的固定规则（无旋钮）
+PIM 的外部 I/O（暂存写入、结果导出）组成 epoch。epoch 开始前，等待 GPU 已发出命令的 DQ 全部落完，之后 epoch 独占 DQ。
+epoch 结束后 DQ 交还 GPU，GPU 正常 FR-FCFS。
+MAC_RUN/ROPE_RUN 描述符占共享外部 CA，相对 GPU 命令优先发出（每层每通道共 147 CA CK，量很小）。
+展开后的内部命令走 rank 私有 CA，不与 GPU 竞争。
+6.4 串行（case b）
+AE 与 VLM 不重叠，两个队列从不同时非空，调度策略无关。
+7. 前端：PIM sequencer 与 VLM 注入
+两个请求来源都只产生请求，不计算任何时序；时序与依赖全部在控制器里解决。
+7.1 PIM sequencer
+输入：layout、rope、dataflow 和算子描述（复用 source/evaluation_workload.py、horizon_ffn.py 的张量与切分定义）。输出：每通道一个请求程序，按算子分段，每段是一个 PIM 阶段。
+请求
+展开
+依赖（控制器跟踪）
+WRGB(slot)
+1 条 WRGB
+目标 SRF 槽位空闲；SRF 就绪 = 发出 + CWL + BL
+BCAST(slot)
+融合数据流：LOCALRD 读出的暂存数据多播到 16 个 SRF
+LOCALRD 完成；目标 SRF 空闲
+MAC(bank, row, slot)
+必要的 ACT1/ACT2 + MAC
+SRF 就绪；输出池槽空闲
+MAC_RUN(desc) / ROPE_RUN(desc)
+1 条描述符，rank controller 内部展开
+描述符中的 WAIT/DONE 事件
+RDRES(slot)
+1 条 RDRES
+对应 MAC 全部完成
+RD/WR(addr)
+暂存、KV、score 落盘与读回
+地址依赖
+LOCALRD/LOCALWR
+本地端口事件
+地址依赖、端口互斥
+BARRIER
+无命令
+只做阶段边界与覆盖检查
+程序由生成器一次产生并存盘（JSON），带输入哈希；仿真只读它。不再从原生 trace 提取 dq_latency。
+7.2 VLM 闭环注入
+每个 VLM kernel 的输入：实测时长 T、读字节 R（L2 read miss，实测）、写字节 W（L2 写扇区）。
+写回系数 α：实际 DRAM 写 = α × W，全局一个值。
+地址：按 kernel 的张量区域顺序生成 32 B 扇区地址，经通道交织映射到 rank0。
+发射节奏：请求在 [启动, 启动 + T] 内均匀释放，但每通道在途请求数不得超过窗口 M；窗口满时后续请求等待。内存跟不上时，kernel 自然延长。
+kernel 完成 = 最后一个请求完成，且不早于启动 + T。
+7.3 单独运行校准（验收标准）
+自由参数只有三个：α、M、写批处理的高/低水位。
+目标：VLM 单独运行总时长与实测 104.95 ms 相差 ≤ 5%；同时报告逐 kernel 相对误差分布（中位数、p90）。
+校准在 concurrent 实验之前完成，参数写入固定配置文件，所有 case 共用。
+达不到目标时，先检查 α 是否已到下限，再检查写批处理；不允许回到常数偏差抵消。
+8. 阶段驱动与时延记账
+阶段驱动只决定"什么时候把哪些请求交给控制器"，所有时延都来自控制器的事件时间戳，不做任何事后归一化。
+8.1 AE 静态调度
+AE 是一个固定序列：GPU 块（非线性算子，时长取 Thor 实测，不产生 DRAM 请求）与 PIM 阶段交替，共 18 层 × 10 步。PIM 阶段开始 = 前一个 GPU 块结束；GPU 块开始 = 前一个 PIM 阶段结束且 GPU 空闲。
+8.2 VLM kernel 放置（固定规则，不设旋钮）
+VLM kernel 按依赖顺序，在 GPU 空闲（没有 AE GPU 块在执行）时依次启动。
+已启动的 kernel 执行到结束，不被抢占，可以跨越多个 PIM 阶段。
+AE GPU 块必须等 GPU 上在执行的 VLM kernel 结束才能开始；等待时间记为 AE GPU wait。
+AE 全部完成后，剩余 VLM kernel 独占执行。
+8.3 指标定义
+指标
+定义（全部来自时间戳）
+AE_solo
+同一 AE 程序在无 VLM 时的完成时间
+PIM_interference
+Σ（并发时 PIM 阶段时长 − 单独时该阶段时长）
+AE_GPU_wait
+Σ（AE GPU 块实际开始 − 其前一 PIM 阶段结束）
+VLM_memory_stall
+Σ（并发时 kernel 时长 − 单独校准时该 kernel 时长）
+VLM_remaining
+AE 完成后剩余 VLM 的执行时间
+total
+帧开始到 AE 与 VLM 都完成的时间
+DQ / CA 利用率
+检查插件按通道、按阶段统计
+串行 case b：total = AE_solo + VLM_solo，两者都在同一仿真器中测得。所有 case 的 total 可直接比较，不再需要 91.5 ms 抵消。
+9. 消融矩阵、配置校验与输出
+全部实验由 5 个开关描述：layout、rope、dataflow、mode、arbitration。
+9.1 开关与校验规则
+开关
+取值
+校验
+layout
+feature / token
+feature 只能配 streaming + gpu
+rope
+gpu / local
+—
+dataflow
+streaming / fused
+—
+mode
+serial / concurrent
+—
+arbitration
+frfcfs / pim_head / pim_lookahead / gap_batch
+仅当 mode=concurrent 且 dataflow=streaming 时必填，其余情况必须不填
+另有硬件参数 mac_freq_mult（取值 1/2/4，默认 4），所有 case 共用；做灵敏度分析时对整个矩阵统一扫描，不与上面 5 个开关交叉。
+9.2 实验矩阵
+case
+layout
+rope
+dataflow
+mode
+arbitration
+a
+纯 GPU 实测，不仿真
+
+
+
+
+b
+feature
+gpu
+streaming
+serial
+—
+c
+feature
+gpu
+streaming
+concurrent
+pim_head
+d
+token
+gpu
+streaming
+concurrent
+pim_head
+e
+token
+local
+streaming
+concurrent
+pim_head
+f
+token
+gpu
+fused
+concurrent
+—
+g
+token
+local
+fused
+concurrent
+—
+e-frfcfs / e-lookahead / e-gap
+token
+local
+streaming
+concurrent
+依次三种
+c–e 使用 pim_head 是为了与 1108 对照；仲裁消融只在 e 上做，避免与布局、RoPE 交叉。
+9.3 输出格式（与 anonymous_arbitrator 一致）
+evaluation-b-g.csv：每个 case 一行，列为第 8.3 节的指标。
+<case>-PIM-and-AE-waits.csv：每个 PIM 阶段一行（单独时长、并发时长、干扰、AE GPU wait）。
+<case>-VLM-placement.csv：每个 kernel 一行（启动、结束、单独时长、stall）。
+<case>-bus.csv：每通道每阶段 DQ/CA 利用率，来自检查插件。
+每次运行附 provenance.json：spec 哈希、程序哈希、校准参数、源码提交号。
+列名保持旧版，analysis/ 中的画图与审计脚本只改读取路径即可复用。
+10. 验证阶梯
+每一级通过后才进入下一级；任何一级失败都回到对应模块修复，不在上层打补丁。
+级
+内容
+通过标准
+1 spec
+命令对矩阵（4.5 节）与 JEDEC LPDDR5X-8533 数值逐项对照
+全部一致；无负 DQ 空隙
+2 检查插件
+常开，记录每个 burst 的 DQ 区间与每条命令的 CA 区间
+任何运行都不得触发断言
+3 微基准
+纯 RD 流；读写交替流；纯 WRGB 流；RD 与 WRGB 交织流
+与解析计算一致，见下表
+4 PIM 单独
+5 个配置的 AE 单独运行
+与旧原生结果的差异只来自 WRGB/RDRES 延迟与转向，并能逐项解释
+5 VLM 单独
+第 7.3 节校准
+总时长误差 ≤ 5%
+6 完整 case
+b–g 与仲裁消融
+重复运行结果逐字节一致；DQ 字节守恒
+微基准的期望：
+微基准
+期望
+纯 RD 流，单通道，行命中
+带宽接近每通道峰值
+读写交替，每 n 个 burst 切换一次
+带宽损失 = 每次切换的转向开销 × 切换次数
+纯 WRGB 流
+吞吐与旧模型相同，只整体后移一个 CWL
+WRGB 流（4 CK 一条）中插入 GPU RD
+pim_head 下 RD 无法插入，直到 WRGB 段结束
+另有故障注入测试：故意删掉一条派生约束，检查插件必须报错。
+11. 代码组织与实现顺序
+新仓库从干净的 Ramulator2 上游开始，旧仓库打 tag legacy-1108 冻结，只按下表迁入代码。
+11.1 目录
+pim_vla_sim2/  ramulator2/                 上游 Ramulator2 + 以下改动    python/ramulator/dram/lpddr5x_pim.py     命令集、内部约束、4.3 派生规则    src/ramulator/controller/impl/pim_controller.cpp   双队列、依赖跟踪、刷新、写批处理    src/ramulator/controller/impl/policies/  frfcfs、pim_head、pim_lookahead、gap_batch、fused_epoch    src/ramulator/controller/impl/rank_controller.cpp  融合数据流：描述符展开、私有 CA    src/ramulator/plugin/bus_checker.cpp     DQ/CA 检查与统计（只断言）    src/ramulator/frontend/impl/pim_vla_frontend.cpp   阶段驱动、VLM 闭环注入、PIM 程序读取  workloads/                  从旧仓库迁入的张量与切分定义  programs/gen_pim_program.py PIM 请求程序生成（7.1 节）  calib/calibrate_vlm.py      α、M、写水位校准（7.3 节）  experiments/run.py          读 5 个开关，校验，运行，写 9.3 节输出  analysis/                   从旧仓库迁入的画图与审计脚本  tests/                      spec 矩阵、微基准、故障注入、回归
+11.2 迁入与删除
+迁入（只改接口）
+删除，不迁
+source/evaluation_workload.py、horizon_ffn.py
+sequential_transactions.cpp、sequential_timing.h、sequential_rows.h
+Thor 实测：VLM kernel 时长、读写字节、AE GPU 块时长
+prepare_online_program.py 的 trace 后处理、channel_analysis.dq_intervals
+MAC_RUN/ROPE_RUN 描述符格式（COMMANDS.zh-CN.md）
+uniform_transactions.*、shift 与偏差抵消逻辑
+画图、审计脚本（改读新输出）
+pim_data_path、pim_whole_srf 等 20 多个历史开关
+11.3 实现顺序与每步退出条件
+spec：命令集、内部约束、派生规则、命令对矩阵测试。退出：验证第 1 级通过。
+控制器 + 检查插件：双队列、依赖跟踪、刷新、frfcfs。退出：微基准前两项通过，检查插件无断言。
+PIM sequencer（streaming）：生成 c/d/e 的程序。退出：5 个配置中 3 个 streaming 的单独运行通过第 4 级。
+rank controller + fused：描述符、私有 CA、epoch 规则。退出：f/g 单独运行通过第 4 级。
+VLM 注入 + 校准：写批处理、窗口 M、α。退出：第 5 级通过。
+阶段驱动 + 记账：AE 调度、kernel 放置、指标。退出：case b 的 total = AE_solo + VLM_solo。
+仲裁策略：pim_head、pim_lookahead、gap_batch。退出：微基准第 4 项通过。
+完整矩阵：b–g 与仲裁消融。退出：第 6 级通过，输出与 9.3 节格式一致。
+11.4 AttAcc 遗留项及处理
+旧仓库以 AttAcc（HBM3-PIM）模型为底，下列行为都来自它，新版逐项替换或删除。
+遗留项
+旧位置
+新版处理
+pim_data_path="attacc" 模式，unified GEMV、FFN DRAM、rank RoPE 都强制要求它
+config.py 第 100–151 行
+删除该开关
+WRGB/RDRES 的 DQ 延迟为 0
+lpddr5pim.py resolve()、channel_analysis.dq_intervals
+CWL / CL（4.2 节）
+传输只受 Channel nBL_min、Rank nCCDS、BankGroup nCCDL，不含读写转向
+lpddr5pim.py 第 147–160 行
+从 RD/WR 派生（4.3 节）
+WRGB 发出后 BL 即就绪
+lpddr5_controller.cpp 第 168–170 行
+SRF 就绪 = 发出 + CWL + BL
+RDRES 发出即完成，且跳过结果缓冲占用检查
+backend.py 第 195 行、controller 第 963 行
+数据在 CL 后上 DQ；须等 MAC 完成
+MAC 发出即完成，没有计算尾延迟
+controller 第 1012 行、backend.py 第 275 行
+MAC 完成 = 发出 + 流水线延迟（参数，需给出依据）
+结果依赖由 trace 与 barrier 表达，窗口内结果可越过 MAC
+controller 第 638–655 行
+控制器显式跟踪依赖（7.1 节）
+只支持全 bank（无半 bank MACHB）；BG-K 扩展依赖 AttAcc 路径
+controller 第 390、442 行
+删除 MACHB（半 bank）与 BG-K，只保留全 bank MAC
+命令注释中的 "shared input SRAM"、"result registers to shared external logic"
+WRGB.h、RDRES.h
+改为 SRF 广播写、输出累加池读
+生成器硬编码 pim_data_path='attacc'
+horizon_value.py、pv_token_workload.py
+删除参数
+仲裁器、分析与测试中的 AttAcc 传输规则
+sequential_timing.h、continuous_dq.py、compare_native_timing.py 等
+随旧仲裁器一并删除

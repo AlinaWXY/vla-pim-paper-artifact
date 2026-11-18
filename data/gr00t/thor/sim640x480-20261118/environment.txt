@@ -1,0 +1,11 @@
+2026-11-18T02:52:27+08:00
+fact-thor
+GPU 0: NVIDIA Thor (UUID: GPU-a7c66ad2-6dbb-0ab8-c1a2-37ba6dba3600)
+NV Power Mode: MAXN
+0
+Python 3.12.3
+f841d7ae0c37e11d9fbe802a63e7de2080ad8b75924cec4f0632c4fe48a91198  /var/tmp/anonymous-gr00t16/sim640x480-20261118/source/tools/capture_gr00t_ae.py
+b674e454f4d333bb6e6760ef0e8a9b7e8d455250c6204d914ae832b70b4ddddd  /var/tmp/anonymous-gr00t16/sim640x480-20261118/source/tools/capture_gr00t_cold_consumers.py
+c3d3005b759159eb3a7420a13d0db38dfb36f3ac9f27cf0daf6603aae80147fc  /var/tmp/anonymous-gr00t16/sim640x480-20261118/source/tools/capture_gr00t_thor.py
+94f981bf7c48c5c3db11171a60f0981b76ab40fdf6eece84e3f66e4f3da0a414  /var/tmp/anonymous-gr00t16/sim640x480-20261118/source/workloads/__init__.py
+18d15497dbc8329cf165088ec935cd4255cfeeddbdb1cb57adab3b404f2810e2  /var/tmp/anonymous-gr00t16/sim640x480-20261118/source/workloads/models.py

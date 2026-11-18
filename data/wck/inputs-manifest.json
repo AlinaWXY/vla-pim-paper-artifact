@@ -1,0 +1,56 @@
+{
+  "array": "2074284",
+  "source_commit": "2240d5e74de3bae124292cf7873283d4d5295f74",
+  "binary_sha256": "0e8be90ee963638e19b39151d233768ec5a940c6f8f9d42be54f147a21bc8c4a",
+  "configs": {
+    "b": {
+      "config_sha256": "d81f2d458d4978d4a3e9392e18429fe764f5c493837f5aae96c364f751d1b58e",
+      "input_paths": {
+        "spec_path": "data/pi05/configs/spec-k2.json",
+        "program_path": "data/pi05/evidence/compiled-single-read-matrix.683RuH/c/pim-program.json",
+        "ae_schedule_path": "data/pi05/evidence/case-b-single-read.bauEXp/10/ae.json",
+        "vlm_path": "data/pi05/evidence/inputs/vlm.json"
+      }
+    },
+    "c": {
+      "config_sha256": "4728a15f03da531701819652c2a9bfd1d774f111433bf2e70019c7ca8310ca05",
+      "input_paths": {
+        "spec_path": "data/pi05/configs/spec-k2.json",
+        "program_path": "data/pi05/evidence/compiled-single-read-matrix.683RuH/c/pim-program.json",
+        "ae_schedule_path": "data/pi05/evidence/compiled-single-read-matrix.683RuH/c/ae.json",
+        "vlm_path": "data/pi05/evidence/compiled-single-read-matrix.683RuH/compiled/vlm.json"
+      }
+    },
+    "d": {
+      "config_sha256": "b11d62d19decf159a3007041c7960be6a3b1d98ac7f4a86f6bc406d762494af2",
+      "input_paths": {
+        "spec_path": "data/pi05/configs/spec-k2.json",
+        "program_path": "data/pi05/evidence/compiled-single-read-matrix.683RuH/d/pim-program.json",
+        "ae_schedule_path": "data/pi05/evidence/compiled-single-read-matrix.683RuH/d/ae.json",
+        "vlm_path": "data/pi05/evidence/compiled-single-read-matrix.683RuH/compiled/vlm.json"
+      }
+    },
+    "e": {
+      "config_sha256": "115af08dbb76ca43d491053048a7e294d1da810e64e4d44d181e55691a3c3b06",
+      "input_paths": {
+        "spec_path": "data/pi05/configs/spec-k2.json",
+        "program_path": "data/pi05/evidence/compiled-single-read-matrix.683RuH/e/pim-program.json",
+        "ae_schedule_path": "data/pi05/evidence/compiled-single-read-matrix.683RuH/e/ae.json",
+        "vlm_path": "data/pi05/evidence/compiled-single-read-matrix.683RuH/compiled/vlm.json"
+      }
+    }
+  },
+  "input_sha256": {
+    "data/pi05/configs/spec-k2.json": "541dde44b28c466fe3847840a871e065f8c8cdfd5902ebb60a46ee74996c5900",
+    "data/pi05/evidence/case-b-single-read.bauEXp/10/ae.json": "050d7a1de5da9209dd0c19fc96fb0aca5d96083ce873e9452eb8ce0c4e468c0f",
+    "data/pi05/evidence/compiled-single-read-matrix.683RuH/c/ae.json": "1970226cd253cef97dfd3aa9fd514709956845dead2679d09fa97c81b1616352",
+    "data/pi05/evidence/compiled-single-read-matrix.683RuH/c/pim-program.json": "73ed64c52efd77912297fcb2ebe97a5e89b8b43958a762cd23f7b41d82b1935d",
+    "data/pi05/evidence/compiled-single-read-matrix.683RuH/compiled/vlm.json": "877cbba5461ced6d2c3aa0714d1f6bf86bf4da21e664cb5383b731ccd5196a3b",
+    "data/pi05/evidence/compiled-single-read-matrix.683RuH/d/ae.json": "fe8b565ea1bb46dc8e51299f68e2b655fd7bd92a037b8fa3898c849b255d7d78",
+    "data/pi05/evidence/compiled-single-read-matrix.683RuH/d/pim-program.json": "583d46f96f7a6a52a8aee77e4935773d2f8461c88f55e6e1d099bedda56389eb",
+    "data/pi05/evidence/compiled-single-read-matrix.683RuH/e/ae.json": "c629cb5b936f4c7a9cfee622dc03886d39238a378fd0384cb41916bdccc981c4",
+    "data/pi05/evidence/compiled-single-read-matrix.683RuH/e/pim-program.json": "97623b6efb90cbbe854db2c9e4d22eb7370182c951c78ffc184bc25e70115b99",
+    "data/pi05/evidence/inputs/vlm.json": "4024e7a68526f8c953598aa7fa52b6790ed8cd3d5b3008ad649868752e1157d0",
+    "data/pi05/evidence/compiled-single-read-matrix.683RuH/c/pim-program.json": "aabcc0bd8579e24cff225b1502228818f66dc5a8dbc1b98cf64c91ed579ad33b"
+  }
+}

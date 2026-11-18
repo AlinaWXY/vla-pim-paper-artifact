@@ -1,0 +1,71 @@
+{
+  "cold_profile_sha256": "69c089e1f885dd3f697e443ac0e2538fd0c92ca783d3b184b4140845e53848ab",
+  "variants": {
+    "gr00t_n16-feature_before": {
+      "ae_schedule_sha256": "9d6158ae475050229f1e0623b1c03337976ae683d110380426283f507169692e",
+      "baseline_program_sha256": "dd98058ae126cbf60efa959f06e8c05ae000b90a4849eb8d2734063e397baa3f",
+      "baseline_schedule_sha256": "f2284fda742e6a6c3c4c390a0152c49ec3d44351074952b5c69bad3342446fbf",
+      "cold_gpu_us": 14328.528999993992,
+      "cross_kv_write_bytes": 50331648,
+      "old_gpu_us": 21194.435,
+      "preserved_write_bytes": 748683264,
+      "program_sha256": "57190dbfbc9fa146c830c2cbaf2d2ef21d66d322a648cfdfa503ad0e98d5482a",
+      "removed_rd_bytes": 390070272,
+      "replaced_gpu_calls": {
+        "ff_residual": 128,
+        "gelu": 128,
+        "o_residual": 128,
+        "pv_pack_feature": 128,
+        "q_pack_feature": 128,
+        "self_kv_pack": 64,
+        "softmax_feature_cross_image": 32,
+        "softmax_feature_cross_text": 32,
+        "softmax_feature_self": 64
+      }
+    },
+    "gr00t_n16-token_after": {
+      "ae_schedule_sha256": "cefd605acde9ba93f4a98427427e675a1135689f90afdc244990557e3623a9d2",
+      "baseline_program_sha256": "9c4db40c1b6d87a1ed75aba27c9fd7dc69b1342c52dfe4656fa2f28895285228",
+      "baseline_schedule_sha256": "bb422531e42260c34cfdeb1f5a536a3f42ebf35d528eb30a1b1dfc3551784644",
+      "cold_gpu_us": 13794.513000000596,
+      "cross_kv_write_bytes": 37748736,
+      "old_gpu_us": 20252.13200000006,
+      "preserved_write_bytes": 680525824,
+      "program_sha256": "8af242afe45778094e0c49c0fb2c6aa21ef707adf9f20a74cdeea77cad187eee",
+      "removed_rd_bytes": 329252864,
+      "replaced_gpu_calls": {
+        "ff_residual": 128,
+        "gelu": 128,
+        "o_residual": 128,
+        "q_pack": 128,
+        "self_kv_pack": 64,
+        "softmax_cross_image": 32,
+        "softmax_cross_text": 32,
+        "softmax_self": 64
+      }
+    },
+    "gr00t_n16-token_before": {
+      "ae_schedule_sha256": "bbf1b78ce09e6678f4fb54461595a66b60649e20c30f8456e8d691740ae93fd5",
+      "baseline_program_sha256": "29acd131644df00aeccf00e179a695e27a07f6a8e940370f6bea3c4aa9590940",
+      "baseline_schedule_sha256": "0bc7b111ce4f9b01f70ccc554dc48b6456427b146cdb2f5e66218ee2cd7922dc",
+      "cold_gpu_us": 14036.1770000014,
+      "cross_kv_write_bytes": 37748736,
+      "old_gpu_us": 20908.963000000014,
+      "preserved_write_bytes": 699400192,
+      "program_sha256": "83b0173e787ad156fc87891b3b28491184202b85afe9db4e5c55df902f24e18d",
+      "removed_rd_bytes": 335544320,
+      "replaced_gpu_calls": {
+        "ff_residual": 128,
+        "gelu": 128,
+        "o_residual": 128,
+        "pv_pack": 128,
+        "q_pack": 128,
+        "self_kv_pack": 64,
+        "softmax_cross_image": 32,
+        "softmax_cross_text": 32,
+        "softmax_self": 64
+      }
+    }
+  },
+  "vlm_sha256": "c07cedffebb04fbb66184b584160494951b6abc58b49900118c49b28ea55b607"
+}

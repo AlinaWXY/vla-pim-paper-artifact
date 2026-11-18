@@ -1,0 +1,25 @@
+{
+  "parameters": {
+    "alpha": 0.5,
+    "window": 1024,
+    "write_high": 768,
+    "write_low": 256
+  },
+  "result": {
+    "candidate": 1,
+    "alpha": 0.5,
+    "window": 1024,
+    "write_high": 768,
+    "write_low": 256,
+    "target_ms": 66.80254669189453,
+    "solo_ms": 65.936397646,
+    "relative_error": -0.012965808772072318,
+    "kernel_error_p50": 0.12193415450121647,
+    "kernel_error_p90": 0.7863125,
+    "read_bytes": 12630469632,
+    "write_bytes": 1982538912,
+    "within_five_percent": true
+  },
+  "native_solo_sha256": "b73c459fe2eedc67158a52f81feaa7c26d7d00a1b9e8509aaba4b55d3639f3b5",
+  "vlm_sha256": "877cbba5461ced6d2c3aa0714d1f6bf86bf4da21e664cb5383b731ccd5196a3b"
+}

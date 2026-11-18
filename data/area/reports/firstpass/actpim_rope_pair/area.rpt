@@ -1,0 +1,106 @@
+ 
+****************************************
+Report : area
+Design : actpim_rope_pair
+Version: W-2024.09-SP5
+Date   : Sun Nov 15 04:35:23 2026
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    asap7sc7p5t_INVBUF_RVT_TT_nldm_211120 (File: /artifact-source/projects/actpim-hw-overhead/lib/asap7sc7p5t_INVBUF_RVT_TT_nldm_211120.db)
+    asap7sc7p5t_OA_RVT_TT_nldm_211120 (File: /artifact-source/projects/actpim-hw-overhead/lib/asap7sc7p5t_OA_RVT_TT_nldm_211120.db)
+    asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120 (File: /artifact-source/projects/actpim-hw-overhead/lib/asap7sc7p5t_SIMPLE_RVT_TT_nldm_211120.db)
+    asap7sc7p5t_AO_RVT_TT_nldm_211120 (File: /artifact-source/projects/actpim-hw-overhead/lib/asap7sc7p5t_AO_RVT_TT_nldm_211120.db)
+    asap7sc7p5t_SEQ_RVT_TT_nldm_220123 (File: /artifact-source/projects/actpim-hw-overhead/lib/asap7sc7p5t_SEQ_RVT_TT_nldm_220123.db)
+
+Number of ports:                         3188
+Number of nets:                         11605
+Number of cells:                         9189
+Number of combinational cells:           8875
+Number of sequential cells:               260
+Number of macros/black boxes:               0
+Number of buf/inv:                       2739
+Number of references:                      28
+
+Combinational area:                727.658641
+Buf/Inv area:                      151.340402
+Noncombinational area:              75.918057
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:                   803.576698
+Total area:                 undefined
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  --------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-    Noncombi-  Black-
+                                  Total      Total    national  national   boxes   Design
+--------------------------------  ---------  -------  --------  ---------  ------  ----------------------------------------------
+actpim_rope_pair                   803.5767    100.0   14.7695    75.9181  0.0000  actpim_rope_pair
+add                                164.8269     20.5    0.0437     0.0000  0.0000  actpim_rope_pair_DW_fp_add_0
+add/U1                             164.7832     20.5   95.1637     0.0000  0.0000  actpim_rope_pair_DW_fp_addsub_J6_0
+add/U1/U1                            6.9984      0.9    6.9984     0.0000  0.0000  actpim_rope_pair_DW_norm_J6_0
+add/U1/U1/add_118                    0.0000      0.0    0.0000     0.0000  0.0000  actpim_rope_pair_DW01_add_J6_1
+add/U1/U2                            5.5696      0.7    5.5696     0.0000  0.0000  actpim_rope_pair_DW_lzd_J6_0
+add/U1/add_1_root_add_295_2         12.9325      1.6   12.9325     0.0000  0.0000  actpim_rope_pair_DW01_add_J6_0
+add/U1/add_340                       1.8225      0.2    1.8225     0.0000  0.0000  actpim_rope_pair_DW01_add_J6_2
+add/U1/add_399                       7.1442      0.9    7.1442     0.0000  0.0000  actpim_rope_pair_DW01_inc_J6_0
+add/U1/add_403_DP_OP_363J6_9206_16
+                                     8.9667      1.1    8.9667     0.0000  0.0000  actpim_rope_pair_add_403_DP_OP_363J6_9206_J6_0
+add/U1/lt_224                       15.3382      1.9   15.3382     0.0000  0.0000  actpim_rope_pair_DW01_cmp2_J6_0
+add/U1/lte_336                       2.1433      0.3    2.1433     0.0000  0.0000  actpim_rope_pair_DW01_cmp2_J6_1
+add/U1/sub_278_DP_OP_362J6_6605_15
+                                     8.7043      1.1    8.7043     0.0000  0.0000  actpim_rope_pair_sub_278_DP_OP_362J6_6605_J6_0
+add_1_root_add_47_2_C61_S5           3.9220      0.5    3.9220     0.0000  0.0000  actpim_rope_pair_DW01_add_39
+add_1_root_add_47_2_C61_S5_I2        3.9220      0.5    3.9220     0.0000  0.0000  actpim_rope_pair_DW01_add_38
+m0                                  93.5453     11.6   55.0249     0.0000  0.0000  actpim_rope_pair_DW_fp_mult_3
+m0/add_376                           1.4434      0.2    1.4434     0.0000  0.0000  actpim_rope_pair_DW01_inc_5
+m0/add_511                           7.9024      1.0    7.9024     0.0000  0.0000  actpim_rope_pair_DW01_add_37
+m0/mult_487                         21.6513      2.7   21.6513     0.0000  0.0000  actpim_rope_pair_DW_mult_uns_3
+m0/r471                              2.3182      0.3    2.3182     0.0000  0.0000  actpim_rope_pair_DW01_add_29
+m0/sub_369_2                         2.5078      0.3    2.5078     0.0000  0.0000  actpim_rope_pair_DW01_sub_20
+m0/sub_481                           2.6973      0.3    2.6973     0.0000  0.0000  actpim_rope_pair_DW01_sub_21
+m1                                  94.2889     11.7   54.6458     0.0000  0.0000  actpim_rope_pair_DW_fp_mult_2
+m1/add_376                           1.4434      0.2    1.4434     0.0000  0.0000  actpim_rope_pair_DW01_inc_4
+m1/add_511                           8.6605      1.1    8.6605     0.0000  0.0000  actpim_rope_pair_DW01_add_28
+m1/mult_487                         21.9283      2.7   21.9283     0.0000  0.0000  actpim_rope_pair_DW_mult_uns_2
+m1/r471                              2.3182      0.3    2.3182     0.0000  0.0000  actpim_rope_pair_DW01_add_20
+m1/sub_369_2                         2.5952      0.3    2.5952     0.0000  0.0000  actpim_rope_pair_DW01_sub_15
+m1/sub_481                           2.6973      0.3    2.6973     0.0000  0.0000  actpim_rope_pair_DW01_sub_16
+m2                                  93.5599     11.6   54.3542     0.0000  0.0000  actpim_rope_pair_DW_fp_mult_1
+m2/add_376                           1.4434      0.2    1.4434     0.0000  0.0000  actpim_rope_pair_DW01_inc_3
+m2/add_511                           8.1648      1.0    8.1648     0.0000  0.0000  actpim_rope_pair_DW01_add_19
+m2/mult_487                         22.0741      2.7   22.0741     0.0000  0.0000  actpim_rope_pair_DW_mult_uns_1
+m2/r471                              2.3182      0.3    2.3182     0.0000  0.0000  actpim_rope_pair_DW01_add_11
+m2/sub_369_2                         2.5078      0.3    2.5078     0.0000  0.0000  actpim_rope_pair_DW01_sub_10
+m2/sub_481                           2.6973      0.3    2.6973     0.0000  0.0000  actpim_rope_pair_DW01_sub_11
+m3                                  93.8952     11.7   55.3311     0.0000  0.0000  actpim_rope_pair_DW_fp_mult_0
+m3/add_376                           1.4434      0.2    1.4434     0.0000  0.0000  actpim_rope_pair_DW01_inc_2
+m3/add_511                           7.7857      1.0    7.7857     0.0000  0.0000  actpim_rope_pair_DW01_add_10
+m3/mult_487                         21.7971      2.7   21.7971     0.0000  0.0000  actpim_rope_pair_DW_mult_uns_0
+m3/r471                              2.3182      0.3    2.3182     0.0000  0.0000  actpim_rope_pair_DW01_add_2
+m3/sub_369_2                         2.5223      0.3    2.5223     0.0000  0.0000  actpim_rope_pair_DW01_sub_5
+m3/sub_481                           2.6973      0.3    2.6973     0.0000  0.0000  actpim_rope_pair_DW01_sub_6
+sub                                164.9290     20.5    0.0875     0.0000  0.0000  actpim_rope_pair_DW_fp_sub_0
+sub/U1                             164.8415     20.5   96.9570     0.0000  0.0000  actpim_rope_pair_DW_fp_addsub_J5_0
+sub/U1/U1                            7.1588      0.9    7.1588     0.0000  0.0000  actpim_rope_pair_DW_norm_J5_0
+sub/U1/U1/add_118                    0.0000      0.0    0.0000     0.0000  0.0000  actpim_rope_pair_DW01_add_J5_1
+sub/U1/U2                            5.5404      0.7    5.5404     0.0000  0.0000  actpim_rope_pair_DW_lzd_J5_0
+sub/U1/add_1_root_add_295_2         14.2301      1.8   14.2301     0.0000  0.0000  actpim_rope_pair_DW01_add_J5_0
+sub/U1/add_340                       1.9391      0.2    1.9391     0.0000  0.0000  actpim_rope_pair_DW01_add_J5_2
+sub/U1/add_399                       6.2986      0.8    6.2986     0.0000  0.0000  actpim_rope_pair_DW01_inc_J5_0
+sub/U1/add_403_DP_OP_363J5_9206_16
+                                     7.0713      0.9    7.0713     0.0000  0.0000  actpim_rope_pair_add_403_DP_OP_363J5_9206_J5_0
+sub/U1/lt_224                       14.6966      1.8   14.6966     0.0000  0.0000  actpim_rope_pair_DW01_cmp2_J5_0
+sub/U1/lte_336                       2.1433      0.3    2.1433     0.0000  0.0000  actpim_rope_pair_DW01_cmp2_J5_1
+sub/U1/sub_278_DP_OP_362J5_6605_15
+                                     8.8063      1.1    8.8063     0.0000  0.0000  actpim_rope_pair_sub_278_DP_OP_362J5_6605_J5_0
+--------------------------------  ---------  -------  --------  ---------  ------  ----------------------------------------------
+Total                                                 727.6586    75.9181  0.0000
+
+1

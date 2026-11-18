@@ -1,0 +1,413 @@
+{
+  "job_id": "2074523",
+  "source_commit": "2240d5e74de3bae124292cf7873283d4d5295f74",
+  "calibration_policy": "same compiled Thor MHA8 inputs and calibration as the 1115 replay",
+  "b_vlm_solo_us": 65936.397646,
+  "historical_c_g": {
+    "always_on_c_g": {
+      "c": {
+        "path": "data/pi05/results/combined-c/repeat-1/raw.json",
+        "raw_sha256": "89095d62efde1e068072e84ef319dfd2e75e48ab4846bf03a36facb8b54d15db",
+        "duration_channel_ck": 788156112,
+        "pim_channel_ck": 42577920,
+        "gpu_channel_ck": 501386737,
+        "pim_linear_wall_ms": 46.205652066,
+        "gpu_actual_dq_pct": 63.61515559749919,
+        "dq_not_occupied_by_pim_pct": 94.59778090257328,
+        "metrics": {
+          "AE_elapsed_us": 60327.083544,
+          "AE_GPU_wait_us": 2865.440858,
+          "VLM_remaining_us": 26439.022358,
+          "total_us": 86766.105902,
+          "gpu_read_bytes": 12630469632,
+          "gpu_write_bytes": 1982538912,
+          "pim_read_bytes": 0,
+          "pim_write_bytes": 704839680,
+          "checked_commands": 615645550,
+          "serial_epoch_reset": false,
+          "VLM_GPU_yields": 987,
+          "AE_GPU_wait_max_us": 4.550238,
+          "GPU_act1": 10224121,
+          "GPU_act2": 10224121,
+          "GPU_prepb": 10223961,
+          "GPU_preab": 0,
+          "GPU_reads": 394702176,
+          "GPU_writes": 61954341,
+          "GPU_row_hits": 448573002,
+          "GPU_row_misses": 8083515,
+          "PIM_out_of_order_issues": 0,
+          "PIM_prefetched_prerequisites": 0
+        }
+      },
+      "g": {
+        "path": "data/pi05/results/combined-g/repeat-1/raw.json",
+        "raw_sha256": "6d1bd4c5d8139497473db4237735dbbe1d591736831074c68695d0ce70f5eb0e",
+        "duration_channel_ck": 1004963376,
+        "pim_channel_ck": 35297280,
+        "gpu_channel_ck": 759424457,
+        "pim_linear_wall_ms": 58.915977917999996,
+        "gpu_actual_dq_pct": 75.56737639760516,
+        "dq_not_occupied_by_pim_pct": 96.48770484149465,
+        "metrics": {
+          "AE_elapsed_us": 68644.552788,
+          "AE_GPU_wait_us": 1786.013908,
+          "VLM_remaining_us": 9033.121034,
+          "total_us": 77677.673822,
+          "gpu_read_bytes": 12630469632,
+          "gpu_write_bytes": 1982538912,
+          "pim_read_bytes": 11796480,
+          "pim_write_bytes": 576552960,
+          "checked_commands": 667676820,
+          "serial_epoch_reset": false,
+          "VLM_GPU_yields": 681,
+          "AE_GPU_wait_max_us": 4.346692,
+          "GPU_act1": 9800689,
+          "GPU_act2": 9800689,
+          "GPU_prepb": 9800497,
+          "GPU_preab": 0,
+          "GPU_reads": 394702176,
+          "GPU_writes": 61954341,
+          "GPU_row_hits": 448688685,
+          "GPU_row_misses": 7967832,
+          "PIM_out_of_order_issues": 0,
+          "PIM_prefetched_prerequisites": 0
+        }
+      }
+    },
+    "fixed_prior_pim_trace_channel_0": {
+      "c": {
+        "always_on": {
+          "channel": 0,
+          "timing": "always_on",
+          "read_capacity_ck": 36130764,
+          "exclude_io_epochs": false,
+          "duration_ck": 49259757,
+          "gpu_read_dq_capacity_pct": 73.34742637889993
+        },
+        "resync": {
+          "channel": 0,
+          "timing": "resync",
+          "read_capacity_ck": 27168614,
+          "exclude_io_epochs": false,
+          "duration_ck": 49259757,
+          "gpu_read_dq_capacity_pct": 55.15377187102243
+        }
+      },
+      "g": {
+        "always_on": {
+          "channel": 0,
+          "timing": "always_on",
+          "read_capacity_ck": 58918762,
+          "exclude_io_epochs": false,
+          "duration_ck": 62810211,
+          "gpu_read_dq_capacity_pct": 93.8044325308826
+        },
+        "resync": {
+          "channel": 0,
+          "timing": "resync",
+          "read_capacity_ck": 58668620,
+          "exclude_io_epochs": false,
+          "duration_ck": 62810211,
+          "gpu_read_dq_capacity_pct": 93.40618199801939
+        }
+      }
+    },
+    "fixed_prior_pim_trace_excluding_io_epochs_channel_0": {
+      "c": {
+        "always_on": {
+          "channel": 0,
+          "timing": "always_on",
+          "read_capacity_ck": 36130764,
+          "exclude_io_epochs": true,
+          "duration_ck": 49259757,
+          "gpu_read_dq_capacity_pct": 73.34742637889993
+        },
+        "resync": {
+          "channel": 0,
+          "timing": "resync",
+          "read_capacity_ck": 27168614,
+          "exclude_io_epochs": true,
+          "duration_ck": 49259757,
+          "gpu_read_dq_capacity_pct": 55.15377187102243
+        }
+      },
+      "g": {
+        "always_on": {
+          "channel": 0,
+          "timing": "always_on",
+          "read_capacity_ck": 58230050,
+          "exclude_io_epochs": true,
+          "duration_ck": 62810211,
+          "gpu_read_dq_capacity_pct": 92.70793565714976
+        },
+        "resync": {
+          "channel": 0,
+          "timing": "resync",
+          "read_capacity_ck": 58224290,
+          "exclude_io_epochs": true,
+          "duration_ck": 62810211,
+          "gpu_read_dq_capacity_pct": 92.69876517370719
+        }
+      }
+    },
+    "resync_runs": {}
+  },
+  "cases": {
+    "f": {
+      "comparison": {
+        "case": "f",
+        "always_on_e2e_ms": 78.16543382200001,
+        "resync_e2e_ms": 78.169958734,
+        "e2e_delta_ms": 0.004524911999993719,
+        "e2e_delta_pct": 0.005788891302382915,
+        "resync_ae_ms": 69.274119628,
+        "resync_vlm_tail_ms": 8.895839105999999,
+        "always_on_gpu_dq_pct": 75.21299163565267,
+        "resync_gpu_dq_pct": 75.2089486899974,
+        "always_on_dq_not_pim_pct": 96.48786247057338,
+        "resync_dq_not_pim_pct": 96.48819182997428,
+        "rank_switches": 34538
+      },
+      "always_on": {
+        "path": "data/pi05/results/combined-f/repeat-1/raw.json",
+        "raw_sha256": "1567d68c93dc46f640ab6c703c6e3aec4bba3d6a76d0089e10c764a8e07cd360",
+        "duration_channel_ck": 1005008480,
+        "pim_channel_ck": 35297280,
+        "gpu_channel_ck": 755896944,
+        "pim_linear_wall_ms": 58.91862214,
+        "gpu_actual_dq_pct": 75.21299163565267,
+        "dq_not_occupied_by_pim_pct": 96.48786247057338,
+        "metrics": {
+          "AE_elapsed_us": 69271.388172,
+          "AE_GPU_wait_us": 2167.235868,
+          "VLM_remaining_us": 8894.04565,
+          "total_us": 78165.433822,
+          "gpu_read_bytes": 12630469632,
+          "gpu_write_bytes": 1982538912,
+          "pim_read_bytes": 0,
+          "pim_write_bytes": 600145920,
+          "checked_commands": 666626680,
+          "serial_epoch_reset": false,
+          "VLM_GPU_yields": 849,
+          "AE_GPU_wait_max_us": 4.447996,
+          "GPU_act1": 9773750,
+          "GPU_act2": 9773750,
+          "GPU_prepb": 9773558,
+          "GPU_preab": 0,
+          "GPU_reads": 394702176,
+          "GPU_writes": 61954341,
+          "GPU_row_hits": 448698890,
+          "GPU_row_misses": 7957627,
+          "PIM_out_of_order_issues": 0,
+          "PIM_prefetched_prerequisites": 0
+        }
+      },
+      "resync": {
+        "path": "data/wck/results/f/job-2074523/raw.json",
+        "raw_sha256": "f61d81abe481a7804e154d066cb8fd9f9f51193db2395912718bd3d8759ca0be",
+        "duration_channel_ck": 1005102736,
+        "pim_channel_ck": 35297280,
+        "gpu_channel_ck": 755927201,
+        "pim_linear_wall_ms": 58.924147897999994,
+        "gpu_actual_dq_pct": 75.2089486899974,
+        "dq_not_occupied_by_pim_pct": 96.48819182997428,
+        "metrics": {
+          "AE_elapsed_us": 69274.119628,
+          "AE_GPU_wait_us": 2168.68883,
+          "VLM_remaining_us": 8895.839106,
+          "total_us": 78169.958734,
+          "gpu_read_bytes": 12630469632,
+          "gpu_write_bytes": 1982538912,
+          "pim_read_bytes": 0,
+          "pim_write_bytes": 600145920,
+          "checked_commands": 666665786,
+          "serial_epoch_reset": false,
+          "VLM_GPU_yields": 845,
+          "AE_GPU_wait_max_us": 4.578378,
+          "GPU_act1": 9774953,
+          "GPU_act2": 9774953,
+          "GPU_prepb": 9774793,
+          "GPU_preab": 0,
+          "GPU_reads": 394702176,
+          "GPU_writes": 61954341,
+          "GPU_row_hits": 448699627,
+          "GPU_row_misses": 7956890,
+          "PIM_out_of_order_issues": 0,
+          "PIM_prefetched_prerequisites": 0
+        }
+      },
+      "switches_by_direction": {
+        "RR": {
+          "switches": 0,
+          "dq_gap_ck": 0,
+          "required_resync_gap_ck": 0
+        },
+        "RW": {
+          "switches": 2868,
+          "dq_gap_ck": 401813,
+          "required_resync_gap_ck": 31548
+        },
+        "WR": {
+          "switches": 17269,
+          "dq_gap_ck": 731062,
+          "required_resync_gap_ck": 328111
+        },
+        "WW": {
+          "switches": 14401,
+          "dq_gap_ck": 131051305,
+          "required_resync_gap_ck": 158411
+        }
+      },
+      "input_hashes": {
+        "build/pim_vla_sim": "0e8be90ee963638e19b39151d233768ec5a940c6f8f9d42be54f147a21bc8c4a",
+        "configs/f.json": "99039fcaf1de5a1f23aead5a43e056be1816743f42a6001d5814793042bcc515"
+      },
+      "trace_channel_0_capacity": {
+        "dq_only": {
+          "channel": 0,
+          "timing": "resync",
+          "read_capacity_ck": 58675962,
+          "exclude_io_epochs": false,
+          "duration_ck": 62818921,
+          "gpu_read_dq_capacity_pct": 93.40491855948943
+        },
+        "mask_io_epochs": {
+          "channel": 0,
+          "timing": "resync",
+          "read_capacity_ck": 58225760,
+          "exclude_io_epochs": true,
+          "duration_ck": 62818921,
+          "gpu_read_dq_capacity_pct": 92.68825231811925
+        }
+      }
+    },
+    "g": {
+      "comparison": {
+        "case": "g",
+        "always_on_e2e_ms": 77.677673822,
+        "resync_e2e_ms": 77.643136662,
+        "e2e_delta_ms": -0.03453715999999929,
+        "e2e_delta_pct": -0.0444621450420124,
+        "resync_ae_ms": 68.614069664,
+        "resync_vlm_tail_ms": 9.029066998000001,
+        "always_on_gpu_dq_pct": 75.56737639760516,
+        "resync_gpu_dq_pct": 75.59771248893038,
+        "always_on_dq_not_pim_pct": 96.48770484149465,
+        "resync_dq_not_pim_pct": 96.48796876016627,
+        "rank_switches": 28784
+      },
+      "always_on": {
+        "path": "data/pi05/results/combined-g/repeat-1/raw.json",
+        "raw_sha256": "6d1bd4c5d8139497473db4237735dbbe1d591736831074c68695d0ce70f5eb0e",
+        "duration_channel_ck": 1004963376,
+        "pim_channel_ck": 35297280,
+        "gpu_channel_ck": 759424457,
+        "pim_linear_wall_ms": 58.915977917999996,
+        "gpu_actual_dq_pct": 75.56737639760516,
+        "dq_not_occupied_by_pim_pct": 96.48770484149465,
+        "metrics": {
+          "AE_elapsed_us": 68644.552788,
+          "AE_GPU_wait_us": 1786.013908,
+          "VLM_remaining_us": 9033.121034,
+          "total_us": 77677.673822,
+          "gpu_read_bytes": 12630469632,
+          "gpu_write_bytes": 1982538912,
+          "pim_read_bytes": 11796480,
+          "pim_write_bytes": 576552960,
+          "checked_commands": 667676820,
+          "serial_epoch_reset": false,
+          "VLM_GPU_yields": 681,
+          "AE_GPU_wait_max_us": 4.346692,
+          "GPU_act1": 9800689,
+          "GPU_act2": 9800689,
+          "GPU_prepb": 9800497,
+          "GPU_preab": 0,
+          "GPU_reads": 394702176,
+          "GPU_writes": 61954341,
+          "GPU_row_hits": 448688685,
+          "GPU_row_misses": 7967832,
+          "PIM_out_of_order_issues": 0,
+          "PIM_prefetched_prerequisites": 0
+        }
+      },
+      "resync": {
+        "path": "data/wck/results/g/job-2074523/raw.json",
+        "raw_sha256": "f3a367fab97db8d4167fe05b2f6e85d4b2bd4a6c2c9eddb8a41ec74b65697c63",
+        "duration_channel_ck": 1005038896,
+        "pim_channel_ck": 35297280,
+        "gpu_channel_ck": 759786415,
+        "pim_linear_wall_ms": 58.920405278,
+        "gpu_actual_dq_pct": 75.59771248893038,
+        "dq_not_occupied_by_pim_pct": 96.48796876016627,
+        "metrics": {
+          "AE_elapsed_us": 68614.069664,
+          "AE_GPU_wait_us": 1753.88647,
+          "VLM_remaining_us": 9029.066998,
+          "total_us": 77643.136662,
+          "gpu_read_bytes": 12630469632,
+          "gpu_write_bytes": 1982538912,
+          "pim_read_bytes": 11796480,
+          "pim_write_bytes": 576552960,
+          "checked_commands": 667719274,
+          "serial_epoch_reset": false,
+          "VLM_GPU_yields": 676,
+          "AE_GPU_wait_max_us": 4.34294,
+          "GPU_act1": 9805953,
+          "GPU_act2": 9805953,
+          "GPU_prepb": 9805809,
+          "GPU_preab": 0,
+          "GPU_reads": 394702176,
+          "GPU_writes": 61954341,
+          "GPU_row_hits": 448689328,
+          "GPU_row_misses": 7967189,
+          "PIM_out_of_order_issues": 0,
+          "PIM_prefetched_prerequisites": 0
+        }
+      },
+      "switches_by_direction": {
+        "RR": {
+          "switches": 2574,
+          "dq_gap_ck": 244873,
+          "required_resync_gap_ck": 48906
+        },
+        "RW": {
+          "switches": 0,
+          "dq_gap_ck": 0,
+          "required_resync_gap_ck": 0
+        },
+        "WR": {
+          "switches": 14336,
+          "dq_gap_ck": 5637555,
+          "required_resync_gap_ck": 272384
+        },
+        "WW": {
+          "switches": 11874,
+          "dq_gap_ck": 123851629,
+          "required_resync_gap_ck": 130614
+        }
+      },
+      "input_hashes": {
+        "build/pim_vla_sim": "0e8be90ee963638e19b39151d233768ec5a940c6f8f9d42be54f147a21bc8c4a",
+        "configs/g.json": "c7c869c10970ff22e5d7b87bc3f4625afc3d61e8ba44582638fd506df0fb227b"
+      },
+      "trace_channel_0_capacity": {
+        "dq_only": {
+          "channel": 0,
+          "timing": "resync",
+          "read_capacity_ck": 58673652,
+          "exclude_io_epochs": false,
+          "duration_ck": 62814931,
+          "gpu_read_dq_capacity_pct": 93.40717416373505
+        },
+        "mask_io_epochs": {
+          "channel": 0,
+          "timing": "resync",
+          "read_capacity_ck": 58228860,
+          "exclude_io_epochs": true,
+          "duration_ck": 62814931,
+          "gpu_read_dq_capacity_pct": 92.69907500176988
+        }
+      }
+    }
+  }
+}

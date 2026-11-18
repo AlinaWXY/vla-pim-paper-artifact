@@ -1,0 +1,22 @@
+{
+  "ae_schedule_path": "data/pi05/evidence/case-b-single-read.bauEXp/10/ae.json",
+  "calibration": {
+    "alpha": 1.0,
+    "window": 1024,
+    "write_high": 768,
+    "write_low": 256
+  },
+  "case": "b",
+  "dataflow": "streaming",
+  "layout": "feature",
+  "mac_freq_mult": 2,
+  "mode": "serial",
+  "program_path": "data/pi05/evidence/case-b-single-read.bauEXp/pim-program.json",
+  "rope": "gpu",
+  "run_kind": "ae_solo",
+  "spec_path": "data/pi05/configs/spec-k2.json",
+  "vlm_path": "data/pi05/evidence/inputs/vlm.json",
+  "vlm_release": "uniform",
+  "wck_rank_switch": "resync",
+  "bus_diagnostics": true
+}

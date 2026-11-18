@@ -1,0 +1,698 @@
+ 
+****************************************
+Report : resources
+Design : actpim_rope_pair
+Version: W-2024.09-SP5
+Date   : Sun Nov 15 04:35:23 2026
+****************************************
+
+Resource Sharing Report for design actpim_rope_pair in file
+        /artifact-source/projects/actpim-hw-overhead/rtl/actpim_blocks.sv
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r400     | DW01_add     | width=32   |               | add_1_root_add_47_2_C61_S5 |
+| r402     | DW01_add     | width=32   |               | add_1_root_add_47_2_C61_S5_I2 |
+| r404     | DW_fp_mult   | sig_width=23 |             | m0                   |
+|          |              | exp_width=8 |              |                      |
+|          |              | ieee_compliance=1 |        |                      |
+|          |              | en_ubr_flag=0 |            |                      |
+| r406     | DW_fp_mult   | sig_width=23 |             | m1                   |
+|          |              | exp_width=8 |              |                      |
+|          |              | ieee_compliance=1 |        |                      |
+|          |              | en_ubr_flag=0 |            |                      |
+| r408     | DW_fp_mult   | sig_width=23 |             | m2                   |
+|          |              | exp_width=8 |              |                      |
+|          |              | ieee_compliance=1 |        |                      |
+|          |              | en_ubr_flag=0 |            |                      |
+| r410     | DW_fp_mult   | sig_width=23 |             | m3                   |
+|          |              | exp_width=8 |              |                      |
+|          |              | ieee_compliance=1 |        |                      |
+|          |              | en_ubr_flag=0 |            |                      |
+| r412     | DW_fp_sub    | sig_width=23 |             | sub                  |
+|          |              | exp_width=8 |              |                      |
+|          |              | ieee_compliance=1 |        |                      |
+| r414     | DW_fp_add    | sig_width=23 |             | add                  |
+|          |              | exp_width=8 |              |                      |
+|          |              | ieee_compliance=1 |        |                      |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_1_root_add_47_2_C61_S5            |                    |                |
+|                    | DW01_add         | rpl                |                |
+| add_1_root_add_47_2_C61_S5_I2         |                    |                |
+|                    | DW01_add         | rpl                |                |
+| m0                 | DW_fp_mult       | rtl                |                |
+| m1                 | DW_fp_mult       | rtl                |                |
+| m2                 | DW_fp_mult       | rtl                |                |
+| m3                 | DW_fp_mult       | rtl                |                |
+| sub                | DW_fp_sub        | rtl                |                |
+| add                | DW_fp_add        | rtl                |                |
+===============================================================================
+
+ 
+****************************************
+Design : actpim_rope_pair_DW_fp_mult_3
+****************************************
+
+Resource Sharing Report for design
+        DW_fp_mult_sig_width23_exp_width8_ieee_compliance1_en_ubr_flag0 in file
+        ./DW_fp_mult__rtl.v.e
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r471     | DW01_add     | width=9    |               | add_369 add_369_4    |
+|          |              |            |               | add_379              |
+| r472     | DW01_sub     | width=10   |               | sub_369 sub_369_3    |
+| r487     | DW01_add     | width=7    |               | add_481 add_481_3    |
+| r499     | DW_cmp       | width=48   |               | lt_568_2 lt_568_4    |
+|          |              |            |               | lt_568_6             |
+| r500     | DW_cmp       | width=48   |               | lt_568_3 lt_568_5    |
+| r501     | DW_cmp       | width=48   |               | eq_568_16 eq_568_9   |
+| r540     | DW01_sub     | width=10   |               | sub_369_2            |
+| r542     | DW01_add     | width=10   |               | add_369_2            |
+| r544     | DW01_add     | width=10   |               | add_369_3            |
+| r546     | DW01_inc     | width=8    |               | add_376              |
+| r548     | DW01_add     | width=10   |               | add_379_2            |
+| r550     | DW01_add     | width=10   |               | add_379_3            |
+| r552     | DW01_sub     | width=10   |               | sub_379              |
+| r554     | DW01_sub     | width=10   |               | sub_380              |
+| r556     | DW_cmp       | width=10   |               | lte_384              |
+| r558     | DW_cmp       | width=10   |               | lt_385               |
+| r560     | DW_cmp       | width=10   |               | gte_389              |
+| r562     | DW_cmp       | width=10   |               | gt_390               |
+| r564     | DW_cmp       | width=10   |               | gte_391              |
+| r566     | DW01_add     | width=6    |               | add_449              |
+| r568     | DW01_add     | width=10   |               | add_481_2            |
+| r570     | DW01_sub     | width=10   |               | sub_481              |
+| r572     | DW_mult_uns  | a_width=24 |               | mult_487             |
+|          |              | b_width=24 |               |                      |
+| r574     | DW_rightsh   | A_width=48 |               | srl_490              |
+|          |              | SH_width=10 |              |                      |
+| r576     | DW_leftsh    | A_width=48 |               | sll_491              |
+|          |              | SH_width=7 |               |                      |
+| r578     | DW_cmp       | width=10   |               | lt_502               |
+| r580     | DW_cmp       | width=10   |               | lt_507               |
+| r582     | DW01_add     | width=25   |               | add_511              |
+| r584     | DW01_add     | width=10   |               | add_523              |
+| r586     | DW_cmp       | width=10   |               | gte_523              |
+| r588     | DW_cmp       | width=48   |               | lt_568               |
+| r590     | DW_cmp       | width=48   |               | lt_568_7             |
+| r592     | DW_cmp       | width=48   |               | eq_568_22            |
+| r594     | DW_lzd       | a_width=24 |               | U1                   |
+| r596     | DW_lzd       | a_width=24 |               | U2                   |
+| r598     | DW_lzd       | a_width=24 |               | U3                   |
+| r600     | DW_lzd       | a_width=24 |               | U4                   |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_511            | DW01_add         | rpl                |                |
+| sub_481            | DW01_sub         | rpl                |                |
+| add_376            | DW01_inc         | rpl                |                |
+| mult_487           | DW_mult_uns      | apparch (area)     |                |
+|                    |                  | mult_arch: benc_radix8              |
+| sub_369_2          | DW01_sub         | rpl                |                |
+| r471               | DW01_add         | rpl                |                |
+===============================================================================
+
+ 
+****************************************
+Design : actpim_rope_pair_DW_fp_mult_2
+****************************************
+
+Resource Sharing Report for design
+        DW_fp_mult_sig_width23_exp_width8_ieee_compliance1_en_ubr_flag0 in file
+        ./DW_fp_mult__rtl.v.e
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r471     | DW01_add     | width=9    |               | add_369 add_369_4    |
+|          |              |            |               | add_379              |
+| r472     | DW01_sub     | width=10   |               | sub_369 sub_369_3    |
+| r487     | DW01_add     | width=7    |               | add_481 add_481_3    |
+| r499     | DW_cmp       | width=48   |               | lt_568_2 lt_568_4    |
+|          |              |            |               | lt_568_6             |
+| r500     | DW_cmp       | width=48   |               | lt_568_3 lt_568_5    |
+| r501     | DW_cmp       | width=48   |               | eq_568_16 eq_568_9   |
+| r540     | DW01_sub     | width=10   |               | sub_369_2            |
+| r542     | DW01_add     | width=10   |               | add_369_2            |
+| r544     | DW01_add     | width=10   |               | add_369_3            |
+| r546     | DW01_inc     | width=8    |               | add_376              |
+| r548     | DW01_add     | width=10   |               | add_379_2            |
+| r550     | DW01_add     | width=10   |               | add_379_3            |
+| r552     | DW01_sub     | width=10   |               | sub_379              |
+| r554     | DW01_sub     | width=10   |               | sub_380              |
+| r556     | DW_cmp       | width=10   |               | lte_384              |
+| r558     | DW_cmp       | width=10   |               | lt_385               |
+| r560     | DW_cmp       | width=10   |               | gte_389              |
+| r562     | DW_cmp       | width=10   |               | gt_390               |
+| r564     | DW_cmp       | width=10   |               | gte_391              |
+| r566     | DW01_add     | width=6    |               | add_449              |
+| r568     | DW01_add     | width=10   |               | add_481_2            |
+| r570     | DW01_sub     | width=10   |               | sub_481              |
+| r572     | DW_mult_uns  | a_width=24 |               | mult_487             |
+|          |              | b_width=24 |               |                      |
+| r574     | DW_rightsh   | A_width=48 |               | srl_490              |
+|          |              | SH_width=10 |              |                      |
+| r576     | DW_leftsh    | A_width=48 |               | sll_491              |
+|          |              | SH_width=7 |               |                      |
+| r578     | DW_cmp       | width=10   |               | lt_502               |
+| r580     | DW_cmp       | width=10   |               | lt_507               |
+| r582     | DW01_add     | width=25   |               | add_511              |
+| r584     | DW01_add     | width=10   |               | add_523              |
+| r586     | DW_cmp       | width=10   |               | gte_523              |
+| r588     | DW_cmp       | width=48   |               | lt_568               |
+| r590     | DW_cmp       | width=48   |               | lt_568_7             |
+| r592     | DW_cmp       | width=48   |               | eq_568_22            |
+| r594     | DW_lzd       | a_width=24 |               | U1                   |
+| r596     | DW_lzd       | a_width=24 |               | U2                   |
+| r598     | DW_lzd       | a_width=24 |               | U3                   |
+| r600     | DW_lzd       | a_width=24 |               | U4                   |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_511            | DW01_add         | rpl                |                |
+| sub_481            | DW01_sub         | rpl                |                |
+| add_376            | DW01_inc         | rpl                |                |
+| mult_487           | DW_mult_uns      | apparch (area)     |                |
+|                    |                  | mult_arch: benc_radix8              |
+| sub_369_2          | DW01_sub         | rpl                |                |
+| r471               | DW01_add         | rpl                |                |
+===============================================================================
+
+ 
+****************************************
+Design : actpim_rope_pair_DW_fp_mult_1
+****************************************
+
+Resource Sharing Report for design
+        DW_fp_mult_sig_width23_exp_width8_ieee_compliance1_en_ubr_flag0 in file
+        ./DW_fp_mult__rtl.v.e
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r471     | DW01_add     | width=9    |               | add_369 add_369_4    |
+|          |              |            |               | add_379              |
+| r472     | DW01_sub     | width=10   |               | sub_369 sub_369_3    |
+| r487     | DW01_add     | width=7    |               | add_481 add_481_3    |
+| r499     | DW_cmp       | width=48   |               | lt_568_2 lt_568_4    |
+|          |              |            |               | lt_568_6             |
+| r500     | DW_cmp       | width=48   |               | lt_568_3 lt_568_5    |
+| r501     | DW_cmp       | width=48   |               | eq_568_16 eq_568_9   |
+| r540     | DW01_sub     | width=10   |               | sub_369_2            |
+| r542     | DW01_add     | width=10   |               | add_369_2            |
+| r544     | DW01_add     | width=10   |               | add_369_3            |
+| r546     | DW01_inc     | width=8    |               | add_376              |
+| r548     | DW01_add     | width=10   |               | add_379_2            |
+| r550     | DW01_add     | width=10   |               | add_379_3            |
+| r552     | DW01_sub     | width=10   |               | sub_379              |
+| r554     | DW01_sub     | width=10   |               | sub_380              |
+| r556     | DW_cmp       | width=10   |               | lte_384              |
+| r558     | DW_cmp       | width=10   |               | lt_385               |
+| r560     | DW_cmp       | width=10   |               | gte_389              |
+| r562     | DW_cmp       | width=10   |               | gt_390               |
+| r564     | DW_cmp       | width=10   |               | gte_391              |
+| r566     | DW01_add     | width=6    |               | add_449              |
+| r568     | DW01_add     | width=10   |               | add_481_2            |
+| r570     | DW01_sub     | width=10   |               | sub_481              |
+| r572     | DW_mult_uns  | a_width=24 |               | mult_487             |
+|          |              | b_width=24 |               |                      |
+| r574     | DW_rightsh   | A_width=48 |               | srl_490              |
+|          |              | SH_width=10 |              |                      |
+| r576     | DW_leftsh    | A_width=48 |               | sll_491              |
+|          |              | SH_width=7 |               |                      |
+| r578     | DW_cmp       | width=10   |               | lt_502               |
+| r580     | DW_cmp       | width=10   |               | lt_507               |
+| r582     | DW01_add     | width=25   |               | add_511              |
+| r584     | DW01_add     | width=10   |               | add_523              |
+| r586     | DW_cmp       | width=10   |               | gte_523              |
+| r588     | DW_cmp       | width=48   |               | lt_568               |
+| r590     | DW_cmp       | width=48   |               | lt_568_7             |
+| r592     | DW_cmp       | width=48   |               | eq_568_22            |
+| r594     | DW_lzd       | a_width=24 |               | U1                   |
+| r596     | DW_lzd       | a_width=24 |               | U2                   |
+| r598     | DW_lzd       | a_width=24 |               | U3                   |
+| r600     | DW_lzd       | a_width=24 |               | U4                   |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_511            | DW01_add         | rpl                |                |
+| sub_481            | DW01_sub         | rpl                |                |
+| add_376            | DW01_inc         | rpl                |                |
+| mult_487           | DW_mult_uns      | apparch (area)     |                |
+|                    |                  | mult_arch: benc_radix8              |
+| sub_369_2          | DW01_sub         | rpl                |                |
+| r471               | DW01_add         | rpl                |                |
+===============================================================================
+
+ 
+****************************************
+Design : actpim_rope_pair_DW_fp_mult_0
+****************************************
+
+Resource Sharing Report for design
+        DW_fp_mult_sig_width23_exp_width8_ieee_compliance1_en_ubr_flag0 in file
+        ./DW_fp_mult__rtl.v.e
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r471     | DW01_add     | width=9    |               | add_369 add_369_4    |
+|          |              |            |               | add_379              |
+| r472     | DW01_sub     | width=10   |               | sub_369 sub_369_3    |
+| r487     | DW01_add     | width=7    |               | add_481 add_481_3    |
+| r499     | DW_cmp       | width=48   |               | lt_568_2 lt_568_4    |
+|          |              |            |               | lt_568_6             |
+| r500     | DW_cmp       | width=48   |               | lt_568_3 lt_568_5    |
+| r501     | DW_cmp       | width=48   |               | eq_568_16 eq_568_9   |
+| r540     | DW01_sub     | width=10   |               | sub_369_2            |
+| r542     | DW01_add     | width=10   |               | add_369_2            |
+| r544     | DW01_add     | width=10   |               | add_369_3            |
+| r546     | DW01_inc     | width=8    |               | add_376              |
+| r548     | DW01_add     | width=10   |               | add_379_2            |
+| r550     | DW01_add     | width=10   |               | add_379_3            |
+| r552     | DW01_sub     | width=10   |               | sub_379              |
+| r554     | DW01_sub     | width=10   |               | sub_380              |
+| r556     | DW_cmp       | width=10   |               | lte_384              |
+| r558     | DW_cmp       | width=10   |               | lt_385               |
+| r560     | DW_cmp       | width=10   |               | gte_389              |
+| r562     | DW_cmp       | width=10   |               | gt_390               |
+| r564     | DW_cmp       | width=10   |               | gte_391              |
+| r566     | DW01_add     | width=6    |               | add_449              |
+| r568     | DW01_add     | width=10   |               | add_481_2            |
+| r570     | DW01_sub     | width=10   |               | sub_481              |
+| r572     | DW_mult_uns  | a_width=24 |               | mult_487             |
+|          |              | b_width=24 |               |                      |
+| r574     | DW_rightsh   | A_width=48 |               | srl_490              |
+|          |              | SH_width=10 |              |                      |
+| r576     | DW_leftsh    | A_width=48 |               | sll_491              |
+|          |              | SH_width=7 |               |                      |
+| r578     | DW_cmp       | width=10   |               | lt_502               |
+| r580     | DW_cmp       | width=10   |               | lt_507               |
+| r582     | DW01_add     | width=25   |               | add_511              |
+| r584     | DW01_add     | width=10   |               | add_523              |
+| r586     | DW_cmp       | width=10   |               | gte_523              |
+| r588     | DW_cmp       | width=48   |               | lt_568               |
+| r590     | DW_cmp       | width=48   |               | lt_568_7             |
+| r592     | DW_cmp       | width=48   |               | eq_568_22            |
+| r594     | DW_lzd       | a_width=24 |               | U1                   |
+| r596     | DW_lzd       | a_width=24 |               | U2                   |
+| r598     | DW_lzd       | a_width=24 |               | U3                   |
+| r600     | DW_lzd       | a_width=24 |               | U4                   |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_511            | DW01_add         | rpl                |                |
+| sub_481            | DW01_sub         | rpl                |                |
+| add_376            | DW01_inc         | rpl                |                |
+| mult_487           | DW_mult_uns      | apparch (area)     |                |
+|                    |                  | mult_arch: benc_radix8              |
+| sub_369_2          | DW01_sub         | rpl                |                |
+| r471               | DW01_add         | rpl                |                |
+===============================================================================
+
+ 
+****************************************
+Design : actpim_rope_pair_DW_fp_sub_0
+****************************************
+
+Resource Sharing Report for design
+        DW_fp_sub_sig_width23_exp_width8_ieee_compliance1
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r360     | DW_fp_addsub | sig_width=23 |             | U1                   |
+|          |              | exp_width=8 |              |                      |
+|          |              | ieee_compliance=1 |        |                      |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| U1                 | DW_fp_addsub     | str                |                |
+===============================================================================
+
+ 
+****************************************
+Design : actpim_rope_pair_DW_fp_addsub_J5_0
+****************************************
+
+Resource Sharing Report for design
+        DW_fp_addsub_sig_width23_exp_width8_ieee_compliance1 in file
+        ./DW_fp_addsub__str.v.e
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r41      | DW01_cmp2    | width=31   |               | lt_224               |
+| r42      | DW01_cmp2    | width=8    |               | lte_336              |
+| r44      | DW01_add     | width=5    |               | add_340              |
+| r45      | DW01_add     | width=28   |               | add_1_root_add_295_2 |
+| r60      | DW01_inc     | width=23   |               | add_399              |
+| r99      | DW_norm      | a_width=27 |               | U1                   |
+|          |              | srch_wind=3 |              |                      |
+|          |              | exp_width=6 |              |                      |
+|          |              | exp_ctr=0  |               |                      |
+| r103     | DW_lzd       | a_width=28 |               | U2                   |
+| r107     | DW_leftsh    | A_width=27 |               | sll_338              |
+|          |              | SH_width=6 |               |                      |
+| r108     | DW_leftsh    | A_width=26 |               | sll_286              |
+|          |              | SH_width=8 |               |                      |
+| r109     | DW_rightsh   | A_width=26 |               | srl_284_lsb_trim     |
+|          |              | SH_width=8 |               |                      |
+| r194     | sub_278_DP_OP_362J5_6605 |  |             | sub_278              |
+| r196     | sub_278_DP_OP_362J5_6605 |  |             | add_0_root_add_280_ni |
+| r198     | sub_278_DP_OP_362J5_6605 |  |             | sub_1_root_add_280_ni |
+| r214     | add_403_DP_OP_363J5_9206 |  |             | add_403              |
+| r216     | add_403_DP_OP_363J5_9206 |  |             | sub_404              |
+===============================================================================
+
+Datapath Report for design DW_fp_addsub_sig_width23_exp_width8_ieee_compliance1 in file ./DW_fp_addsub__str.v.e 
+
+RTL-datapath Connections for add_403_DP_OP_363J5_9206-str
+====================================================================
+|                      |                      |            | Bus   |
+| RTL Wire             | Datapath Port        | Direction  | Width |
+====================================================================
+| large_p              | I1                   | input      | 8     |
+| num_zeros_used       | I2                   | input      | 5     |
+| E1                   | O11                  | output     | 9     |
+| Elz                  | O2                   | output     | 10    |
+====================================================================
+
+
+Datapath Blocks in add_403_DP_OP_363J5_9206-str
+===============================================================================
+|            | Out   |                           | Contained      | Operation |
+| Port       | Width | Datapath Block            | Operation_Line | Type      |
+===============================================================================
+| O11        | 9     | I1 + 1                    | add_403        | UNSIGNED  |
+| O2         | 10    | O11 - I2                  | sub_404        | UNSIGNED  |
+===============================================================================
+
+Datapath Report for design DW_fp_addsub_sig_width23_exp_width8_ieee_compliance1 in file ./DW_fp_addsub__str.v.e 
+
+RTL-datapath Connections for sub_278_DP_OP_362J5_6605-str
+====================================================================
+|                      |                      |            | Bus   |
+| RTL Wire             | Datapath Port        | Direction  | Width |
+====================================================================
+| exp_a_int            | I1                   | input      | 8     |
+| exp_b_int            | I2                   | input      | 8     |
+| ediff                | O10                  | output     | 9     |
+| N120-N113            | O9                   | output     | 8     |
+====================================================================
+
+
+Datapath Blocks in sub_278_DP_OP_362J5_6605-str
+===============================================================================
+|            | Out   |                           | Contained      | Operation |
+| Port       | Width | Datapath Block            | Operation_Line | Type      |
+===============================================================================
+| O10        | 9     | I1 - I2                   | sub_278        | UNSIGNED  |
+| O9         | 8     | 255 - O10[7:0] + 1        | add_0_root_add_280_ni      |
+|            |       |                           |                | UNSIGNED  |
+|            |       |                           | sub_1_root_add_280_ni      |
+|            |       |                           |                | UNSIGNED  |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_399            | DW01_inc         | rpl                |                |
+| add_340            | DW01_add         | rpl                |                |
+| lte_336            | DW01_cmp2        | rpl                |                |
+| U2                 | DW_lzd           | cla                | cla            |
+| U1                 | DW_norm          | rtl                | rtl            |
+| add_1_root_add_295_2                  |                    |                |
+|                    | DW01_add         | rpl                |                |
+| lt_224             | DW01_cmp2        | rpl                |                |
+| add_403_DP_OP_363J5_9206_16           |                    |                |
+|                    | add_403_DP_OP_363J5_9206 | str (speed)                 |
+| sub_278_DP_OP_362J5_6605_15           |                    |                |
+|                    | sub_278_DP_OP_362J5_6605 | str (speed)                 |
+===============================================================================
+
+ 
+****************************************
+Design : actpim_rope_pair_DW_lzd_J5_0
+****************************************
+
+Resource Sharing Report for design DW_lzd_a_width28
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r112     | DW_lzod      | a_width=28 |               | U1                   |
+|          |              | detect_1=0 |               |                      |
+===============================================================================
+
+ 
+****************************************
+Design : actpim_rope_pair_DW_norm_J5_0
+****************************************
+
+Resource Sharing Report for design
+        DW_norm_a_width27_srch_wind3_exp_width6_exp_ctr0 in file
+        ./DW_norm_rtl.vhd.e
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r366     | DW01_add     | width=7    |               | add_118              |
+| r368     | DW_lzod      | a_width=3  |               | U1                   |
+|          |              | detect_1=0 |               |                      |
+| r370     | DW01_ash     | A_width=27 |               | U2                   |
+|          |              | SH_width=3 |               |                      |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_118            | DW01_add         | rpl                |                |
+===============================================================================
+
+ 
+****************************************
+Design : actpim_rope_pair_DW_fp_add_0
+****************************************
+
+Resource Sharing Report for design
+        DW_fp_add_sig_width23_exp_width8_ieee_compliance1
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r360     | DW_fp_addsub | sig_width=23 |             | U1                   |
+|          |              | exp_width=8 |              |                      |
+|          |              | ieee_compliance=1 |        |                      |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| U1                 | DW_fp_addsub     | str                |                |
+===============================================================================
+
+ 
+****************************************
+Design : actpim_rope_pair_DW_fp_addsub_J6_0
+****************************************
+
+Resource Sharing Report for design
+        DW_fp_addsub_sig_width23_exp_width8_ieee_compliance1 in file
+        ./DW_fp_addsub__str.v.e
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r41      | DW01_cmp2    | width=31   |               | lt_224               |
+| r42      | DW01_cmp2    | width=8    |               | lte_336              |
+| r44      | DW01_add     | width=5    |               | add_340              |
+| r45      | DW01_add     | width=28   |               | add_1_root_add_295_2 |
+| r60      | DW01_inc     | width=23   |               | add_399              |
+| r99      | DW_norm      | a_width=27 |               | U1                   |
+|          |              | srch_wind=3 |              |                      |
+|          |              | exp_width=6 |              |                      |
+|          |              | exp_ctr=0  |               |                      |
+| r103     | DW_lzd       | a_width=28 |               | U2                   |
+| r107     | DW_leftsh    | A_width=27 |               | sll_338              |
+|          |              | SH_width=6 |               |                      |
+| r108     | DW_leftsh    | A_width=26 |               | sll_286              |
+|          |              | SH_width=8 |               |                      |
+| r109     | DW_rightsh   | A_width=26 |               | srl_284_lsb_trim     |
+|          |              | SH_width=8 |               |                      |
+| r194     | sub_278_DP_OP_362J6_6605 |  |             | sub_278              |
+| r196     | sub_278_DP_OP_362J6_6605 |  |             | add_0_root_add_280_ni |
+| r198     | sub_278_DP_OP_362J6_6605 |  |             | sub_1_root_add_280_ni |
+| r214     | add_403_DP_OP_363J6_9206 |  |             | add_403              |
+| r216     | add_403_DP_OP_363J6_9206 |  |             | sub_404              |
+===============================================================================
+
+Datapath Report for design DW_fp_addsub_sig_width23_exp_width8_ieee_compliance1 in file ./DW_fp_addsub__str.v.e 
+
+RTL-datapath Connections for add_403_DP_OP_363J6_9206-str
+====================================================================
+|                      |                      |            | Bus   |
+| RTL Wire             | Datapath Port        | Direction  | Width |
+====================================================================
+| large_p              | I1                   | input      | 8     |
+| num_zeros_used       | I2                   | input      | 5     |
+| E1                   | O11                  | output     | 9     |
+| Elz                  | O2                   | output     | 10    |
+====================================================================
+
+
+Datapath Blocks in add_403_DP_OP_363J6_9206-str
+===============================================================================
+|            | Out   |                           | Contained      | Operation |
+| Port       | Width | Datapath Block            | Operation_Line | Type      |
+===============================================================================
+| O11        | 9     | I1 + 1                    | add_403        | UNSIGNED  |
+| O2         | 10    | O11 - I2                  | sub_404        | UNSIGNED  |
+===============================================================================
+
+Datapath Report for design DW_fp_addsub_sig_width23_exp_width8_ieee_compliance1 in file ./DW_fp_addsub__str.v.e 
+
+RTL-datapath Connections for sub_278_DP_OP_362J6_6605-str
+====================================================================
+|                      |                      |            | Bus   |
+| RTL Wire             | Datapath Port        | Direction  | Width |
+====================================================================
+| exp_a_int            | I1                   | input      | 8     |
+| exp_b_int            | I2                   | input      | 8     |
+| ediff                | O10                  | output     | 9     |
+| N120-N113            | O9                   | output     | 8     |
+====================================================================
+
+
+Datapath Blocks in sub_278_DP_OP_362J6_6605-str
+===============================================================================
+|            | Out   |                           | Contained      | Operation |
+| Port       | Width | Datapath Block            | Operation_Line | Type      |
+===============================================================================
+| O10        | 9     | I1 - I2                   | sub_278        | UNSIGNED  |
+| O9         | 8     | 255 - O10[7:0] + 1        | add_0_root_add_280_ni      |
+|            |       |                           |                | UNSIGNED  |
+|            |       |                           | sub_1_root_add_280_ni      |
+|            |       |                           |                | UNSIGNED  |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_399            | DW01_inc         | rpl                |                |
+| add_340            | DW01_add         | rpl                |                |
+| lte_336            | DW01_cmp2        | rpl                |                |
+| U2                 | DW_lzd           | cla                | cla            |
+| U1                 | DW_norm          | rtl                | rtl            |
+| add_1_root_add_295_2                  |                    |                |
+|                    | DW01_add         | rpl                |                |
+| lt_224             | DW01_cmp2        | rpl                |                |
+| add_403_DP_OP_363J6_9206_16           |                    |                |
+|                    | add_403_DP_OP_363J6_9206 | str (speed)                 |
+| sub_278_DP_OP_362J6_6605_15           |                    |                |
+|                    | sub_278_DP_OP_362J6_6605 | str (speed)                 |
+===============================================================================
+
+ 
+****************************************
+Design : actpim_rope_pair_DW_lzd_J6_0
+****************************************
+
+Resource Sharing Report for design DW_lzd_a_width28
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r112     | DW_lzod      | a_width=28 |               | U1                   |
+|          |              | detect_1=0 |               |                      |
+===============================================================================
+
+ 
+****************************************
+Design : actpim_rope_pair_DW_norm_J6_0
+****************************************
+
+Resource Sharing Report for design
+        DW_norm_a_width27_srch_wind3_exp_width6_exp_ctr0 in file
+        ./DW_norm_rtl.vhd.e
+
+===============================================================================
+|          |              |            | Contained     |                      |
+| Resource | Module       | Parameters | Resources     | Contained Operations |
+===============================================================================
+| r366     | DW01_add     | width=7    |               | add_118              |
+| r368     | DW_lzod      | a_width=3  |               | U1                   |
+|          |              | detect_1=0 |               |                      |
+| r370     | DW01_ash     | A_width=27 |               | U2                   |
+|          |              | SH_width=3 |               |                      |
+===============================================================================
+
+
+Implementation Report
+===============================================================================
+|                    |                  | Current            | Set            |
+| Cell               | Module           | Implementation     | Implementation |
+===============================================================================
+| add_118            | DW01_add         | rpl                |                |
+===============================================================================
+
+1

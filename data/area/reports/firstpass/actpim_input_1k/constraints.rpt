@@ -1,0 +1,19 @@
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : actpim_input_1k
+Version: W-2024.09-SP5
+Date   : Sun Nov 15 04:43:07 2026
+****************************************
+
+
+   max_area
+
+                             Required        Actual
+   Design                      Area           Area           Slack
+   -----------------------------------------------------------------
+   actpim_input_1k              0.00        3859.66       -3859.66  (VIOLATED)
+
+
+1

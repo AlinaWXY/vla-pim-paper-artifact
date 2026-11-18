@@ -1,0 +1,19 @@
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : actpim_output_128b
+Version: W-2024.09-SP5
+Date   : Sun Nov 15 04:46:10 2026
+****************************************
+
+
+   max_area
+
+                             Required        Actual
+   Design                      Area           Area           Slack
+   -----------------------------------------------------------------
+   actpim_output_128b           0.00         726.40        -726.40  (VIOLATED)
+
+
+1

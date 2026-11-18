@@ -1,0 +1,1068 @@
+{
+  "combined-c": {
+    "channel": 0,
+    "scope": "all 18x10 events; rank1 gaps, not global DQ idle",
+    "bins": [
+      {
+        "length_bin_ck": "33-64",
+        "count": 6033,
+        "cycles": 256241,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 87799
+      },
+      {
+        "length_bin_ck": "1-4",
+        "count": 686410,
+        "cycles": 1378187,
+        "cannot_fit_one_read_by_dq_edges": 686410,
+        "read_capacity_upper_bound_bursts": 0
+      },
+      {
+        "length_bin_ck": "65-256",
+        "count": 7554,
+        "cycles": 832507,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 366904
+      },
+      {
+        "length_bin_ck": "15-32",
+        "count": 631698,
+        "cycles": 16766037,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 4106963
+      },
+      {
+        "length_bin_ck": "257-1024",
+        "count": 30428,
+        "cycles": 13961889,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 6775753
+      },
+      {
+        "length_bin_ck": "9-14",
+        "count": 4162,
+        "cycles": 40983,
+        "cannot_fit_one_read_by_dq_edges": 3269,
+        "read_capacity_upper_bound_bursts": 4639
+      },
+      {
+        "length_bin_ck": ">1024",
+        "count": 1141,
+        "cycles": 13612268,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 6800521
+      },
+      {
+        "length_bin_ck": "5-8",
+        "count": 138,
+        "cycles": 788,
+        "cannot_fit_one_read_by_dq_edges": 138,
+        "read_capacity_upper_bound_bursts": 0
+      }
+    ],
+    "conserved_duration_ck": 49602180,
+    "limitation": "DQ read-capacity upper bound; C/A, GPU demand and refresh are not modeled by this bound"
+  },
+  "combined-d": {
+    "channel": 0,
+    "scope": "all 18x10 events; rank1 gaps, not global DQ idle",
+    "bins": [
+      {
+        "length_bin_ck": "33-64",
+        "count": 7423,
+        "cycles": 296827,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 99168
+      },
+      {
+        "length_bin_ck": "1-4",
+        "count": 637582,
+        "cycles": 1320397,
+        "cannot_fit_one_read_by_dq_edges": 637582,
+        "read_capacity_upper_bound_bursts": 0
+      },
+      {
+        "length_bin_ck": "65-256",
+        "count": 6302,
+        "cycles": 704882,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 312642
+      },
+      {
+        "length_bin_ck": "9-14",
+        "count": 14024,
+        "cycles": 173621,
+        "cannot_fit_one_read_by_dq_edges": 13135,
+        "read_capacity_upper_bound_bursts": 4615
+      },
+      {
+        "length_bin_ck": "15-32",
+        "count": 553731,
+        "cycles": 14272445,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 3390446
+      },
+      {
+        "length_bin_ck": "5-8",
+        "count": 3380,
+        "cycles": 17295,
+        "cannot_fit_one_read_by_dq_edges": 3380,
+        "read_capacity_upper_bound_bursts": 0
+      },
+      {
+        "length_bin_ck": ">1024",
+        "count": 6521,
+        "cycles": 18147372,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 9031633
+      },
+      {
+        "length_bin_ck": "257-1024",
+        "count": 21641,
+        "cycles": 11921518,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 5816105
+      }
+    ],
+    "conserved_duration_ck": 49382997,
+    "limitation": "DQ read-capacity upper bound; C/A, GPU demand and refresh are not modeled by this bound"
+  },
+  "combined-e": {
+    "channel": 0,
+    "scope": "all 18x10 events; rank1 gaps, not global DQ idle",
+    "bins": [
+      {
+        "length_bin_ck": "33-64",
+        "count": 5812,
+        "cycles": 244675,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 84472
+      },
+      {
+        "length_bin_ck": "1-4",
+        "count": 652729,
+        "cycles": 1350564,
+        "cannot_fit_one_read_by_dq_edges": 652726,
+        "read_capacity_upper_bound_bursts": 3
+      },
+      {
+        "length_bin_ck": "65-256",
+        "count": 6314,
+        "cycles": 707553,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 313984
+      },
+      {
+        "length_bin_ck": "9-14",
+        "count": 10682,
+        "cycles": 146373,
+        "cannot_fit_one_read_by_dq_edges": 9773,
+        "read_capacity_upper_bound_bursts": 4542
+      },
+      {
+        "length_bin_ck": "15-32",
+        "count": 553438,
+        "cycles": 14263329,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 3391408
+      },
+      {
+        "length_bin_ck": "5-8",
+        "count": 3405,
+        "cycles": 17398,
+        "cannot_fit_one_read_by_dq_edges": 3395,
+        "read_capacity_upper_bound_bursts": 21
+      },
+      {
+        "length_bin_ck": ">1024",
+        "count": 6505,
+        "cycles": 18121682,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 9018852
+      },
+      {
+        "length_bin_ck": "257-1024",
+        "count": 21414,
+        "cycles": 11900441,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 5807008
+      }
+    ],
+    "conserved_duration_ck": 49280655,
+    "limitation": "DQ read-capacity upper bound; C/A, GPU demand and refresh are not modeled by this bound"
+  },
+  "combined-f": {
+    "channel": 0,
+    "scope": "all 18x10 events; rank1 gaps, not global DQ idle",
+    "bins": [
+      {
+        "length_bin_ck": "15-32",
+        "count": 15408,
+        "cycles": 429278,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 106819,
+        "io_epoch_overlap_ck": 429278
+      },
+      {
+        "length_bin_ck": "9-14",
+        "count": 5490,
+        "cycles": 49467,
+        "cannot_fit_one_read_by_dq_edges": 5490,
+        "read_capacity_upper_bound_bursts": 0,
+        "io_epoch_overlap_ck": 49467
+      },
+      {
+        "length_bin_ck": "65-256",
+        "count": 3344,
+        "cycles": 263096,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 115128,
+        "io_epoch_overlap_ck": 263096
+      },
+      {
+        "length_bin_ck": "1-4",
+        "count": 764014,
+        "cycles": 1528044,
+        "cannot_fit_one_read_by_dq_edges": 764014,
+        "read_capacity_upper_bound_bursts": 0,
+        "io_epoch_overlap_ck": 1528044
+      },
+      {
+        "length_bin_ck": "257-1024",
+        "count": 1518,
+        "cycles": 508716,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 245370,
+        "io_epoch_overlap_ck": 356964
+      },
+      {
+        "length_bin_ck": ">1024",
+        "count": 1080,
+        "cycles": 58237980,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 29114755
+      }
+    ],
+    "conserved_duration_ck": 63360901,
+    "limitation": "DQ read-capacity upper bound; C/A, GPU demand and refresh are not modeled by this bound"
+  },
+  "combined-g": {
+    "channel": 0,
+    "scope": "all 18x10 events; rank1 gaps, not global DQ idle",
+    "bins": [
+      {
+        "length_bin_ck": "15-32",
+        "count": 15838,
+        "cycles": 440065,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 111379,
+        "io_epoch_overlap_ck": 440065
+      },
+      {
+        "length_bin_ck": "9-14",
+        "count": 2274,
+        "cycles": 20514,
+        "cannot_fit_one_read_by_dq_edges": 2243,
+        "read_capacity_upper_bound_bursts": 121,
+        "io_epoch_overlap_ck": 20514
+      },
+      {
+        "length_bin_ck": "65-256",
+        "count": 3187,
+        "cycles": 249402,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 108473,
+        "io_epoch_overlap_ck": 249402
+      },
+      {
+        "length_bin_ck": "33-64",
+        "count": 354,
+        "cycles": 13816,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 6204,
+        "io_epoch_overlap_ck": 13816
+      },
+      {
+        "length_bin_ck": "1-4",
+        "count": 748758,
+        "cycles": 1497580,
+        "cannot_fit_one_read_by_dq_edges": 748747,
+        "read_capacity_upper_bound_bursts": 11,
+        "io_epoch_overlap_ck": 1497580
+      },
+      {
+        "length_bin_ck": "257-1024",
+        "count": 1302,
+        "cycles": 475077,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 229837,
+        "io_epoch_overlap_ck": 344455
+      },
+      {
+        "length_bin_ck": ">1024",
+        "count": 1260,
+        "cycles": 58595558,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 29292482,
+        "io_epoch_overlap_ck": 357033
+      },
+      {
+        "length_bin_ck": "5-8",
+        "count": 49,
+        "cycles": 383,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 141,
+        "io_epoch_overlap_ck": 383
+      }
+    ],
+    "conserved_duration_ck": 63590635,
+    "limitation": "DQ read-capacity upper bound; C/A, GPU demand and refresh are not modeled by this bound"
+  },
+  "combined-e-frfcfs": {
+    "channel": 0,
+    "scope": "all 18x10 events; rank1 gaps, not global DQ idle",
+    "bins": [
+      {
+        "length_bin_ck": "33-64",
+        "count": 2368,
+        "cycles": 106661,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 38297
+      },
+      {
+        "length_bin_ck": "1-4",
+        "count": 635808,
+        "cycles": 1319424,
+        "cannot_fit_one_read_by_dq_edges": 635808,
+        "read_capacity_upper_bound_bursts": 0
+      },
+      {
+        "length_bin_ck": "65-256",
+        "count": 10397,
+        "cycles": 1157477,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 510086
+      },
+      {
+        "length_bin_ck": "9-14",
+        "count": 80896,
+        "cycles": 1123741,
+        "cannot_fit_one_read_by_dq_edges": 79910,
+        "read_capacity_upper_bound_bursts": 4892
+      },
+      {
+        "length_bin_ck": "15-32",
+        "count": 478995,
+        "cycles": 12339972,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 2832020
+      },
+      {
+        "length_bin_ck": "5-8",
+        "count": 901,
+        "cycles": 5936,
+        "cannot_fit_one_read_by_dq_edges": 863,
+        "read_capacity_upper_bound_bursts": 40
+      },
+      {
+        "length_bin_ck": ">1024",
+        "count": 20204,
+        "cycles": 80167838,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 39949609
+      },
+      {
+        "length_bin_ck": "257-1024",
+        "count": 31172,
+        "cycles": 15569889,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 7578040
+      }
+    ],
+    "conserved_duration_ck": 114319578,
+    "limitation": "DQ read-capacity upper bound; C/A, GPU demand and refresh are not modeled by this bound"
+  },
+  "combined-e-lookahead": {
+    "channel": 0,
+    "scope": "all 18x10 events; rank1 gaps, not global DQ idle",
+    "bins": [
+      {
+        "length_bin_ck": "33-64",
+        "count": 7039,
+        "cycles": 284545,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 96413
+      },
+      {
+        "length_bin_ck": "1-4",
+        "count": 634461,
+        "cycles": 1277546,
+        "cannot_fit_one_read_by_dq_edges": 634457,
+        "read_capacity_upper_bound_bursts": 4
+      },
+      {
+        "length_bin_ck": "65-256",
+        "count": 6310,
+        "cycles": 708086,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 314319
+      },
+      {
+        "length_bin_ck": "9-14",
+        "count": 57206,
+        "cycles": 798063,
+        "cannot_fit_one_read_by_dq_edges": 56295,
+        "read_capacity_upper_bound_bursts": 4555
+      },
+      {
+        "length_bin_ck": "15-32",
+        "count": 527017,
+        "cycles": 13380995,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 3053178
+      },
+      {
+        "length_bin_ck": "5-8",
+        "count": 432,
+        "cycles": 2327,
+        "cannot_fit_one_read_by_dq_edges": 419,
+        "read_capacity_upper_bound_bursts": 31
+      },
+      {
+        "length_bin_ck": ">1024",
+        "count": 6513,
+        "cycles": 18102387,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 9009146
+      },
+      {
+        "length_bin_ck": "257-1024",
+        "count": 21369,
+        "cycles": 11884478,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 5799418
+      }
+    ],
+    "conserved_duration_ck": 48967067,
+    "limitation": "DQ read-capacity upper bound; C/A, GPU demand and refresh are not modeled by this bound"
+  },
+  "combined-e-gap": {
+    "channel": 0,
+    "scope": "all 18x10 events; rank1 gaps, not global DQ idle",
+    "bins": [
+      {
+        "length_bin_ck": "33-64",
+        "count": 625,
+        "cycles": 25508,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 9327
+      },
+      {
+        "length_bin_ck": "1-4",
+        "count": 629225,
+        "cycles": 1262529,
+        "cannot_fit_one_read_by_dq_edges": 629222,
+        "read_capacity_upper_bound_bursts": 3
+      },
+      {
+        "length_bin_ck": "65-256",
+        "count": 6679,
+        "cycles": 666681,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 288981
+      },
+      {
+        "length_bin_ck": "9-14",
+        "count": 123209,
+        "cycles": 1598002,
+        "cannot_fit_one_read_by_dq_edges": 122310,
+        "read_capacity_upper_bound_bursts": 4495
+      },
+      {
+        "length_bin_ck": ">1024",
+        "count": 6512,
+        "cycles": 18082024,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 8999054
+      },
+      {
+        "length_bin_ck": "15-32",
+        "count": 472632,
+        "cycles": 12786738,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 3108933
+      },
+      {
+        "length_bin_ck": "257-1024",
+        "count": 21272,
+        "cycles": 11872334,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 5794009
+      }
+    ],
+    "conserved_duration_ck": 48822456,
+    "limitation": "DQ read-capacity upper bound; C/A, GPU demand and refresh are not modeled by this bound"
+  },
+  "solo-c": {
+    "channel": 0,
+    "scope": "all 18x10 events; rank1 gaps, not global DQ idle",
+    "bins": [
+      {
+        "length_bin_ck": "33-64",
+        "count": 60,
+        "cycles": 3028,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 1124
+      },
+      {
+        "length_bin_ck": "1-4",
+        "count": 686223,
+        "cycles": 1373910,
+        "cannot_fit_one_read_by_dq_edges": 686223,
+        "read_capacity_upper_bound_bursts": 0
+      },
+      {
+        "length_bin_ck": "65-256",
+        "count": 7537,
+        "cycles": 762322,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 330550
+      },
+      {
+        "length_bin_ck": "15-32",
+        "count": 638066,
+        "cycles": 16657681,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 3865072
+      },
+      {
+        "length_bin_ck": "257-1024",
+        "count": 30341,
+        "cycles": 14029903,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 6810683
+      },
+      {
+        "length_bin_ck": "9-14",
+        "count": 3959,
+        "cycles": 38699,
+        "cannot_fit_one_read_by_dq_edges": 3061,
+        "read_capacity_upper_bound_bursts": 4669
+      },
+      {
+        "length_bin_ck": ">1024",
+        "count": 1090,
+        "cycles": 13434370,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 6711749
+      }
+    ],
+    "conserved_duration_ck": 49053193,
+    "limitation": "DQ read-capacity upper bound; C/A, GPU demand and refresh are not modeled by this bound"
+  },
+  "solo-d": {
+    "channel": 0,
+    "scope": "all 18x10 events; rank1 gaps, not global DQ idle",
+    "bins": [
+      {
+        "length_bin_ck": "33-64",
+        "count": 108,
+        "cycles": 5570,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 2074
+      },
+      {
+        "length_bin_ck": "1-4",
+        "count": 613731,
+        "cycles": 1228852,
+        "cannot_fit_one_read_by_dq_edges": 613731,
+        "read_capacity_upper_bound_bursts": 0
+      },
+      {
+        "length_bin_ck": "65-256",
+        "count": 6270,
+        "cycles": 628769,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 272936
+      },
+      {
+        "length_bin_ck": "9-14",
+        "count": 87332,
+        "cycles": 1204290,
+        "cannot_fit_one_read_by_dq_edges": 86438,
+        "read_capacity_upper_bound_bursts": 4645
+      },
+      {
+        "length_bin_ck": ">1024",
+        "count": 6496,
+        "cycles": 18043499,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 8979887
+      },
+      {
+        "length_bin_ck": "15-32",
+        "count": 514619,
+        "cycles": 13287011,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 3043648
+      },
+      {
+        "length_bin_ck": "257-1024",
+        "count": 21514,
+        "cycles": 11963219,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 5838360
+      }
+    ],
+    "conserved_duration_ck": 48889850,
+    "limitation": "DQ read-capacity upper bound; C/A, GPU demand and refresh are not modeled by this bound"
+  },
+  "solo-e": {
+    "channel": 0,
+    "scope": "all 18x10 events; rank1 gaps, not global DQ idle",
+    "bins": [
+      {
+        "length_bin_ck": "33-64",
+        "count": 331,
+        "cycles": 14114,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 5621
+      },
+      {
+        "length_bin_ck": "1-4",
+        "count": 627707,
+        "cycles": 1256808,
+        "cannot_fit_one_read_by_dq_edges": 627707,
+        "read_capacity_upper_bound_bursts": 0
+      },
+      {
+        "length_bin_ck": "65-256",
+        "count": 6153,
+        "cycles": 621949,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 270449
+      },
+      {
+        "length_bin_ck": "9-14",
+        "count": 84195,
+        "cycles": 1176876,
+        "cannot_fit_one_read_by_dq_edges": 83296,
+        "read_capacity_upper_bound_bursts": 4495
+      },
+      {
+        "length_bin_ck": ">1024",
+        "count": 6480,
+        "cycles": 18060653,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 8988686
+      },
+      {
+        "length_bin_ck": "15-32",
+        "count": 514381,
+        "cycles": 13266290,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 3046785
+      },
+      {
+        "length_bin_ck": "257-1024",
+        "count": 21385,
+        "cycles": 11982265,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 5849338
+      }
+    ],
+    "conserved_duration_ck": 48907595,
+    "limitation": "DQ read-capacity upper bound; C/A, GPU demand and refresh are not modeled by this bound"
+  },
+  "solo-f": {
+    "channel": 0,
+    "scope": "all 18x10 events; rank1 gaps, not global DQ idle",
+    "bins": [
+      {
+        "length_bin_ck": "15-32",
+        "count": 15358,
+        "cycles": 427915,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 106482,
+        "io_epoch_overlap_ck": 427915
+      },
+      {
+        "length_bin_ck": "9-14",
+        "count": 5426,
+        "cycles": 48857,
+        "cannot_fit_one_read_by_dq_edges": 5426,
+        "read_capacity_upper_bound_bursts": 0,
+        "io_epoch_overlap_ck": 48857
+      },
+      {
+        "length_bin_ck": "65-256",
+        "count": 3368,
+        "cycles": 266007,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 116513,
+        "io_epoch_overlap_ck": 266007
+      },
+      {
+        "length_bin_ck": "1-4",
+        "count": 764144,
+        "cycles": 1528379,
+        "cannot_fit_one_read_by_dq_edges": 764144,
+        "read_capacity_upper_bound_bursts": 0,
+        "io_epoch_overlap_ck": 1528379
+      },
+      {
+        "length_bin_ck": "257-1024",
+        "count": 1454,
+        "cycles": 482084,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 232418,
+        "io_epoch_overlap_ck": 336961
+      },
+      {
+        "length_bin_ck": ">1024",
+        "count": 1080,
+        "cycles": 58185060,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 29088315
+      }
+    ],
+    "conserved_duration_ck": 63282622,
+    "limitation": "DQ read-capacity upper bound; C/A, GPU demand and refresh are not modeled by this bound"
+  },
+  "solo-g": {
+    "channel": 0,
+    "scope": "all 18x10 events; rank1 gaps, not global DQ idle",
+    "bins": [
+      {
+        "length_bin_ck": "15-32",
+        "count": 14052,
+        "cycles": 392648,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 98510,
+        "io_epoch_overlap_ck": 392648
+      },
+      {
+        "length_bin_ck": "9-14",
+        "count": 3794,
+        "cycles": 34154,
+        "cannot_fit_one_read_by_dq_edges": 3794,
+        "read_capacity_upper_bound_bursts": 0,
+        "io_epoch_overlap_ck": 34154
+      },
+      {
+        "length_bin_ck": "65-256",
+        "count": 3107,
+        "cycles": 243497,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 106110,
+        "io_epoch_overlap_ck": 243497
+      },
+      {
+        "length_bin_ck": "33-64",
+        "count": 360,
+        "cycles": 14040,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 6300,
+        "io_epoch_overlap_ck": 14040
+      },
+      {
+        "length_bin_ck": "1-4",
+        "count": 749041,
+        "cycles": 1498107,
+        "cannot_fit_one_read_by_dq_edges": 749041,
+        "read_capacity_upper_bound_bursts": 0,
+        "io_epoch_overlap_ck": 1498107
+      },
+      {
+        "length_bin_ck": "257-1024",
+        "count": 1390,
+        "cycles": 492777,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 237922,
+        "io_epoch_overlap_ck": 373100
+      },
+      {
+        "length_bin_ck": ">1024",
+        "count": 1260,
+        "cycles": 58447617,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 29218481,
+        "io_epoch_overlap_ck": 340019
+      }
+    ],
+    "conserved_duration_ck": 63421080,
+    "limitation": "DQ read-capacity upper bound; C/A, GPU demand and refresh are not modeled by this bound"
+  },
+  "mac-e-k1": {
+    "channel": 0,
+    "scope": "all 18x10 events; rank1 gaps, not global DQ idle",
+    "bins": [
+      {
+        "length_bin_ck": "33-64",
+        "count": 502838,
+        "cycles": 29011664,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 11036239
+      },
+      {
+        "length_bin_ck": "1-4",
+        "count": 629510,
+        "cycles": 1264145,
+        "cannot_fit_one_read_by_dq_edges": 629506,
+        "read_capacity_upper_bound_bursts": 4
+      },
+      {
+        "length_bin_ck": "65-256",
+        "count": 11983,
+        "cycles": 1117995,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 480672
+      },
+      {
+        "length_bin_ck": "15-32",
+        "count": 82544,
+        "cycles": 2469633,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 666252
+      },
+      {
+        "length_bin_ck": ">1024",
+        "count": 22739,
+        "cycles": 49354094,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 24525391
+      },
+      {
+        "length_bin_ck": "257-1024",
+        "count": 9632,
+        "cycles": 3341249,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 1607336
+      },
+      {
+        "length_bin_ck": "9-14",
+        "count": 913,
+        "cycles": 10959,
+        "cannot_fit_one_read_by_dq_edges": 9,
+        "read_capacity_upper_bound_bursts": 4519
+      },
+      {
+        "length_bin_ck": "5-8",
+        "count": 9,
+        "cycles": 52,
+        "cannot_fit_one_read_by_dq_edges": 3,
+        "read_capacity_upper_bound_bursts": 10
+      }
+    ],
+    "conserved_duration_ck": 89098431,
+    "limitation": "DQ read-capacity upper bound; C/A, GPU demand and refresh are not modeled by this bound"
+  },
+  "mac-e-k4": {
+    "channel": 0,
+    "scope": "all 18x10 events; rank1 gaps, not global DQ idle",
+    "bins": [
+      {
+        "length_bin_ck": "33-64",
+        "count": 1622,
+        "cycles": 74842,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 27543
+      },
+      {
+        "length_bin_ck": "1-4",
+        "count": 900785,
+        "cycles": 2156487,
+        "cannot_fit_one_read_by_dq_edges": 900781,
+        "read_capacity_upper_bound_bursts": 4
+      },
+      {
+        "length_bin_ck": "65-256",
+        "count": 6309,
+        "cycles": 708758,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 314638
+      },
+      {
+        "length_bin_ck": "5-8",
+        "count": 25655,
+        "cycles": 139487,
+        "cannot_fit_one_read_by_dq_edges": 25648,
+        "read_capacity_upper_bound_bursts": 15
+      },
+      {
+        "length_bin_ck": "15-32",
+        "count": 277954,
+        "cycles": 5471825,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 919875
+      },
+      {
+        "length_bin_ck": "257-1024",
+        "count": 23757,
+        "cycles": 10197856,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 4940109
+      },
+      {
+        "length_bin_ck": ">1024",
+        "count": 2141,
+        "cycles": 8656581,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 4315764
+      },
+      {
+        "length_bin_ck": "9-14",
+        "count": 22018,
+        "cycles": 303725,
+        "cannot_fit_one_read_by_dq_edges": 21106,
+        "read_capacity_upper_bound_bursts": 4558
+      }
+    ],
+    "conserved_duration_ck": 30238201,
+    "limitation": "DQ read-capacity upper bound; C/A, GPU demand and refresh are not modeled by this bound"
+  },
+  "mac-g-k1": {
+    "channel": 0,
+    "scope": "all 18x10 events; rank1 gaps, not global DQ idle",
+    "bins": [
+      {
+        "length_bin_ck": "15-32",
+        "count": 15477,
+        "cycles": 431984,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 108591,
+        "io_epoch_overlap_ck": 431984
+      },
+      {
+        "length_bin_ck": "9-14",
+        "count": 2417,
+        "cycles": 21787,
+        "cannot_fit_one_read_by_dq_edges": 2398,
+        "read_capacity_upper_bound_bursts": 73,
+        "io_epoch_overlap_ck": 21787
+      },
+      {
+        "length_bin_ck": "65-256",
+        "count": 3180,
+        "cycles": 248060,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 107856,
+        "io_epoch_overlap_ck": 248060
+      },
+      {
+        "length_bin_ck": "33-64",
+        "count": 356,
+        "cycles": 13877,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 6226,
+        "io_epoch_overlap_ck": 13877
+      },
+      {
+        "length_bin_ck": "1-4",
+        "count": 748862,
+        "cycles": 1497781,
+        "cannot_fit_one_read_by_dq_edges": 748858,
+        "read_capacity_upper_bound_bursts": 4,
+        "io_epoch_overlap_ck": 1497781
+      },
+      {
+        "length_bin_ck": "257-1024",
+        "count": 1346,
+        "cycles": 489444,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 236672,
+        "io_epoch_overlap_ck": 358702
+      },
+      {
+        "length_bin_ck": ">1024",
+        "count": 1260,
+        "cycles": 99212864,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 49601151,
+        "io_epoch_overlap_ck": 364097
+      },
+      {
+        "length_bin_ck": "5-8",
+        "count": 42,
+        "cycles": 326,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 120,
+        "io_epoch_overlap_ck": 326
+      }
+    ],
+    "conserved_duration_ck": 104214363,
+    "limitation": "DQ read-capacity upper bound; C/A, GPU demand and refresh are not modeled by this bound"
+  },
+  "mac-g-k4": {
+    "channel": 0,
+    "scope": "all 18x10 events; rank1 gaps, not global DQ idle",
+    "bins": [
+      {
+        "length_bin_ck": "15-32",
+        "count": 15745,
+        "cycles": 438205,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 110649,
+        "io_epoch_overlap_ck": 438205
+      },
+      {
+        "length_bin_ck": "9-14",
+        "count": 2354,
+        "cycles": 21231,
+        "cannot_fit_one_read_by_dq_edges": 2325,
+        "read_capacity_upper_bound_bursts": 117,
+        "io_epoch_overlap_ck": 21231
+      },
+      {
+        "length_bin_ck": "65-256",
+        "count": 3179,
+        "cycles": 248576,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 108126,
+        "io_epoch_overlap_ck": 248576
+      },
+      {
+        "length_bin_ck": "33-64",
+        "count": 354,
+        "cycles": 13798,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 6193,
+        "io_epoch_overlap_ck": 13798
+      },
+      {
+        "length_bin_ck": "1-4",
+        "count": 748829,
+        "cycles": 1497664,
+        "cannot_fit_one_read_by_dq_edges": 748823,
+        "read_capacity_upper_bound_bursts": 6,
+        "io_epoch_overlap_ck": 1497664
+      },
+      {
+        "length_bin_ck": "257-1024",
+        "count": 1318,
+        "cycles": 479540,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 231930,
+        "io_epoch_overlap_ck": 349516
+      },
+      {
+        "length_bin_ck": ">1024",
+        "count": 1260,
+        "cycles": 38126534,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 19057967,
+        "io_epoch_overlap_ck": 361305
+      },
+      {
+        "length_bin_ck": "5-8",
+        "count": 50,
+        "cycles": 382,
+        "cannot_fit_one_read_by_dq_edges": 0,
+        "read_capacity_upper_bound_bursts": 139,
+        "io_epoch_overlap_ck": 382
+      }
+    ],
+    "conserved_duration_ck": 43124170,
+    "limitation": "DQ read-capacity upper bound; C/A, GPU demand and refresh are not modeled by this bound"
+  }
+}
